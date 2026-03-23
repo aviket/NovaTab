@@ -54,3 +54,44 @@ body.dark {
     background: #121212;
     color: #fff;
 }
+
+
+.widget {
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #1e1e1e;
+    overflow: hidden;
+}
+
+.widget-header {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background: #2a2a2a;
+}
+
+.widget-body {
+    flex: 1;
+    overflow: hidden;
+}
+
+.widget-body.collapsed {
+    display: none;
+}
+
+.widget-content {
+    height: 100%;
+    overflow: auto; /* 🔥 scrollbar here */
+    padding: 10px;
+}
+
+#widget-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 15px;
+}

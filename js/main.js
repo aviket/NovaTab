@@ -60,3 +60,14 @@ function performSearch() {
 document.getElementById("settings-btn").addEventListener("click", () => {
     chrome.runtime.openOptionsPage();
 });
+
+import { WidgetManager } from "./widget-manager.js";
+import { ClockWidget } from "./../widgets/Clock/clock.js";
+
+const container = document.getElementById("widget-container");
+
+const manager = new WidgetManager(container);
+
+// Add widget
+const clock = new ClockWidget("w1");
+manager.addWidget(clock);
