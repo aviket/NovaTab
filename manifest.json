@@ -10,7 +10,7 @@
 
    "options_page": "settings.html",
 
-  "permissions": ["storage" , "tabs", "activeTab", "scripting"],
+  "permissions": ["storage" , "tabs", "activeTab", "scripting","sidePanel"],
 
    "background": {
     "service_worker": "js/background.js"
@@ -20,5 +20,18 @@
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
+  },
+
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Open NovaTab"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
   }
+
 }

@@ -381,3 +381,9 @@ async function ensurePinAndActivate(tab) {
   await new Promise(resolve => chrome.windows.update(tab.windowId, { focused: true }, () => resolve()));
   await new Promise(resolve => chrome.tabs.update(tab.id, { active: true }, () => resolve()));
 }
+
+// js/background.js
+
+chrome.action.onClicked.addListener(async (tab) => {
+    await chrome.sidePanel.open({ tabId: tab.id });
+});
