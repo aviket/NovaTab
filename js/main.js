@@ -70,4 +70,14 @@ const manager = new WidgetManager(container);
 
 // Add widget
 const clock = new ClockWidget("w1");
+const clock1 = new ClockWidget("w2");
+const clock2 = new ClockWidget("w3");
+const clock3 = new ClockWidget("w4");
+const clock4 = new ClockWidget("w5");
+
+
 manager.addWidget(clock);
+manager.addWidget(clock1);
+manager.addWidget(clock2);
+manager.addWidget(clock3);
+manager.addWidget(clock4);
