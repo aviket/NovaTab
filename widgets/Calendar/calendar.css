@@ -1,0 +1,110 @@
+/* Scope to this widget */
+.widget[data-id="calendar"] .calendar-widget-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 8px;
+}
+
+/* ==============================
+   CONTROLS
+============================== */
+.calendar-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid var(--border, #444);
+  color: var(--fg, #fff);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.nav-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Home button slightly highlighted */
+.home-btn {
+  font-weight: 600;
+}
+
+/* ==============================
+   TITLE
+============================== */
+.calendar-title {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ==============================
+   BODY
+============================== */
+.calendar-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image */
+.calendar-body img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.3);
+  cursor: zoom-in;
+}
+
+/* Error */
+.cal-error {
+  display: none;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* ==============================
+   MODAL
+============================== */
+.cal-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.cal-modal.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cal-modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+
+.cal-modal.visible .cal-modal-content {
+  transform: scale(1);
+}
+
+.cal-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+}

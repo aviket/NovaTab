@@ -63,6 +63,8 @@ document.getElementById("settings-btn").addEventListener("click", () => {
 
 import { WidgetManager } from "./widget-manager.js";
 import { ClockWidget } from "./../widgets/Clock/clock.js";
+import { CalendarWidget } from "./../widgets/Calendar/CalendarWidget.js";
+
 
 const container = document.getElementById("widget-container");
 
@@ -74,6 +76,8 @@ const clock1 = new ClockWidget("w2");
 const clock2 = new ClockWidget("w3");
 const clock3 = new ClockWidget("w4");
 const clock4 = new ClockWidget("w5");
+const calendar = new CalendarWidget("w6");
+
 
 
 manager.addWidget(clock);
@@ -81,3 +85,4 @@ manager.addWidget(clock1);
 manager.addWidget(clock2);
 manager.addWidget(clock3);
 manager.addWidget(clock4);
+manager.addWidget(calendar);
