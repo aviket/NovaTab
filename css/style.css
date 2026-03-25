@@ -92,6 +92,20 @@ body.dark {
     padding: 10px;
 }
 
+.widget.maximized {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9999;
+    border-radius: 0;
+}
+
+.widget.maximized .widget-content {
+    height: calc(100vh - 40px);
+}
+
 #widget-container {
     display: grid;
 

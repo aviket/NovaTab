@@ -1,0 +1,122 @@
+/* ROOT */
+.time-tools-root {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+  font-family: system-ui, sans-serif;
+}
+
+/* =========================
+   SEGMENTED CONTROL
+========================= */
+.segmented {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.seg-btn {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  background: #f3f3f3;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.seg-btn:hover {
+  background: #e0e0e0;
+}
+
+.seg-btn.active {
+  background: #471eda;
+  color: #fff;
+}
+
+/* =========================
+   TOOL LAYOUT
+========================= */
+.time-tool {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* =========================
+   TIME DISPLAY
+========================= */
+.time-readout {
+  font-size: clamp(26px, 5vw, 52px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-variant-numeric: tabular-nums;
+  color: #222;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.tool-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.tool-buttons button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #471eda;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.tool-buttons button:hover {
+  background: #5a2df0;
+}
+
+.tool-buttons button:active {
+  transform: scale(0.96);
+}
+
+/* =========================
+   INPUT (COUNTDOWN)
+========================= */
+.duration-input {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  background: #f3f3f3;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.duration-input input {
+  width: 45px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 14px;
+  outline: none;
+}
+
+.duration-input input:focus {
+  border-color: #471eda;
+  box-shadow: 0 0 0 2px rgba(71, 30, 218, 0.2);
+}
+
+/* =========================
+   HIDDEN
+========================= */
+.hidden {
+  display: none;
+}

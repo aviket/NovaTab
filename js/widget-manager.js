@@ -4,11 +4,11 @@ export class WidgetManager {
         this.widgets = new Map();
     }
 
-    addWidget(widgetInstance) {
+    async addWidget(widgetInstance) {
         const el = widgetInstance.render();
         this.container.appendChild(el);
 
-        widgetInstance.init();
+         await widgetInstance.init();
 
         this.widgets.set(widgetInstance.id, widgetInstance);
     }

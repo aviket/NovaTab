@@ -7,6 +7,7 @@ export function createWidgetShell({ id, title, content }) {
         <div class="widget-header">
             <span class="widget-title">${title}</span>
             <div class="widget-controls">
+                 <button class="maximize-btn">⛶</button>
                 <button class="toggle-btn">▾</button>
                 <button class="remove-btn">✕</button>
             </div>
@@ -30,6 +31,17 @@ export function createWidgetShell({ id, title, content }) {
     // Remove logic
     wrapper.querySelector(".remove-btn").onclick = () => {
         wrapper.remove();
+    };
+
+
+    // 🔥 Maximize logic
+    const maximizeBtn = wrapper.querySelector(".maximize-btn");
+
+    maximizeBtn.onclick = () => {
+        wrapper.classList.toggle("maximized");
+
+        // Change icon
+        maximizeBtn.textContent = wrapper.classList.contains("maximized") ? "🗗" : "⛶";
     };
 
     return wrapper;

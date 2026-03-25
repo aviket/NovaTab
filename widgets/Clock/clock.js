@@ -57,7 +57,8 @@ export class ClockWidget extends BaseWidget {
     // ==============================
     init() {
         if (!this.element) return;
-
+        console.log("Initializing ClockWidget...");
+        this.loadCSS(); 
         this.drawClockFace();
         this.bindEvents();
         this.startTicker();
@@ -70,7 +71,7 @@ export class ClockWidget extends BaseWidget {
         const numsContainer = this.element.querySelector('#nums');
         if (!numsContainer) return;
 
-        const radius = 42;
+        const radius = 32;
 
         for (let i = 1; i <= 12; i++) {
             const span = document.createElement('span');
@@ -159,4 +160,17 @@ export class ClockWidget extends BaseWidget {
 
         super.destroy();
     }
+
+    loadCSS() {
+    const id = "clock-css";
+
+    if (document.getElementById(id)) return; // prevent duplicate
+
+    const link = document.createElement("link");
+    link.id = id;
+    link.rel = "stylesheet";
+    link.href = chrome.runtime.getURL("widgets/Clock/clock.css");
+
+    document.head.appendChild(link);
+}
 }

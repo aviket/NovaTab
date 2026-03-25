@@ -1,0 +1,5 @@
+[
+  { "keys": "Ctrl+Alt+G", "url": "https://mail.google.com", "target": "tab" },
+  { "keys": "Ctrl+Alt+Y", "url": "https://mail.yahoo.com", "target": "tab" },
+  { "keys": "Ctrl+Alt+C", "url": "https://chat.openai.com", "target": "tab" }
+]

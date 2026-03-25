@@ -64,6 +64,8 @@ document.getElementById("settings-btn").addEventListener("click", () => {
 import { WidgetManager } from "./widget-manager.js";
 import { ClockWidget } from "./../widgets/Clock/clock.js";
 import { CalendarWidget } from "./../widgets/Calendar/CalendarWidget.js";
+import { ShortcutsWidget } from "./../widgets/Shortcuts/shortcutsWidget.js";
+import { TimeToolsWidget } from "./../widgets/TimeTools/TimeToolsWidget.js";
 
 
 const container = document.getElementById("widget-container");
@@ -72,17 +74,13 @@ const manager = new WidgetManager(container);
 
 // Add widget
 const clock = new ClockWidget("w1");
-const clock1 = new ClockWidget("w2");
-const clock2 = new ClockWidget("w3");
-const clock3 = new ClockWidget("w4");
-const clock4 = new ClockWidget("w5");
-const calendar = new CalendarWidget("w6");
+const calendar = new CalendarWidget("w2");
+const shorts = new ShortcutsWidget("w3");
+const timeTools = new TimeToolsWidget("w4");
 
 
 
 manager.addWidget(clock);
-manager.addWidget(clock1);
-manager.addWidget(clock2);
-manager.addWidget(clock3);
-manager.addWidget(clock4);
 manager.addWidget(calendar);
+manager.addWidget(shorts);
+manager.addWidget(timeTools);
