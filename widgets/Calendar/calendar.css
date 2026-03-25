@@ -17,8 +17,9 @@
 
 .nav-btn {
   background: transparent;
+  background-color: bluehsl(250 100% 50%);
   border: 1px solid var(--border, #444);
-  color: var(--fg, #fff);
+  /* color: var(--fg, #fff); */
   cursor: pointer;
   padding: 4px 8px;
   border-radius: 6px;
