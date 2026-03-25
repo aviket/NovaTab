@@ -1,5 +1,6 @@
 import { BaseWidget } from "../widget-base.js";
 import { createWidgetShell } from "../widget-shell.js";
+import { loadCSS } from "../../utilities/loadcss.js";
 
 export class TimeToolsWidget extends BaseWidget {
     constructor() {
@@ -57,7 +58,7 @@ export class TimeToolsWidget extends BaseWidget {
     }
 
     init() {
-        this.loadCSS();
+        loadCSS("time-tools-css", "widgets/TimeTools/TimeToolsWidget.css");
         const root = this.element;
 
         const swBtn = root.querySelector('#toolStopwatch');
@@ -202,16 +203,5 @@ export class TimeToolsWidget extends BaseWidget {
     }
 
 
-    loadCSS() {
-    const id = "time-tools-css";
 
-    if (document.getElementById(id)) return; // prevent duplicate
-
-    const link = document.createElement("link");
-    link.id = id;
-    link.rel = "stylesheet";
-    link.href = chrome.runtime.getURL("widgets/TimeTools/TimeToolsWidget.css");
-
-    document.head.appendChild(link);
-    }
 }

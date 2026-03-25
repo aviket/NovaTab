@@ -66,6 +66,7 @@ import { ClockWidget } from "./../widgets/Clock/clock.js";
 import { CalendarWidget } from "./../widgets/Calendar/CalendarWidget.js";
 import { ShortcutsWidget } from "./../widgets/Shortcuts/shortcutsWidget.js";
 import { TimeToolsWidget } from "./../widgets/TimeTools/TimeToolsWidget.js";
+import { NotesWidget } from "./../widgets/Notes/NotesWidget.js";
 
 
 const container = document.getElementById("widget-container");
@@ -77,6 +78,7 @@ const clock = new ClockWidget("w1");
 const calendar = new CalendarWidget("w2");
 const shorts = new ShortcutsWidget("w3");
 const timeTools = new TimeToolsWidget("w4");
+const notes = new NotesWidget("w5");
 
 
 
@@ -84,3 +86,4 @@ manager.addWidget(clock);
 manager.addWidget(calendar);
 manager.addWidget(shorts);
 manager.addWidget(timeTools);
+manager.addWidget(notes);

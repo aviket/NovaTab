@@ -1,5 +1,6 @@
 import { BaseWidget } from "../widget-base.js";
 import { createWidgetShell } from "../widget-shell.js";
+import { loadCSS } from "../../utilities/loadcss.js";
 
 export class CalendarWidget extends BaseWidget {
     constructor(id, config = {}) {
@@ -64,7 +65,7 @@ export class CalendarWidget extends BaseWidget {
     // Init
     // ==============================
     init() {
-        this.loadCSS(); 
+        loadCSS("calendar-css", "widgets/Calendar/calendar.css");
         this.renderCalendar();
         this.bindEvents();
     }
@@ -148,16 +149,5 @@ export class CalendarWidget extends BaseWidget {
         super.destroy();
     }
 
-    loadCSS() {
-    const id = "calendar-css";
 
-    if (document.getElementById(id)) return; // prevent duplicate
-
-    const link = document.createElement("link");
-    link.id = id;
-    link.rel = "stylesheet";
-    link.href = chrome.runtime.getURL("widgets/calendar/calendar.css");
-
-    document.head.appendChild(link);
-}
 }

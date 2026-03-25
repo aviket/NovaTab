@@ -2,6 +2,7 @@
 
 import { BaseWidget } from "../widget-base.js";
 import { createWidgetShell } from "../widget-shell.js";
+import { loadCSS } from "../../utilities/loadcss.js";
 
 export class ShortcutsWidget extends BaseWidget {
   constructor(id) {
@@ -52,7 +53,7 @@ render() {
 
 async init() {
   console.log("Initializing ShortcutsWidget...");  
-  this.loadCSS();
+  loadCSS("shortcuts-css", "widgets/Shortcuts/shortcutsWidget.css");
 
   this.data =  await this.loadData();   // ✅ async moved here
   this.renderTable();
@@ -205,18 +206,7 @@ fileInput.addEventListener('change', async (e) => {
     });
   }
 
-  loadCSS() {
-    const id = "shortcuts-css";
-
-    if (document.getElementById(id)) return; // prevent duplicate
-
-    const link = document.createElement("link");
-    link.id = id;
-    link.rel = "stylesheet";
-    link.href = chrome.runtime.getURL("widgets/Shortcuts/shortcutsWidget.css");
-
-    document.head.appendChild(link);
-  }
+ 
 
     async loadDefaultShortcuts() {
     try {

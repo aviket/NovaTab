@@ -1,0 +1,61 @@
+
+.widget {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #eae3e3;
+    overflow: hidden;
+}
+
+.widget-header {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background: #471eda;
+    color: #fff;
+    font-size: large;
+}
+
+.widget-body {
+    flex: 1;
+    overflow: hidden;
+}
+
+.widget-body.collapsed {
+    display: none;
+}
+
+.widget-content {
+    height: 100%;
+    overflow: auto; /* 🔥 scrollbar here */
+    padding: 10px;
+}
+
+.widget.maximized {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9999;
+    border-radius: 0;
+}
+
+.widget.maximized .widget-content {
+    height: calc(100vh - 40px);
+}
+
+#widget-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 300px);  /* 4 columns */
+    grid-template-rows: repeat(4, 300px);     /* 4 rows */
+
+    gap: 15px;
+
+    justify-content: center; /* optional: center grid horizontally */
+}

@@ -1,0 +1,42 @@
+.accordion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.accordion-header {
+    padding: 10px;
+    background: #ddd;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    transition: background 0.2s;
+    z-index: 2;
+}
+
+.accordion-header:hover {
+    background: #ccc;
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 10px;
+    z-index: 1;
+    border: 1px solid red;
+}
+
+.accordion-body * {
+    max-width: 100%;
+}
+

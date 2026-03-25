@@ -1,5 +1,6 @@
 import { BaseWidget } from "../widget-base.js";
 import { createWidgetShell } from "../widget-shell.js";
+import { loadCSS } from "../../utilities/loadcss.js";
 
 
 export class ClockWidget extends BaseWidget {
@@ -58,7 +59,7 @@ export class ClockWidget extends BaseWidget {
     init() {
         if (!this.element) return;
         console.log("Initializing ClockWidget...");
-        this.loadCSS(); 
+        loadCSS("clock-css", "widgets/Clock/clock.css"); 
         this.drawClockFace();
         this.bindEvents();
         this.startTicker();
@@ -161,16 +162,5 @@ export class ClockWidget extends BaseWidget {
         super.destroy();
     }
 
-    loadCSS() {
-    const id = "clock-css";
-
-    if (document.getElementById(id)) return; // prevent duplicate
-
-    const link = document.createElement("link");
-    link.id = id;
-    link.rel = "stylesheet";
-    link.href = chrome.runtime.getURL("widgets/Clock/clock.css");
-
-    document.head.appendChild(link);
-}
+ 
 }
