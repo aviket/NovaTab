@@ -1,6 +1,6 @@
 // widgets/Notes/NotesAccordion.js
 //widgets\Notes\NotesAccordion.js
-import { Accordion } from "../components/Accordion.js";
+import { Accordion } from "../components/Accordion/Accordion.js";
 import { loadCSS } from "../../utilities/loadcss.js";
 
 export class NotesAccordion extends Accordion {

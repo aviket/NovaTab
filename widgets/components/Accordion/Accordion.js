@@ -1,5 +1,5 @@
 // widgets/components/Accordion.js
-import { loadCSS } from "../../utilities/loadcss.js";
+import { loadCSS } from "../../../utilities/loadcss.js";
 import { AccordionItem } from "./AccordionItem.js";
 
 export class Accordion {
@@ -61,7 +61,7 @@ export class Accordion {
     }
 
     init() {
-        loadCSS("accordion-css", "widgets/components/Accordion.css");
+        loadCSS("accordion-css", "widgets/components/Accordion/Accordion.css");
     }
 
     destroy() {
