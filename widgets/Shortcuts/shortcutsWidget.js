@@ -1,3 +1,4 @@
+// widgets/Shortcuts/shortcutsWidget.js
 // shortcuts-widget.js
 
 import { BaseWidget } from "../widget-base.js";

@@ -1,3 +1,4 @@
+// widgets/Calendar/CalendarWidget.js
 import { BaseWidget } from "../widget-base.js";
 import { createWidgetShell } from "../widget-shell.js";
 import { loadCSS } from "../../utilities/loadcss.js";

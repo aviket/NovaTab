@@ -1,3 +1,5 @@
+// widgets/Notes/NotesWidget.js
+//widgets\Notes\NotesWidget.js
 import { BaseWidget } from "../widget-base.js";
 import { createWidgetShell } from "../widget-shell.js";
 import { NotesAccordion } from "./NotesAccordion.js";

@@ -1,15 +1,4 @@
-.note-text {
-    width: 100%;
-    height: 120px;
-    resize: none;
-    border: none;
-    outline: none;
-    background: #fff8a6; /* sticky note vibe */
-    padding: 8px;
-    font-family: inherit;
-    box-sizing: border-box;   /* 🔥 ADD THIS */
-}
-
+/* widgets/Notes/NotesWidget.css */
 /* Styling for our beautiful Blockquotes */
 .zen-editor blockquote {
     border-left: 4px solid #ccc;

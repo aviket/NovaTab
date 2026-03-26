@@ -1,3 +1,4 @@
+/* widgets/Calendar/calendar.css */
 /* Scope to this widget */
 .widget[data-id="calendar"] .calendar-widget-inner {
   display: flex;

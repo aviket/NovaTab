@@ -1,3 +1,4 @@
+// js/background.js
 // background.js — prefer tab.url, fallback to changeInfo; match by substring
 // console.log('background.js loaded', { ts: Date.now() });
 

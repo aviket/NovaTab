@@ -1,3 +1,4 @@
+// js/settings.js
 import { getSettings, saveSettings } from "./storage.js";
 
 const form = document.getElementById("settings-form");

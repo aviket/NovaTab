@@ -1,3 +1,4 @@
+// utilities/loadscript_1.js
 export function loadScript(id, src) {
     return new Promise((resolve, reject) => {
         if (document.getElementById(id)) {

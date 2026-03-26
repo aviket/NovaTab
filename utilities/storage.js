@@ -1,3 +1,4 @@
+// utilities/storage.js
 // storage.js
 
 const STORAGE_KEY = "novatab_settings";

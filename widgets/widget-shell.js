@@ -1,3 +1,4 @@
+// widgets/widget-shell.js
 export function createWidgetShell({ id, title, content }) {
     const wrapper = document.createElement("div");
     wrapper.className = "widget";

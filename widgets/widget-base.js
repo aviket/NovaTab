@@ -1,3 +1,4 @@
+// widgets/widget-base.js
 export class BaseWidget {
     constructor(id, config = {}) {
         this.id = id;
