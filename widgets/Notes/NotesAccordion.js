@@ -128,6 +128,52 @@ export class NotesAccordion extends Accordion {
 
         toolbar.appendChild(colorPicker);
 
+        // ... (Inside NotesAccordion.js, right after toolbar.appendChild(colorPicker); ) ...
+
+        // 🔥 1. Add a flexible spacer to push the save button to the far right
+        const spacer = document.createElement("div");
+        spacer.style.flexGrow = "1";
+        toolbar.appendChild(spacer);
+
+        // 🔥 2. Create the Save Button
+        const saveBtn = document.createElement("button");
+        saveBtn.innerHTML = "💾 Save";
+        saveBtn.style.backgroundColor = "#4CAF50"; // Clean green
+        saveBtn.style.color = "white";
+        saveBtn.style.border = "none";
+        saveBtn.style.borderRadius = "4px";
+        saveBtn.style.padding = "4px 12px";
+        saveBtn.style.cursor = "pointer";
+        saveBtn.style.fontSize = "13px";
+        saveBtn.style.fontWeight = "bold";
+        saveBtn.style.transition = "all 0.2s ease";
+
+        saveBtn.onmouseover = () => saveBtn.style.backgroundColor = "#45a049";
+        saveBtn.onmouseout = () => saveBtn.style.backgroundColor = "#4CAF50";
+
+        // 🔥 3. The Save Action
+        saveBtn.onclick = async () => {
+            // Give the user instant visual feedback
+            const originalText = saveBtn.innerHTML;
+            saveBtn.innerHTML = "✅ Saved!";
+            saveBtn.style.backgroundColor = "#2E7D32"; // Darker green
+
+            // Trigger the save callback with the current HTML
+            if (onTextChange) {
+                await onTextChange(editorDiv.innerHTML);
+            }
+
+            // Change the button back after 1.5 seconds
+            setTimeout(() => {
+                saveBtn.innerHTML = originalText;
+                saveBtn.style.backgroundColor = "#4CAF50";
+            }, 1500);
+        };
+
+        toolbar.appendChild(saveBtn);
+        
+        // ... (The code continues with const editorDiv = document.createElement("div");) ...
+
         // 4. The Editor
         const editorDiv = document.createElement("div");
         editorDiv.contentEditable = "true";
