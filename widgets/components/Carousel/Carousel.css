@@ -1,11 +1,11 @@
 /* The main window that hides anything overflowing outside of it */
 .carousel-container {
-    position: relative;
     width: 100%;
+    max-width: 800px; /* Optional: Stops it from getting TOO huge on big monitors */
+    position: relative;
     overflow: hidden; 
-    border-radius: 6px;
-    background: #fff;
-    border: 1px solid #ccc;
+    border-radius: 8px; /* Move the border-radius here so images clip to the corners */
+    background: #865a5a; /* Black background looks great for images */
 }
 
 /* The long train track holding all the slides in a row */
@@ -19,8 +19,21 @@
 .carousel-item {
     flex: 0 0 100%; 
     width: 100%;
+    /* 🔥 Remove the padding so images go edge-to-edge! */
+    padding: 0; 
     box-sizing: border-box;
-    padding: 20px;
+}
+
+.carousel-image {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    
+    /* 'contain' tells the browser: "Shrink or grow the image so the whole thing is visible, but never crop it." */
+    object-fit: contain; 
+    display: block;
+    
+    /* Optional: Since 'contain' might leave empty space, a subtle background color looks nice */
+    background-color: #111; 
 }
 
 /* Navigation Buttons */

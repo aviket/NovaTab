@@ -69,6 +69,7 @@ import { ShortcutsWidget } from "./../widgets/Shortcuts/shortcutsWidget.js";
 import { TimeToolsWidget } from "./../widgets/TimeTools/TimeToolsWidget.js";
 import { NotesWidget } from "./../widgets/Notes/NotesWidget.js";
 import { sampleCarouselWidget } from "./../widgets/sampleCarouselWidget/sampleCarouselWidget.js";
+import { sampleImageCarouselWidget } from "./../widgets/sampleImageCarouselWidget/sampleImageCarouselWidget.js";
 
 
 const container = document.getElementById("widget-container");
@@ -82,6 +83,7 @@ const shorts = new ShortcutsWidget("w3");
 const timeTools = new TimeToolsWidget("w4");
 const notes = new NotesWidget("w5");
 const carousel = new sampleCarouselWidget("w6");
+const imageCarousel = new sampleImageCarouselWidget("w7");
 
 
 
@@ -91,3 +93,4 @@ manager.addWidget(shorts);
 manager.addWidget(timeTools);
 manager.addWidget(notes);
 manager.addWidget(carousel);
+manager.addWidget(imageCarousel);
