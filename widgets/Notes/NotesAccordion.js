@@ -7,134 +7,155 @@ export class NotesAccordion extends Accordion {
         super(config);
     }
 
-    // 🔥 Helper function to generate the editable div for a note
-    // createEditableNote(initialText, onTextChange) {
-    //     const textDiv = document.createElement("div");
-        
-    //     textDiv.contentEditable = "true"; 
-    //     textDiv.innerHTML = initialText || "";
-    //     textDiv.className = "note-text";
-
-    //     // Default styling for the yellow note
-    //     textDiv.style.minHeight = "100px"; 
-    //     textDiv.style.outline = "none";    
-    //     textDiv.style.width = "100%";
-    //     textDiv.style.boxSizing = "border-box";
-    //     textDiv.style.backgroundColor = "#fff59d"; 
-
-    //     // Handle typing and auto-expanding
-    //     textDiv.oninput = () => {
-    //         // Pass the new text back up if you need to save it to storage later
-    //         if (onTextChange) onTextChange(textDiv.innerHTML);
-            
-    //         // Auto-grow the accordion body smoothly
-    //         const parentBody = textDiv.closest('.accordion-body');
-    //         if (parentBody && parentBody.classList.contains('open')) {
-    //             parentBody.style.maxHeight = parentBody.scrollHeight + "px";
-    //         }
-    //     };
-
-    //     return textDiv;   
-    // }
-
-
-    // 🔥 Upgraded helper function: HTML Editor & Preview
     createEditableNote(initialHTML, onTextChange) {
-        // 1. The Main Container
+        // 1. The Container
         const container = document.createElement("div");
         container.style.display = "flex";
         container.style.flexDirection = "column";
-        container.style.width = "100%";
-        container.style.backgroundColor = "#fff59d"; // Yellow note background
+        container.style.backgroundColor = "#fff"; 
         container.style.borderRadius = "0 0 6px 6px";
-        container.style.overflow = "hidden"; // Keeps the corners clean
-
-        // 2. The Toolbar / Toggle Button
+        container.style.overflow = "hidden";
+        
+        // 2. The Fixed Toolbar
         const toolbar = document.createElement("div");
         toolbar.style.display = "flex";
-        toolbar.style.justifyContent = "flex-end";
-        toolbar.style.padding = "4px 8px";
-        toolbar.style.backgroundColor = "rgba(0,0,0,0.05)"; // Slight shadow for toolbar area
+        toolbar.style.alignItems = "center"; 
+        toolbar.style.gap = "4px";
+        toolbar.style.padding = "6px 12px";
+        toolbar.style.backgroundColor = "#f5f5f5"; 
+        toolbar.style.borderBottom = "1px solid #e0e0e0";
 
-        const toggleBtn = document.createElement("button");
-        toggleBtn.textContent = "✏️ Edit HTML";
-        toggleBtn.style.cursor = "pointer";
-        toggleBtn.style.fontSize = "12px";
-        toolbar.appendChild(toggleBtn);
+        // The Headings Dropdown
+        const formatSelect = document.createElement("select");
+        formatSelect.style.border = "none";
+        formatSelect.style.background = "transparent";
+        formatSelect.style.cursor = "pointer";
+        formatSelect.style.fontSize = "14px";
+        formatSelect.style.fontWeight = "bold";
+        formatSelect.style.color = "#333";
+        formatSelect.style.outline = "none";
+        
+        const formats = [
+            { label: "Normal", value: "P" },
+            { label: "Heading 1", value: "H1" },
+            { label: "Heading 2", value: "H2" },
+            { label: "Heading 3", value: "H3" },
+            { label: "Heading 4", value: "H4" },
+            { label: "Heading 5", value: "H5" }
+        ];
 
-        // 3. The Preview Area (Renders the HTML)
-        const previewArea = document.createElement("div");
-        previewArea.innerHTML = initialHTML || "<i>Write some HTML...</i>";
-        previewArea.style.minHeight = "100px";
-        previewArea.style.padding = "8px";
-        previewArea.style.boxSizing = "border-box";
-        previewArea.style.width = "100%";
+        formats.forEach(f => {
+            const opt = document.createElement("option");
+            opt.value = f.value;
+            opt.textContent = f.label;
+            formatSelect.appendChild(opt);
+        });
 
-        // 4. The Edit Area (Raw Code Textarea)
-        const editArea = document.createElement("textarea");
-        editArea.value = initialHTML || "";
-        editArea.style.minHeight = "100px";
-        editArea.style.width = "100%";
-        editArea.style.padding = "8px";
-        editArea.style.boxSizing = "border-box";
-        editArea.style.fontFamily = "monospace"; // Code font
-        editArea.style.border = "none";
-        editArea.style.outline = "none";
-        editArea.style.backgroundColor = "#fff9c4"; // Slightly different yellow for edit mode
-        editArea.style.display = "none"; // Hide by default
+        formatSelect.addEventListener("change", (e) => {
+            document.execCommand("formatBlock", false, e.target.value);
+            if (onTextChange) onTextChange(editorDiv.innerHTML);
+            formatSelect.value = "P"; 
+        });
 
-        // --- THE LOGIC ---
+        toolbar.appendChild(formatSelect);
 
-        // Helper to recalculate the accordion animation height
-        const updateHeight = () => {
+        // Visual separator line
+        const separator1 = document.createElement("div");
+        separator1.style.width = "1px";
+        separator1.style.height = "16px";
+        separator1.style.backgroundColor = "#ccc";
+        separator1.style.margin = "0 6px";
+        toolbar.appendChild(separator1);
+
+        // 🔥 UPGRADED: Helper now accepts a 'value' parameter
+        const createBtn = (html, command, value = null) => {
+            const btn = document.createElement("button");
+            btn.innerHTML = html;
+            btn.style.background = "transparent";
+            btn.style.border = "1px solid transparent";
+            btn.style.borderRadius = "4px";
+            btn.style.color = "#333";
+            btn.style.cursor = "pointer";
+            btn.style.fontSize = "14px";
+            btn.style.fontWeight = "bold";
+            btn.style.padding = "4px 8px";
+            btn.style.transition = "background 0.2s";
+            
+            btn.onmouseover = () => btn.style.backgroundColor = "#e0e0e0";
+            btn.onmouseout = () => btn.style.backgroundColor = "transparent";
+            
+            btn.onmousedown = (e) => {
+                e.preventDefault(); 
+                // 🔥 Pass the value to execCommand (it uses 'null' if not provided)
+                document.execCommand(command, false, value);
+                if (onTextChange) onTextChange(editorDiv.innerHTML); 
+            };
+            return btn;
+        };
+
+        // Add the standard formatting buttons
+        toolbar.appendChild(createBtn("<b>B</b>", "bold"));
+        toolbar.appendChild(createBtn("<i>I</i>", "italic"));
+        toolbar.appendChild(createBtn("<u>U</u>", "underline"));
+        toolbar.appendChild(createBtn("<s>S</s>", "strikeThrough"));
+        
+        // 🔥 ADDED: The Blockquote Button!
+        toolbar.appendChild(createBtn("❝", "formatBlock", "BLOCKQUOTE"));
+
+        toolbar.appendChild(createBtn("•", "insertUnorderedList"));
+        toolbar.appendChild(createBtn("1.", "insertOrderedList"));
+
+        // Add another visual separator line
+        const separator2 = separator1.cloneNode();
+        toolbar.appendChild(separator2);
+
+        // The Native Color Picker
+        const colorPicker = document.createElement("input");
+        colorPicker.type = "color";
+        colorPicker.value = "#333333"; 
+        colorPicker.title = "Text Color";
+        colorPicker.style.border = "none";
+        colorPicker.style.background = "transparent";
+        colorPicker.style.cursor = "pointer";
+        colorPicker.style.width = "24px";
+        colorPicker.style.height = "24px";
+        colorPicker.style.padding = "0";
+
+        colorPicker.addEventListener("input", (e) => {
+            document.execCommand("foreColor", false, e.target.value);
+            if (onTextChange) onTextChange(editorDiv.innerHTML);
+        });
+
+        toolbar.appendChild(colorPicker);
+
+        // 4. The Editor
+        const editorDiv = document.createElement("div");
+        editorDiv.contentEditable = "true";
+        editorDiv.innerHTML = initialHTML || "";
+        editorDiv.className = "zen-editor";
+        editorDiv.style.padding = "16px";
+        editorDiv.style.minHeight = "80px";
+        editorDiv.style.outline = "none";
+        editorDiv.style.lineHeight = "1.5";
+        editorDiv.style.color = "#333";
+
+        // 5. Auto-expand Accordion and Save Data
+        editorDiv.oninput = () => {
+            if (onTextChange) onTextChange(editorDiv.innerHTML);
             const parentBody = container.closest('.accordion-body');
             if (parentBody && parentBody.classList.contains('open')) {
                 parentBody.style.maxHeight = parentBody.scrollHeight + "px";
             }
         };
 
-        let isEditing = false;
-
-        // Toggle between Edit and Preview
-        toggleBtn.onclick = () => {
-            isEditing = !isEditing;
-
-            if (isEditing) {
-                // Switch to Edit Mode
-                toggleBtn.textContent = "👁️ Preview";
-                previewArea.style.display = "none";
-                editArea.style.display = "block";
-            } else {
-                // Switch to Preview Mode
-                toggleBtn.textContent = "✏️ Edit HTML";
-                editArea.style.display = "none";
-                previewArea.style.display = "block";
-                
-                // 🔥 Apply the written HTML code to the preview viewer!
-                previewArea.innerHTML = editArea.value || "<i>Write some HTML...</i>";
-            }
-
-            // Important: Recalculate height because the textarea might be taller/shorter than the preview
-            setTimeout(updateHeight, 0); 
-        };
-
-        // Save data as you type in the HTML editor
-        editArea.oninput = () => {
-            if (onTextChange) onTextChange(editArea.value);
-            updateHeight(); // Auto-expand as you type code lines
-        };
-
-        // Put it all together
         container.appendChild(toolbar);
-        container.appendChild(previewArea);
-        container.appendChild(editArea);
+        container.appendChild(editorDiv);
 
         return container;   
     }
 
-    
     init() {
-        super.init(); // 🔥 Critical: Loads the base Accordion.css!
-        loadCSS("notes-accordion-css", "widgets/Notes/NotesAccordion.css");
+        super.init(); 
+        loadCSS("notes-accordion-css", "widgets/Notes/NotesWidget.css");
     }
 }

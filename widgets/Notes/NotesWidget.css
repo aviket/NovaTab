@@ -9,3 +9,25 @@
     font-family: inherit;
     box-sizing: border-box;   /* 🔥 ADD THIS */
 }
+
+/* Styling for our beautiful Blockquotes */
+.zen-editor blockquote {
+    border-left: 4px solid #ccc;
+    margin: 8px 0;
+    padding-left: 16px;
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9; 
+    border-radius: 0 4px 4px 0;
+}
+
+/* 🔥 Styling for perfectly aligned lists */
+.zen-editor ul, 
+.zen-editor ol {
+    margin: 8px 0;
+    padding-left: 24px; /* Gives the bullets room to breathe */
+}
+
+.zen-editor li {
+    margin-bottom: 4px; /* Spaces out list items slightly */
+}
