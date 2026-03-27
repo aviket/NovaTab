@@ -10,6 +10,19 @@
     overflow: hidden;
 }
 
+.widget.dragging {
+    opacity: 0.4;
+    transform: scale(0.95);
+}
+
+.widget.drop-left {
+    border-left: 4px solid #4CAF50;
+}
+
+.widget.drop-right {
+    border-right: 4px solid #4CAF50;
+}
+
 .widget-header {
     height: 40px;
     display: flex;
