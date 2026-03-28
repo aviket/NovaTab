@@ -88,9 +88,10 @@ const imageCarousel = new sampleImageCarouselWidget("w7");
 
 
 manager.addWidget(clock);
-manager.addWidget(calendar);
+// manager.addWidget(calendar);
 manager.addWidget(shorts);
 manager.addWidget(timeTools);
 manager.addWidget(notes);
+manager.addWidget(calendar);
 manager.addWidget(carousel);
 manager.addWidget(imageCarousel);

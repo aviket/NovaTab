@@ -35,6 +35,9 @@ export class WidgetManager {
         el.addEventListener("dragstart", (e) => {
             this.draggedId = el.dataset.id;
             el.classList.add("dragging");
+
+                // 🔥 FIX: force correct drag image
+    e.dataTransfer.setDragImage(el, el.offsetWidth / 2, el.offsetHeight / 2);
         });
 
         el.addEventListener("dragend", () => {
