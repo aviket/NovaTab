@@ -14,3 +14,13 @@ export function getDefaultWidgets() {
         new NotesWidget("w5")
     ];
 }
+
+export function getDefaultSideWidgets() {
+    return [
+        new ClockWidget("ws1"),
+        // new CalendarWidget("w2"),
+        // new ShortcutsWidget("w3"),
+        // new TimeToolsWidget("w4"),
+        new NotesWidget("ws2")
+    ];
+}

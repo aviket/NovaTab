@@ -9,8 +9,7 @@ export function createWidgetShell({ id, title, content }) {
             <span class="widget-title">${title}</span>
             <div class="widget-controls">
                  <button class="maximize-btn">⛶</button>
-                <button class="toggle-btn">▾</button>
-                <button class="remove-btn">✕</button>
+                 <button class="remove-btn">✕</button>
             </div>
         </div>
         <div class="widget-body">
@@ -21,15 +20,7 @@ export function createWidgetShell({ id, title, content }) {
     const contentContainer = wrapper.querySelector(".widget-content");
     contentContainer.appendChild(content);
 
-    // Collapse logic
-    const toggleBtn = wrapper.querySelector(".toggle-btn");
-    const body = wrapper.querySelector(".widget-body");
-
-    toggleBtn.onclick = () => {
-        body.classList.toggle("collapsed");
-    };
-
-    // Remove logic
+     // Remove logic
     wrapper.querySelector(".remove-btn").onclick = () => {
         wrapper.remove();
     };

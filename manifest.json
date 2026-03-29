@@ -31,7 +31,7 @@
     "default_title": "Open NovaTab"
   },
   "side_panel": {
-    "default_path": "sidepanel.html"
+    "default_path": "sidepanel/sidepanel.html"
   }
 
 }
