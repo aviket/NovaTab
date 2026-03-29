@@ -2,6 +2,9 @@
 import { BaseWidget } from "../widget-base.js";
 import { createWidgetShell } from "../widget-shell.js";
 import { loadCSS } from "../../utilities/loadcss.js";
+// import { Modal } from "../../utilities/modal/modal.js";
+// const modal = new Modal();
+import { notify } from "../../utilities/notify/notify.js";
 
 export class TimeToolsWidget extends BaseWidget {
     constructor() {
@@ -168,7 +171,56 @@ export class TimeToolsWidget extends BaseWidget {
                         inputM.disabled = false;
                         inputS.disabled = false;
 
-                        alert("Time's up!");
+                        // 🔔 SIMPLE NOTIFICATION
+                        notify.create({
+                            type: "basic",
+                            title: "⏰ Countdown Finished",
+                            message: "Your timer is up!",
+                            priority: 2,
+                            requireInteraction: true,
+
+                            // 👇 optional click
+                            onClick: () => {
+                                console.log("Notification clicked");
+                            }
+                        });
+
+                        // // ✅ Chrome notification
+                        // chrome.notifications.create({
+                        //     type: "basic",
+                        //     iconUrl: "assets/icons/icon16.png", // make sure this exists
+                        //     title: "⏰ Countdown Finished",
+                        //     message: "Your timer is up!",
+                        //     priority: 2
+                        // });
+
+    //                        // 🪟 2. Show modal ONLY if UI is active
+    // if (document.visibilityState === "visible") {
+    //     console.log("Showing modal for countdown completion");
+    //     const content = document.createElement("div");
+
+    //     content.innerHTML = `
+    //         <p style="margin-bottom:10px;">⏰ Time's up!</p>
+    //         <button id="okBtn">OK</button>
+    //     `;
+
+    //     modal.open({
+    //         title: "Countdown Done",
+    //         content
+    //     });
+
+    //     content.querySelector("#okBtn").onclick = () => {
+    //         modal.close();
+    //     };
+    // }
+    // else {
+    //     // If not visible, fallback to alert (or just skip)
+    //     console.log("Tab not active, skipping modal and showing alert instead");
+    //     alert("⏰ Time's up!");
+    // }
+
+
+                        
                         remainingSeconds = 0;
                         return;
                     }

@@ -1,4 +1,5 @@
 import os
+import re
 
 ROOT_DIR = os.path.abspath(os.path.join(os.getcwd(), "..", ".."))
 OUTPUT_MERMAID_FILE = "folder_structure.md"
@@ -9,16 +10,29 @@ def get_relative_path(file_path):
     return os.path.relpath(file_path, ROOT_DIR).replace("\\", "/")
 
 
+
+
 def add_comment_to_file(file_path, rel_path):
     """
-    Adds relative path as first-line comment if not already present.
+    Ensures first line contains ONLY the correct relative path comment.
+
+    Rules:
+    1. If first line has a path-like comment → replace it
+    2. Otherwise → prepend new comment
     """
+
     _, ext = os.path.splitext(file_path)
 
     if ext == ".js":
         comment = f"// {rel_path}\n"
+        # matches: // something/like/this.js OR // folder/file.css
+        pattern = re.compile(r"^\s*//\s*[\w./-]+\.(js|css)\s*$")
+
     elif ext == ".css":
         comment = f"/* {rel_path} */\n"
+        # matches: /* something/like/this.js */ OR /* folder/file.css */
+        pattern = re.compile(r"^\s*/\*\s*[\w./-]+\.(js|css)\s*\*/\s*$")
+
     else:
         return
 
@@ -27,14 +41,17 @@ def add_comment_to_file(file_path, rel_path):
 
     if content:
         first_line = content[0].strip()
-        if rel_path in first_line:
-            return  # Already added
 
-    content.insert(0, comment)
+        # 🔥 Replace ONLY if it's a path-like comment
+        if pattern.match(first_line):
+            content[0] = comment
+        else:
+            content.insert(0, comment)
+    else:
+        content = [comment]
 
     with open(file_path, "w", encoding="utf-8") as f:
         f.writelines(content)
-
 
 def build_mermaid_tree():
     """
@@ -84,26 +101,41 @@ def build_mermaid_tree():
 
 
 def main():
-    # print("🔍 Scanning files...")
+    print("⚙️ Select operations:\n")
 
-    # for root, dirs, files in os.walk(ROOT_DIR):
-    #     for file in files:
-    #         if file.endswith(".js") or file.endswith(".css"):
-    #             full_path = os.path.join(root, file)
-    #             rel_path = get_relative_path(full_path)
+    # 🔹 Ask user choices
+    do_comments = input("👉 Add/update relative path comments in JS/CSS files? (y/n): ").strip().lower() == "y"
+    do_mermaid = input("👉 Generate Mermaid folder structure? (y/n): ").strip().lower() == "y"
 
-    #             add_comment_to_file(full_path, rel_path)
-    #             print(f"✔ Updated: {rel_path}")
+    # 🔹 Run comment updater
+    if do_comments:
+        print("\n🔍 Scanning files for JS/CSS...")
 
-    # print("\n📊 Generating Mermaid diagram...")
+        for root, dirs, files in os.walk(ROOT_DIR):
+            dirs[:] = [d for d in dirs if d not in BLACKLIST_DIRS]
 
-    mermaid_code = build_mermaid_tree()
+            for file in files:
+                if file.endswith(".js") or file.endswith(".css"):
+                    full_path = os.path.join(root, file)
+                    rel_path = get_relative_path(full_path)
 
-    with open(OUTPUT_MERMAID_FILE, "w", encoding="utf-8") as f:
-        f.write(mermaid_code)
+                    add_comment_to_file(full_path, rel_path)
+                    print(f"✔ Updated: {rel_path}")
 
-    print(f"✅ Mermaid saved to: {OUTPUT_MERMAID_FILE}")
+    # 🔹 Run mermaid generator
+    if do_mermaid:
+        print("\n📊 Generating Mermaid diagram...")
 
+        mermaid_code = build_mermaid_tree()
+
+        with open(OUTPUT_MERMAID_FILE, "w", encoding="utf-8") as f:
+            f.write(mermaid_code)
+
+        print(f"✅ Mermaid saved to: {OUTPUT_MERMAID_FILE}")
+
+    # 🔹 Nothing selected
+    if not do_comments and not do_mermaid:
+        print("\n⚠️ No operation selected. Exiting.")
 
 if __name__ == "__main__":
     main()

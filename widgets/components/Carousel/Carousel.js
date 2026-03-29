@@ -1,3 +1,4 @@
+// widgets/components/Carousel/Carousel.js
 import { loadCSS } from "../../../utilities/loadcss.js";
 import { CarouselItem } from "./CarouselItem.js";
 

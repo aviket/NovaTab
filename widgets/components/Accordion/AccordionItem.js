@@ -1,4 +1,4 @@
-// widgets/components/AccordionItem.js
+// widgets/components/Accordion/AccordionItem.js
 
 export class AccordionItem {
     constructor({ id, title, contentEl, onToggle }) {

@@ -1,3 +1,4 @@
+// widgets/components/Carousel/CarouselItem.js
 export class CarouselItem {
     constructor({ id, contentEl }) {
         this.id = id;

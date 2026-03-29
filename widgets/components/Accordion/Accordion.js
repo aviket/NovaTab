@@ -1,4 +1,4 @@
-// widgets/components/Accordion.js
+// widgets/components/Accordion/Accordion.js
 import { loadCSS } from "../../../utilities/loadcss.js";
 import { AccordionItem } from "./AccordionItem.js";
 
