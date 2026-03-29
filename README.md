@@ -1,4 +1,4 @@
-# 🚀 NovaTab - Customizable New Tab Extension
+# 🚀 NovaTab - Customizable New Tab Chrome Extension
 
 NovaTab is a modern, extensible browser new tab experience built with a modular widget system.  
 It allows users to personalize their dashboard with interactive widgets, utilities, and quick tools — all in a clean and flexible UI.
