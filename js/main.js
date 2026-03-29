@@ -4,6 +4,18 @@
 // ==============================
 const themeSelect = document.getElementById("theme-select");
 
+import { WidgetHost } from "../widgets/widget-host.js";
+import { getDefaultWidgets } from "../widgets/widget-config.js";
+
+const widgetHost = new WidgetHost();
+widgetHost.registerContainer("widget-container");
+
+// Load default widgets
+getDefaultWidgets().forEach(widget => {
+    widgetHost.mountWidget("widget-container", widget);
+});
+
+
 themeSelect.addEventListener("change", () => {
     const theme = themeSelect.value;
 
@@ -62,36 +74,36 @@ document.getElementById("settings-btn").addEventListener("click", () => {
     chrome.runtime.openOptionsPage();
 });
 
-import { WidgetManager } from "./widget-manager.js";
-import { ClockWidget } from "./../widgets/Clock/clock.js";
-import { CalendarWidget } from "./../widgets/Calendar/CalendarWidget.js";
-import { ShortcutsWidget } from "./../widgets/Shortcuts/shortcutsWidget.js";
-import { TimeToolsWidget } from "./../widgets/TimeTools/TimeToolsWidget.js";
-import { NotesWidget } from "./../widgets/Notes/NotesWidget.js";
-import { sampleCarouselWidget } from "./../widgets/sampleCarouselWidget/sampleCarouselWidget.js";
-import { sampleImageCarouselWidget } from "./../widgets/sampleImageCarouselWidget/sampleImageCarouselWidget.js";
+// import { WidgetManager } from "./widget-manager.js";
+// import { ClockWidget } from "./../widgets/Clock/clock.js";
+// import { CalendarWidget } from "./../widgets/Calendar/CalendarWidget.js";
+// import { ShortcutsWidget } from "./../widgets/Shortcuts/shortcutsWidget.js";
+// import { TimeToolsWidget } from "./../widgets/TimeTools/TimeToolsWidget.js";
+// import { NotesWidget } from "./../widgets/Notes/NotesWidget.js";
+// import { sampleCarouselWidget } from "./../widgets/sampleCarouselWidget/sampleCarouselWidget.js";
+// import { sampleImageCarouselWidget } from "./../widgets/sampleImageCarouselWidget/sampleImageCarouselWidget.js";
 
 
-const container = document.getElementById("widget-container");
+// const container = document.getElementById("widget-container");
 
-const manager = new WidgetManager(container);
+// const manager = new WidgetManager(container);
 
-// Add widget
-const clock = new ClockWidget("w1");
-const calendar = new CalendarWidget("w2");
-const shorts = new ShortcutsWidget("w3");
-const timeTools = new TimeToolsWidget("w4");
-const notes = new NotesWidget("w5");
-const carousel = new sampleCarouselWidget("w6");
-const imageCarousel = new sampleImageCarouselWidget("w7");
+// // Add widget
+// const clock = new ClockWidget("w1");
+// const calendar = new CalendarWidget("w2");
+// const shorts = new ShortcutsWidget("w3");
+// const timeTools = new TimeToolsWidget("w4");
+// const notes = new NotesWidget("w5");
+// const carousel = new sampleCarouselWidget("w6");
+// const imageCarousel = new sampleImageCarouselWidget("w7");
 
 
 
-manager.addWidget(clock);
+// manager.addWidget(clock);
+// // manager.addWidget(calendar);
+// manager.addWidget(shorts);
+// manager.addWidget(timeTools);
+// manager.addWidget(notes);
 // manager.addWidget(calendar);
-manager.addWidget(shorts);
-manager.addWidget(timeTools);
-manager.addWidget(notes);
-manager.addWidget(calendar);
-manager.addWidget(carousel);
-manager.addWidget(imageCarousel);
+// manager.addWidget(carousel);
+// manager.addWidget(imageCarousel);
