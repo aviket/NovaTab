@@ -1,3 +1,4 @@
+// widgets/widget-config.js
 import { ClockWidget } from "../widgets/Clock/clock.js";
 import { CalendarWidget } from "../widgets/Calendar/CalendarWidget.js";
 import { ShortcutsWidget } from "../widgets/Shortcuts/shortcutsWidget.js";

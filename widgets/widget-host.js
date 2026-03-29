@@ -1,3 +1,4 @@
+// widgets/widget-host.js
 import { WidgetManager } from "./widget-manager.js";
 
 export class WidgetHost {

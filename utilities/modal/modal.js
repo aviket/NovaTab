@@ -1,3 +1,4 @@
+// utilities/modal/modal.js
 import { loadCSS } from "../loadcss.js";
 loadCSS("modal-css", "utilities/modal/modal.css");
 

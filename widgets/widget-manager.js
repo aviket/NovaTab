@@ -1,4 +1,4 @@
-// js/widget-manager.js
+// widgets/widget-manager.js
 export class WidgetManager {
     constructor(container) {
         this.container = container;

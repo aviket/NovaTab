@@ -1,3 +1,4 @@
+// utilities/notify/handlers.js
 export function registerHandlers(handlerMap) {
     chrome.notifications.onClicked.addListener((id) => {
         const h = handlerMap.get(id);
