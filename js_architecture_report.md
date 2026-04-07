@@ -62,7 +62,7 @@
 - `render()`
 
 ### 🔗 External Calls
-- `lement.remove()`
+- `element.remove()`
 
 ---
 
@@ -80,8 +80,8 @@
 - `registerContainer()`
 
 ### 🔗 External Calls
-- `anagers.get()`
-- `anagers.set()`
+- `managers.get()`
+- `managers.set()`
 - `document.getElementById()`
 - `manager.addWidget()`
 
@@ -113,21 +113,21 @@
 - `render()`
 
 ### 🔗 External Calls
-- `ayout.indexOf()`
-- `ayout.push()`
-- `ayout.splice()`
+- `layout.indexOf()`
+- `layout.push()`
+- `layout.splice()`
 - `classList.add()`
 - `classList.remove()`
 - `dataTransfer.setDragImage()`
 - `e.preventDefault()`
 - `el.addEventListener()`
 - `el.getBoundingClientRect()`
-- `idgets.delete()`
-- `idgets.get()`
-- `idgets.set()`
-- `ontainer.appendChild()`
-- `ontainer.querySelector()`
-- `ontainer.querySelectorAll()`
+- `widgets.delete()`
+- `widgets.get()`
+- `widgets.set()`
+- `container.appendChild()`
+- `container.querySelector()`
+- `container.querySelectorAll()`
 - `targetEl.getBoundingClientRect()`
 - `this._clearDropIndicators()`
 - `this._handleDrop()`
@@ -166,11 +166,11 @@
 - `classList.add()`
 - `classList.remove()`
 - `document.createElement()`
-- `iewDate.getFullYear()`
-- `iewDate.getMonth()`
-- `iewDate.setMonth()`
-- `iewDate.toLocaleString()`
-- `lement.querySelector()`
+- `viewDate.getFullYear()`
+- `viewDate.getMonth()`
+- `viewDate.setMonth()`
+- `viewDate.toLocaleString()`
+- `element.querySelector()`
 - `runtime.getURL()`
 - `super.destroy()`
 - `this.bindEvents()`
@@ -209,7 +209,7 @@
 - `classList.contains()`
 - `classList.remove()`
 - `document.createElement()`
-- `lement.querySelector()`
+- `element.querySelector()`
 - `modeBtn.addEventListener()`
 - `now.getHours()`
 - `now.getMinutes()`
@@ -250,8 +250,8 @@
 - `element.remove()`
 - `item.close()`
 - `item.toggle()`
-- `lement.appendChild()`
-- `lement.remove()`
+- `element.appendChild()`
+- `element.remove()`
 - `tems.delete()`
 - `tems.entries()`
 - `tems.get()`
@@ -288,7 +288,7 @@
 - `classList.add()`
 - `classList.remove()`
 - `document.createElement()`
-- `lement.querySelector()`
+- `element.querySelector()`
 - `this.close()`
 - `this.onToggle()`
 - `this.open()`
@@ -333,9 +333,9 @@
 
 ### 🔗 External Calls
 - `document.createElement()`
-- `lement.addEventListener()`
-- `lement.appendChild()`
-- `lement.remove()`
+- `element.addEventListener()`
+- `element.appendChild()`
+- `element.remove()`
 - `rack.appendChild()`
 - `tems.push()`
 - `this._updateUI()`
@@ -415,14 +415,14 @@
 ### 🔗 External Calls
 - `Date.now()`
 - `Object.keys()`
-- `ccordion.addItem()`
-- `ccordion.createEditableNote()`
-- `ccordion.init()`
-- `ccordion.render()`
-- `ccordion.toggleItem()`
+- `accordion.addItem()`
+- `accordion.createEditableNote()`
+- `accordion.init()`
+- `accordion.render()`
+- `accordion.toggleItem()`
 - `document.createElement()`
 - `header.appendChild()`
-- `lement.querySelector()`
+- `element.querySelector()`
 - `this.addNote()`
 - `this.renderNoteToDOM()`
 
@@ -530,9 +530,9 @@
 - `importBtn.addEventListener()`
 - `json.every()`
 - `json.slice()`
-- `lement.addEventListener()`
-- `lement.querySelector()`
-- `lement.querySelectorAll()`
+- `element.addEventListener()`
+- `element.querySelector()`
+- `element.querySelectorAll()`
 - `local.get()`
 - `local.set()`
 - `response.json()`

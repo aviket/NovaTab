@@ -388,3 +388,10 @@ async function ensurePinAndActivate(tab) {
 chrome.action.onClicked.addListener(async (tab) => {
     await chrome.sidePanel.open({ tabId: tab.id });
 });
+
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.type === 'OPEN_SIDE_PANEL') {
+        chrome.sidePanel.open({ windowId: sender.tab.windowId });
+    }
+});

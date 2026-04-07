@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>NovaTab</title>
 
+
+  <link rel="stylesheet" href="assets/lib/jstree.min.css" />
+<script src="assets/lib/jquery.min.js"></script>
+  <script src="assets/lib/jstree.min.js"></script>
+  <script src="assets/lib/popper.min.js"></script>
+  <link rel="stylesheet" href="assets/lib/tippy.css">
+  <script src="assets/lib/tippy-bundle.iife.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/widget-base.css">
@@ -13,6 +20,7 @@
 
     <!-- Top Bar -->
     <div id="top-bar">
+        
         <div id="theme-switcher">
             Theme: 
             <select id="theme-select">
@@ -20,12 +28,13 @@
                 <option value="dark">Dark</option>
             </select>
         </div>
+            <button id="btn-open-sidebar" title="Open Sidebar">Sidebar</button>
         <button id="settings-btn">⚙️ Settings</button>
     </div>
 
     <!-- Main Container -->
     <div id="main-container">
-
+        <h2>v 3.14 </h2>
         <!-- Search Bar -->
         <div id="search-container">
             <input type="text" id="search-input" placeholder="Search anything..." />
@@ -36,6 +45,26 @@
                 <option value="duckduckgo">DuckDuckGo</option>
             </select>
         </div>
+        <br />
+        <br />
+               <!-- Links Tree -->
+    <section class="panel" aria-labelledby="links-title">
+      <div style="display:flex; align-items:center; gap:8px; justify-content:space-between;">
+        <h2 id="links-title" style="margin:0;">Links</h2>
+            <div class="tree-actions" style="display:flex; gap:8px; align-items:center;">
+      <input id="tree-search" type="search" placeholder="Filter…" style="max-width:240px;" />
+      <button id="btn-export-tree" title="Export tree to JSON">Export</button>
+      <button id="btn-import-tree" title="Import tree from JSON">Import</button>
+      <button id="btn-collapse" title="Collapse All">Collapse All</button>
+      <input id="file-import-tree" type="file" accept="application/json,.json" style="display:none" />
+    </div>
+      </div>
+      <div id="links-tree" style="margin-top:10px;"></div>
+      <div id="links-hint" class="muted" style="margin-top:8px; font-size:.9rem;">
+        Tip: Right-click a node to add/rename/delete. Drag to reorder. Press <kbd>/</kbd> to focus the omnibox.
+      </div>
+    </section>
+  
 
         <!-- Content Area (future widgets / links / etc) -->
         <div id="content-area">
@@ -48,8 +77,9 @@
 
     <!-- JS -->
      
-    <script type="module" src="js/main.js"></script>
 
+    <script type="module" src="js/main.js"></script>
+    <script src="linkstree/linksTree.js"></script>
 
 </body>
 </html>

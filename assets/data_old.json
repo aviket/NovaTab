@@ -1,0 +1,2998 @@
+{
+
+ "quotes": [
+    { "type": "quote", "quote": "Stay consistent. Tiny wins compound.", "tip": "Press '/' to focus the search box." , "notify": "" },
+    { "type": "todo",  "priority": 1, "quote": "Stop pretending that you can always multitask", "tip": "Consider cost of Task Switching.." , "notify": "" },
+    { "type": "todo",  "priority": 2, "quote": "Take LapTop out. Make it portable" , "notify": "l"},
+    { "type": "todo",  "priority": 3, "quote": "Sweep stale storage keys in local/sync." , "notify": "a" },
+    { "type": "reminder", "quote": "Take care if your eyes , look at objects far away and near.." , "notify": "" },
+    { "type": "note", "quote": "Design your future, one FreeCAD sketch daily. ✅", "tip": "Do this daily" , "notify": "" },
+    { "type": "quote", "quote": "Motion beats meditation.", "tip": "Do one tiny action now." , "notify": "" },
+    { "type": "quote", "quote": "Break the habits, that dont align with your goals", "tip": "Swap them ,dont just trim" , "notify": "" },
+    { "type": "quote", "quote": "Build the habits, that align with your goals", "tip": "Regular small wins matter" , "notify": "" },
+    { "type": "quote", "quote": "Motivation comes from motion", "tip": "Start now." }
+  ],
+  
+     "linksTree":  [
+  {
+    "id": "root",
+    "text": "My Sites",
+    "type": "root",
+    "children": [
+      {
+        "id": "d1f8b2c3-4e5f-4a6b-8c9d-0e1f2a3b4c5d",
+        "text": "!IMP",
+        "type": "folder",
+        "children": [
+          {
+            "id": "a1b2c3d4-e5f6-7a8b-9c0d-e1f2a3b4c5d6",
+            "text": "Gmail",
+            "type": "link",
+            "data": {
+              "url": "https://mail.google.com/mail/u/0/#inbox"
+            }
+
+      }
+    ]
+  },
+      {
+        "id": "6c208d9d-8dee-4a72-8b72-bd07a8b2722c",
+        "text": "Bookmarks bar",
+        "type": "folder",
+        "children": [
+          {
+            "id": "1bb505d6-e87b-4313-b172-96d396054849",
+            "text": "visualising data structures and algorithms through animation - VisuAlgo",
+            "type": "link",
+            "data": {
+              "url": "https://visualgo.net/en"
+            }
+          },
+          {
+            "id": "32df8698-be9c-467a-b05a-08a24cc66569",
+            "text": "Markdown Editor",
+            "type": "link",
+            "data": {
+              "url": "https://stackedit.io/app#"
+            }
+          },
+          {
+            "id": "e0d6387e-a7ad-4614-8384-64814548bc1c",
+            "text": "All Sites - Stack Exchange",
+            "type": "link",
+            "data": {
+              "url": "https://stackexchange.com/sites"
+            }
+          }
+        ]
+      },
+      {
+        "id": "8cb76eab-85bc-4c73-a061-f927aa5fdbfd",
+        "text": "Youtube",
+        "type": "folder",
+        "children": [
+          {
+            "id": "982bd13e-a28e-4da2-91fe-85c16bd62b08",
+            "text": "health",
+            "type": "folder",
+            "children": [
+              {
+                "id": "c60ac66b-8e5a-4566-92f6-f7f5c3e71564",
+                "text": "Medbridge - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@MedbridgeTeam"
+                }
+              },
+              {
+                "id": "1a6875b5-25a2-4a18-829b-f66681921ec4",
+                "text": "Chloe Ting - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@ChloeTing"
+                }
+              },
+              {
+                "id": "37402582-1e70-45c5-8fee-4f01d6f9942f",
+                "text": "MadFit - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@MadFit"
+                }
+              },
+              {
+                "id": "a8dc574b-e9a3-4323-a66d-52d316f48f2a",
+                "text": "ATHLEAN-X™ - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@athleanx"
+                }
+              },
+              {
+                "id": "9e5fcd37-b8d3-44d1-b8bd-8ed01db38456",
+                "text": "Jeremy Ethier - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@JeremyEthier"
+                }
+              },
+              {
+                "id": "0c6135e8-c8b4-4a12-a338-678d1538345a",
+                "text": "Yoga With Adriene - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@yogawithadriene"
+                }
+              },
+              {
+                "id": "487cdc0a-ddaf-4b93-bbc7-b702c918c682",
+                "text": "blogilates - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@blogilates"
+                }
+              },
+              {
+                "id": "477492d3-7a5c-49e7-9865-b1f74f5ec6be",
+                "text": "Guru Mann Fitness - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@GuruMannFitness"
+                }
+              },
+              {
+                "id": "29f4f159-8c4b-4b70-b180-64fcf594c2cc",
+                "text": "Jeet Selal Aesthetics - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@JeetSelalAesthetics"
+                }
+              },
+              {
+                "id": "b9c2c58c-dd8a-4247-8850-f68010a0c7c8",
+                "text": "Stoic Aadmi - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@StoicAadmi"
+                }
+              },
+              {
+                "id": "89c07406-4412-4363-be5c-e186fd83e2d7",
+                "text": "Fit Tuber - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@FitTuber"
+                }
+              },
+              {
+                "id": "6cdf6e51-14e8-4db9-8177-222825db3be1",
+                "text": "Ayurveda",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "63e9f690-29b1-49bf-b7f1-9a9bbdf8303c",
+                    "text": "SHAKALYA KATTA - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@1965vijayr/videos"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "33ed3ebb-46aa-4a64-bd71-4b911754b472",
+                "text": "Wise Forever - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@sant%C3%A9desseniors12-l5o4/videos"
+                }
+              },
+              {
+                "id": "de931d07-f613-4e3a-a8a4-67ffd36314cc",
+                "text": "Yoga",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "9bfc0f53-5c9a-466a-9cdd-41317cf53fc6",
+                    "text": "Yoga with Seema Khade - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@YogawithSeemaKhade"
+                    }
+                  },
+                  {
+                    "id": "cf9af107-403e-4c08-a756-c7c8c9cdcf34",
+                    "text": "yogawithpraju - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@prajktadhamane7882"
+                    }
+                  },
+                  {
+                    "id": "70fe1cb6-adfe-4d8a-a081-d267f2457cb2",
+                    "text": "Swami Ramdev - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@SwamiRamdevOfficial"
+                    }
+                  },
+                  {
+                    "id": "94457a66-6bc3-470f-a952-cab3a1250411",
+                    "text": "Bharti Yoga - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@BhartiYoga"
+                    }
+                  },
+                  {
+                    "id": "7eec7304-e61d-47ef-bbe4-b21fb251355a",
+                    "text": "PMC Hindi - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@PMCHindi"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "3182a7b5-911e-487d-971b-ca5451e4e0f6",
+                "text": "self help",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "ceb34390-36ff-4747-b1fc-3d5476b8732c",
+                    "text": "GREAT IDEAS GREAT LIFE - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@GreatIdeasGreatLifeIndia/videos"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "2d899319-8b0e-4337-8465-3d51cc598948",
+                "text": "Dr. John Campbell - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@Campbellteaching/featured"
+                }
+              }
+            ]
+          },
+          {
+            "id": "38e4e934-d174-4a1d-a9c6-e859dfbd666f",
+            "text": "receipe",
+            "type": "folder",
+            "children": [
+              {
+                "id": "c2bf9411-82ea-4475-9ad8-bb84b5863b8b",
+                "text": "Bakshi's Kitchen Recipes - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@bakshiskitchenrecipes258"
+                }
+              },
+              {
+                "id": "d600c576-abc7-414b-8b51-2920b72a9ef1",
+                "text": "Maharashtrian",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "5a67a2d8-064e-47ef-97a6-072ce1efe2a5",
+                    "text": "सातारकर किचन - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/channel/UCnD0uIWT-IaL0By-kmMDlaw"
+                    }
+                  },
+                  {
+                    "id": "146798cb-6066-4c81-a1d7-9b9c4eff0137",
+                    "text": "Preshita's Kitchen - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@PreshitasKitchen/videos"
+                    }
+                  },
+                  {
+                    "id": "e622c16a-a58c-4386-ae9a-2c3180442984",
+                    "text": "Being Homemaker - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@beinghomemaker2pallavi"
+                    }
+                  },
+                  {
+                    "id": "dd47f42e-31b8-45c9-99e8-79d65dc49b8c",
+                    "text": "Masteer Recipes - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@masteerrecipes"
+                    }
+                  },
+                  {
+                    "id": "5f4b3790-252d-4850-9709-186546d694ff",
+                    "text": "AkshadasRecipe - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@akshadasrecipe1/videos"
+                    }
+                  },
+                  {
+                    "id": "cfffcca3-289b-401c-84cf-3939e460106d",
+                    "text": "Ankita s recipe Marathi - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@AnkitasrecipeMarathi/videos"
+                    }
+                  },
+                  {
+                    "id": "9d35e29b-ff12-41c1-a331-061f94423279",
+                    "text": "Trupti's Corner - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@truptiscorner-z3x/videos"
+                    }
+                  },
+                  {
+                    "id": "3ac902ba-581e-41d8-88b3-91c64b8e9532",
+                    "text": "Zatpat Marathi Tips - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@zatpatmarathitips"
+                    }
+                  },
+                  {
+                    "id": "74196616-bf48-4ac7-9548-3b55554dc2a0",
+                    "text": "Mi Aani Barachkahi - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@miaanibarchkahi9922"
+                    }
+                  },
+                  {
+                    "id": "7ec6645f-ff88-4ede-9bb1-f599d8e2dfdb",
+                    "text": "Tatyacha Mala तात्याचा मळा - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@tatyachamala/videos"
+                    }
+                  },
+                  {
+                    "id": "bc2aed0b-c112-415b-95a3-e20b286ff32d",
+                    "text": "RajashriKatkarVlogs - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@RajashriKatkarVlogs"
+                    }
+                  },
+                  {
+                    "id": "1faa2d31-f0c8-4219-bbe5-e57619e192e9",
+                    "text": "Vrushali's Kitchen & Creations - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@VrushalisKitchenandCreations"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "fbaaf1f8-93de-441d-a354-805c88b0313d",
+                "text": "Grannyspecial - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@Grannyspecial"
+                }
+              }
+            ]
+          },
+          {
+            "id": "8a006afe-7820-4435-a0b3-7cc30a49063d",
+            "text": "music",
+            "type": "folder",
+            "children": [
+              {
+                "id": "cbdc4909-ed02-4437-bbcf-2f31962ac1ea",
+                "text": "आदिवासी ओरिजनल कोकणी पावरी aadivasi original kokani pawri /kasmadestudio - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=nZC_siV7PFU"
+                }
+              },
+              {
+                "id": "703b1267-ad88-4919-b822-fd4665acc71f",
+                "text": "#Dongrdev adiwasi Ranpawari l #रानपावरी ll Pravin Chaure ll 2021 adiwasi pawari #Dongryadev official - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=-i8rWAK3SrY"
+                }
+              },
+              {
+                "id": "69330ab9-564a-44e9-b789-c3e6f180c1e1",
+                "text": "आदिम कलानी न्यू पावरी || Adim_kala #New_Pavari|| Original Pavari Mix| |Prem Pawar 2024 - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=RTAmdrw_ZRU"
+                }
+              },
+              {
+                "id": "254ebdb1-22ec-4cf7-8261-93b04d6f093d",
+                "text": "Alurkar Music House - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@AlurkarMusicHouse/videos"
+                }
+              }
+            ]
+          },
+          {
+            "id": "1f3716ec-4818-41a1-9081-3fba1d20e8b8",
+            "text": "short movies",
+            "type": "folder",
+            "children": [
+              {
+                "id": "f6408898-0dca-4252-8d53-c207761a23cd",
+                "text": "CHILLAR SAALA | By Parag Pradip Sawant | Shortfilm | India - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=QXkOKPIw6Kc"
+                }
+              },
+              {
+                "id": "b1f7c957-45e0-491e-801b-70a2c97dffac",
+                "text": "Pankhol | Award Winning Short Film | Suhas Shirsat, Ketaki Saraf, Makarand Sawant , Arav ayeer - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=gBOFsRubV0g"
+                }
+              }
+            ]
+          },
+          {
+            "id": "edb42a5a-ca85-4f73-87ff-8336532852b4",
+            "text": "Core Dumped - YouTube",
+            "type": "link",
+            "data": {
+              "url": "https://www.youtube.com/@CoreDumpped/videos"
+            }
+          },
+          {
+            "id": "8c3d11b7-aa70-429b-b3db-ecfdf95fc8f8",
+            "text": "The Philosophy of Software Design – with John Ousterhout - YouTube",
+            "type": "link",
+            "data": {
+              "url": "https://www.youtube.com/watch?v=lz451zUlF-k"
+            }
+          },
+          {
+            "id": "0f3b6af4-d2cd-404b-941d-629b3df63207",
+            "text": "Veritasium: What Everyone Gets Wrong About AI and Learning – Derek Muller Explains - YouTube",
+            "type": "link",
+            "data": {
+              "url": "https://www.youtube.com/watch?v=0xS68sl2D70&t=11s"
+            }
+          },
+          {
+            "id": "b34ecdda-7c7a-42bb-9d5b-1ac72e1be5ca",
+            "text": "cinema",
+            "type": "folder",
+            "children": [
+              {
+                "id": "25b7cde8-b07b-4b5c-88ce-e463d8c0843f",
+                "text": "malyalam",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "98ca9db2-73c3-4fe9-96ec-790b3aa3326f",
+                    "text": "Central Talkies - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@CentralTalkiesmovies"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "8020eb09-7732-4c8a-aaec-51855de43adc",
+                "text": "English",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "be1b0df8-c9ed-4dc6-ab30-6d326442cbca",
+                    "text": "FEATURE FILM - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@FeatureFilm"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "f67bfe80-0c00-47cb-baab-af140f1b4578",
+            "text": "tech",
+            "type": "folder",
+            "children": [
+              {
+                "id": "8074fece-0c94-4583-bd37-5c1dcad2848c",
+                "text": "cnc",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "757d63fe-480d-4214-a64a-0071e50911c6",
+                    "text": "NYC CNC - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@nyccnc"
+                    }
+                  },
+                  {
+                    "id": "ececa6ac-4af9-4961-a7ae-c957bb15f661",
+                    "text": "Inventables - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@inventables"
+                    }
+                  },
+                  {
+                    "id": "27ab1bd1-6b5b-4863-996d-4ea590633fb4",
+                    "text": "CNCnutz (Peter Passuello) - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@cncnutz"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "247c3a95-8dee-49c2-adf2-244427bea512",
+                "text": "Breaking Taps - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@BreakingTaps"
+                }
+              },
+              {
+                "id": "80b0220e-b338-43cd-be0d-d74ec7bdb273",
+                "text": "Quartz - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@Qznews"
+                }
+              },
+              {
+                "id": "273306ee-18bd-4d84-8b1d-6da42d07f815",
+                "text": "Economy Media - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@EconomyMedia"
+                }
+              },
+              {
+                "id": "63095719-2b61-4e71-ade6-0c570dce3780",
+                "text": "Brain Station Advanced - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@BrainStationAdvanced"
+                }
+              },
+              {
+                "id": "5be69247-6a49-4528-a4ee-19360411761a",
+                "text": "Peter H. Diamandis - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@peterdiamandis/videos"
+                }
+              }
+            ]
+          },
+          {
+            "id": "2a33dc2c-d1e1-486b-86d7-ab81fd4bb42c",
+            "text": "Marathi",
+            "type": "folder",
+            "children": [
+              {
+                "id": "b4fa278b-d9e9-4505-ab0a-039b9d5a8a6d",
+                "text": "Dr. Gauri Sakhare - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@gaurisakhare"
+                }
+              },
+              {
+                "id": "cd11849a-6008-4a1d-a8ee-cc2ff72021ec",
+                "text": "Sambodh books gallery - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@sambodhbooksgallery4916/videos"
+                }
+              },
+              {
+                "id": "7823136b-0671-4b61-9b42-cd1efc1b8db4",
+                "text": "Atharva Hardikar - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@atharvahardikar"
+                }
+              },
+              {
+                "id": "e3a1c35d-a314-4244-8783-64ddde282c97",
+                "text": "Think Bank - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@ThinkBankLive"
+                }
+              },
+              {
+                "id": "ecadc887-e437-43a2-9806-1569e159587e",
+                "text": "American Bhau - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@american-bhau"
+                }
+              },
+              {
+                "id": "6f6bbc87-2487-4a3e-94a6-df246d0d639b",
+                "text": "IT पेक्षा Core मधील Jobs जास्त सुरक्षित? | Chinmay Gavankar | Think Bank Podcast - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=VwipvP4d74M"
+                }
+              }
+            ]
+          },
+          {
+            "id": "fe846726-1152-49b5-b2d5-071741b661c5",
+            "text": "Investing and finance",
+            "type": "folder",
+            "children": [
+              {
+                "id": "05d7c6cb-34fc-47db-b070-d8340d08d82a",
+                "text": "Lightbox - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@Lightbox1/playlists"
+                }
+              },
+              {
+                "id": "12123e10-cee4-492a-a91c-9d19f028c2c0",
+                "text": "CNBC International Live - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@CNBCInternationalLive"
+                }
+              },
+              {
+                "id": "4b6ffe67-ec28-4f8c-ba2b-e1c60d84c070",
+                "text": "Principles by Ray Dalio - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@principlesbyraydalio"
+                }
+              },
+              {
+                "id": "c1ce7fb3-bcfb-4732-b3f1-40f11641adc6",
+                "text": "The Plain Bagel - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@ThePlainBagel"
+                }
+              },
+              {
+                "id": "469fc7af-18b5-4506-8a04-d6f47c91b4eb",
+                "text": "The Compound - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@TheCompoundNews"
+                }
+              },
+              {
+                "id": "3ee9243a-cba1-45d4-a3a3-93ab19865a3c",
+                "text": "MeaningfulMoney - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@MeaningfulMoney"
+                }
+              },
+              {
+                "id": "11a3d9d2-e47c-430d-85dc-7885c7e611bb",
+                "text": "Aswath Damodaran - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@AswathDamodaranonValuation"
+                }
+              },
+              {
+                "id": "ae9a3bd1-abca-4fbf-8d7c-5bf3e2d9e71b",
+                "text": "The Money Guy Show - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@MoneyGuyShow"
+                }
+              },
+              {
+                "id": "ad5d2053-a82b-4d76-8fda-903a92ac4e0c",
+                "text": "Ben Felix - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@BenFelixCSI"
+                }
+              },
+              {
+                "id": "b0ba4182-6ed4-4cc3-a9fb-7a75f5a27b00",
+                "text": "How Money Works - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@HowMoneyWorks"
+                }
+              },
+              {
+                "id": "cefac254-c27a-4c3e-94c1-69ddcdbd9255",
+                "text": "Cara Nicole - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@thefinancialfreedomgirl"
+                }
+              },
+              {
+                "id": "94e3097e-c112-47d5-9aa7-f80270613d7a",
+                "text": "Graham Stephan - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@GrahamStephan/videos"
+                }
+              },
+              {
+                "id": "5d51904f-811c-4204-9a68-63d017f00049",
+                "text": "Upayukta Marathi - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@upayukta_marathi"
+                }
+              },
+              {
+                "id": "72471853-7729-4bbd-b8cc-73c00a1fce4a",
+                "text": "Sonia Shenoy - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@soniashenoyofficial/videos"
+                }
+              }
+            ]
+          },
+          {
+            "id": "aab3e0c5-0ef6-4440-bcba-fef5b600966d",
+            "text": "Stock Market international",
+            "type": "folder",
+            "children": [
+              {
+                "id": "b706db24-175b-4719-80f4-5bb3729bfb9c",
+                "text": "Benzinga - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@Benzinga"
+                }
+              },
+              {
+                "id": "f276ac86-af1a-4424-afea-ad957b19656d",
+                "text": "Mr. FIRED Up Wealth - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@FiredUpWealth"
+                }
+              },
+              {
+                "id": "1930eaf4-329a-4a83-a025-bccc9ab1d636",
+                "text": "Dividends And Income - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@DividendsandIncome"
+                }
+              },
+              {
+                "id": "48673e2a-706b-40e2-85e1-1503c4e8c450",
+                "text": "Ale's World of Stocks - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@AlesWorldofStocks"
+                }
+              },
+              {
+                "id": "367e1cf7-5e87-450e-ad35-8bdfd840b430",
+                "text": "Charlie Chang - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@CharlieChang"
+                }
+              }
+            ]
+          },
+          {
+            "id": "1c1f0f1e-282e-4b33-aea3-031db9a28fbd",
+            "text": "vlogs",
+            "type": "folder",
+            "children": [
+              {
+                "id": "34b965a3-8223-43bb-a329-bcff37b1c254",
+                "text": "Marathi",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "09c833bd-09a8-4043-be89-6d1147db7185",
+                    "text": "Swanandi Sardesai - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@SwanandiSardesai/videos"
+                    }
+                  },
+                  {
+                    "id": "b6558895-b43d-4972-9c9d-778ff4cb6f46",
+                    "text": "Sunil D'Mello - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@sunildmello/featured"
+                    }
+                  },
+                  {
+                    "id": "90f393f0-a23d-428a-ac49-862997c97229",
+                    "text": "Amol Awali Vlogs - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@Amolawalivlogs/videos"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "ca455fbb-bd6a-4f03-b41f-ea87352e4fa2",
+                "text": "English",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "0ac02c52-59a1-4ede-b99a-d396c1788083",
+                    "text": "GenXistence - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@GenXistence"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "edbb5ac2-c64a-4eac-860d-3ac3a81aba90",
+            "text": "binural_tracks",
+            "type": "folder",
+            "children": [
+              {
+                "id": "9ab86cc3-22a7-4e06-89d2-9a4781e22bc9",
+                "text": "SUPER FOCUS [ Flow State Music ] Binaural Beats 40Hz ★ Ambient Study Music to Concentrate - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=n4YghVcjbpw"
+                }
+              },
+              {
+                "id": "2a982153-80a6-4db3-853c-d8ff6f520e41",
+                "text": "Astral | Deep Theta 4Hz | Binaural Beats Soundscape | Internal Focus, Meditation, Prayer | ASMR - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=qQ_W1w9v-2Y"
+                }
+              },
+              {
+                "id": "f3cca0dd-f297-4750-8c51-e1fd88621b8e",
+                "text": "THETA DREAMSCAPE [ 6.4Hz Binaural Beats ] Deep Sleep Music ✨ Lucid Dreaming - Hypnosis - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=PGtAseQIYoY"
+                }
+              }
+            ]
+          },
+          {
+            "id": "95257758-a3ba-4c02-9247-71c853d4fae4",
+            "text": "science and maths",
+            "type": "folder",
+            "children": [
+              {
+                "id": "9bbcb3c4-f69c-43ce-a0aa-3143e1479a9d",
+                "text": "TrevTutor - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@Trevtutor/featured"
+                }
+              },
+              {
+                "id": "b44e696a-64d0-40f5-b707-a1b71cad881d",
+                "text": "Scalars, Vectors, Matrices, Tensors, etc explained | Linear Algebra Basics for Machine Learning - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=wvW4fAFUUWE"
+                }
+              },
+              {
+                "id": "263820c7-621c-4d40-ae87-7980ee632de5",
+                "text": "Essence of linear algebra - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
+                }
+              },
+              {
+                "id": "ee3cfe70-e91a-43f8-9fa1-1faea5776af9",
+                "text": "Complexity Explorer - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@ComplexityExplorer/featured"
+                }
+              },
+              {
+                "id": "4148b995-1ae1-4cd7-921f-7e71275315de",
+                "text": "Vector and Matrix Algebra Tutorial: Sets and Set Notation 3 - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=FVc0nN5docM&list=PLF0b3ThojznTK1i-HjB3BCYk5Tb7SV1WB&index=4"
+                }
+              },
+              {
+                "id": "87c922de-576f-40aa-8d4e-bd15d48d347f",
+                "text": "Linear Algebra (Full Course) - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/playlist?list=PLHXZ9OQGMqxfUl0tcqPNTJsb7R6BqSLo6"
+                }
+              },
+              {
+                "id": "863e5a1d-0096-4bc2-acc0-bb7a4efd9abb",
+                "text": "Math For Data Science | Practical reasons to learn math for Machine/Deep Learning - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=04kwxpVZE_s&list=PLIkXejH7XPT_uPvD-XaTKJIX4aG3m5Lc5"
+                }
+              },
+              {
+                "id": "85149cf1-2136-4c7e-88a8-017e9edb0f46",
+                "text": "Stanford Online - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@stanfordonline/featured"
+                }
+              },
+              {
+                "id": "4f5738e9-bbe5-4592-8d93-e943bc6209db",
+                "text": "Beginner's Guide to MATLAB - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/playlist?list=PLWvk7z0xH-Ke_N7dSsHSeWXJRq-AU0E2H"
+                }
+              },
+              {
+                "id": "7e1ac91f-b01d-4d65-9934-49eb0421b00a",
+                "text": "Linear Algebra - Full College Course - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=JnTa9XtvmfI"
+                }
+              },
+              {
+                "id": "5585c2f9-51cc-421b-862f-a955182208a5",
+                "text": "Vectors 9.2 Systems of Equations - Matrices - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=qGx1ZFPJeoQ"
+                }
+              },
+              {
+                "id": "91334e59-40e4-4c0b-8233-7e218d319a4a",
+                "text": "Ms Havrot's Canadian University Math Prerequisites - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@mshavrotscanadianuniversit6234/featured"
+                }
+              },
+              {
+                "id": "df5f2bf2-3c06-44b5-9500-e609303172cd",
+                "text": "Oxford Mathematics - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@OxfordMathematics/videos"
+                }
+              },
+              {
+                "id": "c3b6bfc9-2d0d-4b5e-98f9-f42b9ac10d33",
+                "text": "Veritasium - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@veritasium"
+                }
+              }
+            ]
+          },
+          {
+            "id": "96c1387a-aa00-4fbe-9636-0ddb0a0279f1",
+            "text": "history",
+            "type": "folder",
+            "children": [
+              {
+                "id": "485626ca-0be0-4ff8-af26-8b52713192d5",
+                "text": "Europe",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "756c2d58-b901-4405-ac7f-ae40ad18294c",
+                    "text": "Epic History - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@EpichistoryTv"
+                    }
+                  },
+                  {
+                    "id": "ea62db79-5725-4285-b783-69715a8d364b",
+                    "text": "Simple History - YouTube",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.youtube.com/@Simplehistory"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "1a529e2b-d952-4418-8bb9-6595428a9a98",
+                "text": "Captivating History - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@CaptivatingHistory"
+                }
+              },
+              {
+                "id": "5250a749-6aa8-46ac-8c59-0a0a4370feed",
+                "text": "Made In History - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@MadeInHistory"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5838a91a-6132-45f3-a333-4e723a68474e",
+        "text": "facepages",
+        "type": "folder",
+        "children": [
+          {
+            "id": "1d4026c4-cd22-4b90-ad80-6637b6c764f5",
+            "text": "personal blogs",
+            "type": "folder",
+            "children": [
+              {
+                "id": "d6e029e1-bc80-474e-8dff-1d8da9d19fdb",
+                "text": "Ravikumar Subhashrao",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/ravikumar.karad"
+                }
+              },
+              {
+                "id": "b5e106b3-c625-420d-babe-6119c57493e1",
+                "text": "Jitendra Ghatge",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/jitendraghatge54"
+                }
+              },
+              {
+                "id": "bbcb4dfd-fdc7-4d26-a37d-8095cb59646f",
+                "text": "आमचं मस्त चाललंय",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/AMCcreator"
+                }
+              },
+              {
+                "id": "15ed6f1d-f152-490c-ac90-f04fe13b9954",
+                "text": "बोभाटा",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/bobhatamarathi"
+                }
+              },
+              {
+                "id": "42484d4a-0f66-40f5-85e2-ca6a86038692",
+                "text": "सुंदर विचारधारा",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/profile.php?id=100067336752403"
+                }
+              },
+              {
+                "id": "4c7d4ae8-5ad2-4b87-a4e8-7e76eb54ca9e",
+                "text": "भारतीय संविधान",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/rumashinde113"
+                }
+              },
+              {
+                "id": "ecc902c9-64a4-4302-bffc-322da0335423",
+                "text": "Chintoo",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/OfficialChintooPage"
+                }
+              },
+              {
+                "id": "98f14e86-d6ad-47c5-ac50-5a727adea267",
+                "text": "चंद्रकांत केदारे",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/chandrakant.kedare.39"
+                }
+              },
+              {
+                "id": "a2754b14-d0c2-45cd-b491-6c4d74407ac9",
+                "text": "Shrikant Joshi",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/shrikantjoshiofficial"
+                }
+              },
+              {
+                "id": "2d50536f-bb2e-46b3-a24b-32a13f474cfa",
+                "text": "Hamppy Hamster",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/hellomondayyyy"
+                }
+              },
+              {
+                "id": "fb5bb820-a4a0-4a86-8656-eec122a63751",
+                "text": "Vishal Ade",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/profile.php?id=100088725008898"
+                }
+              },
+              {
+                "id": "7a4ac15b-732a-418d-83bc-580bf9029594",
+                "text": "Yoga-Health",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/Yogaclub0000"
+                }
+              },
+              {
+                "id": "0a5dabf3-18b1-425e-8c6a-4ce87fd7313b",
+                "text": "Anthony Goldsmith",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/anthony.goldsmith"
+                }
+              },
+              {
+                "id": "8be2da58-abd8-4e3b-ae64-4841751b82df",
+                "text": "Spine-health",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/SpineHealth"
+                }
+              },
+              {
+                "id": "6af41588-74b3-4419-960d-7669bec08ac6",
+                "text": "Shiva Shetty",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/shivanshetty"
+                }
+              },
+              {
+                "id": "f2347672-0801-46e7-aa26-4881a1c8a0ef",
+                "text": "DrPrakashAmte",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/DrPrakashAmte"
+                }
+              },
+              {
+                "id": "8d8b6c74-f597-4b2e-b527-372819cec527",
+                "text": "Rupal Sumaria",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/rupal.sumaria1"
+                }
+              },
+              {
+                "id": "d5fbf57f-019b-48b8-b729-ecadc93d5b98",
+                "text": "Hemant Sahasrabuddhe",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/hemant.sahasrabuddhe1"
+                }
+              },
+              {
+                "id": "771ab2da-41e5-4a53-a471-50c2b2df853a",
+                "text": "Masteer Recipes  (Vishnu Manohar)",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/profile.php?id=100053043645463"
+                }
+              },
+              {
+                "id": "d09ebb8e-fbcf-4dd4-8b02-f7472414d967",
+                "text": "Anu Bhandari  (Anuradha Raj Bhandari)",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/anu.bhandari.365"
+                }
+              },
+              {
+                "id": "92b887cb-2e5d-476c-a414-fea75771fffd",
+                "text": "दर्जेदार",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/Darjedar"
+                }
+              },
+              {
+                "id": "10c83a3b-b2fd-4a3c-8433-a4d4d53448a0",
+                "text": "Digital Kashmir",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/digitalkashmiri"
+                }
+              },
+              {
+                "id": "1e3859ed-e886-44dd-a017-5a69eb6bf486",
+                "text": "Pratham Ramdas Mhatre",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/pratham.mhatre.718"
+                }
+              },
+              {
+                "id": "18134993-b039-41cd-a9a7-f29ea7ca09e5",
+                "text": "Kanchan Dixit",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/kanchan.dixit.76"
+                }
+              },
+              {
+                "id": "6168942e-9224-409b-8d96-db316366ed1f",
+                "text": "Vaishali's Recipe",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/vaishalisrecipe"
+                }
+              },
+              {
+                "id": "0cc8cbf2-955b-4954-816b-68ef6f252a5e",
+                "text": "Rohini Ninawe",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/rohini.ninawe"
+                }
+              },
+              {
+                "id": "c550996d-a1df-454a-b1a5-76c363291d9f",
+                "text": "चित्रा ज्ञानेश्वर",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/citra.jnanesvara"
+                }
+              },
+              {
+                "id": "5d1aa9de-5fc9-43cf-b3e4-e8feb9a5a068",
+                "text": "IIT Madras",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/ReachIITM"
+                }
+              },
+              {
+                "id": "6d490be8-8871-4634-8f13-14bb558d2a2a",
+                "text": "अनन्य कॉम्रेड : शरद् पाटील",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/profile.php?id=100064878452068"
+                }
+              },
+              {
+                "id": "47affbf2-5257-4907-a997-b9de0dd6d1d3",
+                "text": "Some Amazing Facts",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/someamazingfacts"
+                }
+              },
+              {
+                "id": "fc9c9ed5-459d-42f4-a5c3-c9945023b10d",
+                "text": "Master Krishnarao Phulambrikar",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/MasterKrishnaraoGaneshPhulambrikar"
+                }
+              },
+              {
+                "id": "c1a83a87-14a2-42a9-ba98-a1620342dd9f",
+                "text": "Vishal Phutane",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/vishal.phutane.58"
+                }
+              },
+              {
+                "id": "5029fe2e-fc91-4879-9cf3-b10e526fb713",
+                "text": "क्षणस्थनील बाकी शून्यच",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/nil.waghmare.31"
+                }
+              },
+              {
+                "id": "03ca49c8-6f5d-4a9e-bfe1-698dfc54c860",
+                "text": "Bharati Sudame",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/bharati.sudame.1"
+                }
+              },
+              {
+                "id": "9af7b00d-20e1-4436-8d9e-513fb8fdc2f2",
+                "text": "राजन अपरंपार",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/rajan.khan.547"
+                }
+              },
+              {
+                "id": "c9f3d36e-1808-4081-94d9-dd82c7550da4",
+                "text": "Faruk Naik",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/faruk.naik.9"
+                }
+              },
+              {
+                "id": "e3fb063a-0e5b-4d59-af06-74f2f426321f",
+                "text": "The Postman",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/ThePostmanOfficial"
+                }
+              },
+              {
+                "id": "c9744da3-0318-40ad-b957-ef82e9caac35",
+                "text": "Shailendra Kawade",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/shailendrakawade"
+                }
+              },
+              {
+                "id": "39e1370a-13b1-4705-b808-bf836c4a7b33",
+                "text": "Vishal Ade",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/vishal.ade.166707"
+                }
+              },
+              {
+                "id": "fcf8a336-6c68-41a7-9481-ac28ee9debc8",
+                "text": "Facebook",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/gaurisakhare"
+                }
+              },
+              {
+                "id": "23bebac3-912d-4104-9a3b-f0e82cd6d202",
+                "text": "Sanjay Alkari",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/sanjay.alkari"
+                }
+              },
+              {
+                "id": "978dfcef-5fd3-4073-bd41-78002f0d3740",
+                "text": "Chrome for Testing availability",
+                "type": "link",
+                "data": {
+                  "url": "https://googlechromelabs.github.io/chrome-for-testing/"
+                }
+              },
+              {
+                "id": "3d81cae2-9ce0-4e59-8c19-aefce2eaf672",
+                "text": "Facebook",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/marathi.netbhet"
+                }
+              },
+              {
+                "id": "8f5f2c9e-9924-4067-b485-e827683b3419",
+                "text": "Sachin paranjpe",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/Sachin.baba123"
+                }
+              },
+              {
+                "id": "ee056f6e-8353-46ba-94b4-e45cc310fbb6",
+                "text": "Vasundhara Kashikar",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/vasundhara.kashikar"
+                }
+              },
+              {
+                "id": "eb18d000-dff2-4a91-aa2b-f48ac65d8ff3",
+                "text": "Facebook",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/officialviralmedia20"
+                }
+              },
+              {
+                "id": "18b683ca-a6f0-4ba2-a7be-aa790d322c3a",
+                "text": "Lin hillside",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/ChinaBirding"
+                }
+              },
+              {
+                "id": "717264ca-08ce-415a-8553-8826dd64e87d",
+                "text": "काशीपुत्र अमोल पाध्ये",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/kasiputra.amola.padhye"
+                }
+              },
+              {
+                "id": "3dd46ff4-cac4-436d-965a-a42994334645",
+                "text": "Sudhir Panse",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/sudhir.panse.16"
+                }
+              }
+            ]
+          },
+          {
+            "id": "4969d5fc-3e02-475b-8b42-e26cd45b1c47",
+            "text": "Places",
+            "type": "folder",
+            "children": [
+              {
+                "id": "091e7ab6-640c-48f9-95fb-5c5574c0988c",
+                "text": "Germany",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "cf20910b-ed25-405a-aef6-8d4a9af8da4e",
+                    "text": "Germany lovers",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/profile.php?id=100083301424637"
+                    }
+                  },
+                  {
+                    "id": "95669078-8f78-45a1-bef6-484034bb4031",
+                    "text": "Anyfin Germany",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/anyfin.de"
+                    }
+                  },
+                  {
+                    "id": "c699f125-fa99-4ff0-aa4e-b63fab540644",
+                    "text": "Germany in the EU",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/germanyintheeu"
+                    }
+                  },
+                  {
+                    "id": "bea6b9c8-4c7c-4427-85ee-a55f68e892f2",
+                    "text": "British Council Germany",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/BritishCouncilGermany"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "1d52da48-e17c-46e4-bf0a-3e38c89f893e",
+                "text": "China",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "16e8f82c-1b4e-4940-af95-8d4a65bf0788",
+                    "text": "China Culture",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/chinacultureorg"
+                    }
+                  },
+                  {
+                    "id": "5941e45c-a9bb-474b-aa53-21ef8792099c",
+                    "text": "China Science",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/PDChinaScience"
+                    }
+                  },
+                  {
+                    "id": "61d0d061-edf4-46a2-a152-34b9599e4efc",
+                    "text": "China Vibes",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/ChinaVibes"
+                    }
+                  },
+                  {
+                    "id": "2bb55423-beed-408e-9fdd-1d211ebd7cca",
+                    "text": "China Daily",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/chinadaily"
+                    }
+                  },
+                  {
+                    "id": "ad2e34cd-17f1-492a-a888-5048073d97b3",
+                    "text": "Embassy of The People's Republic of China in the United States",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/ChineseEmbassyinUS"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "d521431f-2980-4f39-b0e2-2010bc693f8d",
+                "text": "India",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "7a446c1c-6b41-473b-a19a-770956462e44",
+                    "text": "Siliguri Meri Jaan",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/Siligurimerijaan"
+                    }
+                  },
+                  {
+                    "id": "15508b65-54b2-412a-a8eb-0214b65422b2",
+                    "text": "राजापूरकर",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/profile.php?id=100070871664730"
+                    }
+                  },
+                  {
+                    "id": "b25e4617-8977-4999-89be-3a54ee001628",
+                    "text": "Being मालवणी",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/Beingmalwani"
+                    }
+                  },
+                  {
+                    "id": "d4d45a2d-ac83-42de-8ca6-b6ca0fabeb99",
+                    "text": "Vrundawan",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/Vrundawan.Agrotourism"
+                    }
+                  },
+                  {
+                    "id": "194d8abb-187e-49b2-80c5-2f4e900f8d7b",
+                    "text": "Dil Se Punekar",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/profile.php?id=61558063857269"
+                    }
+                  },
+                  {
+                    "id": "ad43f48f-4a2e-423d-a4f7-b5b52695e0a7",
+                    "text": "DELHI NCR CONNECT | Facebook",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/groups/mychaubara"
+                    }
+                  },
+                  {
+                    "id": "7e0e3a1c-0afe-4a32-b475-83e53ca6d463",
+                    "text": "DELHI - NCR Business | Facebook",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/groups/471834197458013"
+                    }
+                  },
+                  {
+                    "id": "046a62a5-26a8-4083-94e2-27f2133d0920",
+                    "text": "Delhi NCR | Facebook",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/groups/604345196592023"
+                    }
+                  },
+                  {
+                    "id": "9fd7a5e6-1d59-4ac1-8b9b-a1a87f5046ff",
+                    "text": "Facebook",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/NortheastToday"
+                    }
+                  },
+                  {
+                    "id": "51134ee0-7d45-4bdf-a796-b33a2581baf5",
+                    "text": "Facebook",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/chiplun08"
+                    }
+                  },
+                  {
+                    "id": "730a57ab-9dfb-449d-9ca8-61a434042553",
+                    "text": "Trekkamp. Discover Unknown",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/trekkamp"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "849aa79f-688f-492c-be3d-29ddc50ba66f",
+                "text": "USA",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "1c49be51-13d7-454f-b77b-72ab207ae8cb",
+                    "text": "United States Patent and Trademark Office",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/uspto.gov"
+                    }
+                  },
+                  {
+                    "id": "f6bf352e-06f3-4f82-a8be-c0a3a2d3144d",
+                    "text": "United States Mint",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/UnitedStatesMint"
+                    }
+                  },
+                  {
+                    "id": "8fab91d9-e389-4dec-88a9-3158a2e54e15",
+                    "text": "United States Space Force",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/SpaceForceDoD"
+                    }
+                  },
+                  {
+                    "id": "602880c6-e2e4-4e2c-af39-c8709931a010",
+                    "text": "United States Secret Service",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/UnitedStatesSecretServiceOfficial"
+                    }
+                  },
+                  {
+                    "id": "8954c48f-8413-45b8-bbd1-4cb2d723deee",
+                    "text": "New York City Photos",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/nydaily"
+                    }
+                  },
+                  {
+                    "id": "3f9945df-c893-4e98-8718-79c74aa0a30d",
+                    "text": "Los Angeles California",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/profile.php?id=100064547268442"
+                    }
+                  },
+                  {
+                    "id": "6950e8b2-0d63-41da-93dd-ba6e1872076e",
+                    "text": "Houston Museum of Natural Science",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/HoustonMuseumOfNaturalScience"
+                    }
+                  },
+                  {
+                    "id": "b6e253ae-7487-4e5f-88bd-d73a8c1231cc",
+                    "text": "New York City 4K Views",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/profile.php?id=61550950435184"
+                    }
+                  },
+                  {
+                    "id": "00780277-b30f-40aa-9d57-fad5ab44e23c",
+                    "text": "New York City Department of Parks & Recreation",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/nycparks"
+                    }
+                  },
+                  {
+                    "id": "4e453dae-1ae8-48b6-b3ab-0c06b0b5d1dc",
+                    "text": "Houston Methodist",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/houstonmethodist"
+                    }
+                  },
+                  {
+                    "id": "b648923f-20f2-4b9c-9f54-42db4ab2b2fd",
+                    "text": "Chicago Midway International Airport",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/fly2midway"
+                    }
+                  },
+                  {
+                    "id": "2e50511f-6eae-4295-ae0e-d10a4c3fabb5",
+                    "text": "University of Houston",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/UniversityOfHouston"
+                    }
+                  },
+                  {
+                    "id": "3aaf4412-e926-4408-81e1-6750d5fc0b8b",
+                    "text": "National Audubon Society",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/NationalAudubonSociety"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "0b17ea5b-2648-440a-9848-b7353dd7e49a",
+                "text": "Swiss_beautiful",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/profile.php?id=61551914491943"
+                }
+              },
+              {
+                "id": "90ff13f3-2f54-435e-9619-3af0a308bcfc",
+                "text": "Discover with Joe HaTTab",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/Discoverwithjoehattab"
+                }
+              }
+            ]
+          },
+          {
+            "id": "614936a7-6c94-471f-abc4-94cca4b039cd",
+            "text": "news",
+            "type": "folder",
+            "children": [
+              {
+                "id": "ecf8fbf9-db5c-46f1-bfff-2409cb30659f",
+                "text": "INDIA",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "25a5e4ae-90b6-424a-bc1c-6054ac6893a0",
+                    "text": "mint",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/mint.live"
+                    }
+                  },
+                  {
+                    "id": "1b6ec95c-6687-4800-b74d-bcd70db45a6f",
+                    "text": "TheHindu",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/thehindu"
+                    }
+                  },
+                  {
+                    "id": "9d95b00f-6fa5-4ceb-ad61-8c3a6b66ac29",
+                    "text": "TimesOfIndia",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/TimesofIndia"
+                    }
+                  },
+                  {
+                    "id": "572948fe-68b1-4944-92ca-a1c06360f556",
+                    "text": "News18 Lokmat",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/News18Lokmat"
+                    }
+                  },
+                  {
+                    "id": "66951d0d-5831-4952-baf4-f67b195c4a0f",
+                    "text": "maharashtra times",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/maharashtratimesonline"
+                    }
+                  },
+                  {
+                    "id": "34e03859-4a28-4161-a943-435669240e8e",
+                    "text": "Moneycontrol",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/moneycontrol"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "7e73411a-6aaa-4870-a3fc-e56e33a16e19",
+                "text": "USA",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "fcedffa5-1e22-4a71-b29a-da8f3885d5c1",
+                    "text": "TheNewYorkTimes",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/nytimes"
+                    }
+                  },
+                  {
+                    "id": "0ba26a7e-9f6c-4ac7-b9e7-fa80623b0a2a",
+                    "text": "Chicago Magazine",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/nbcchicago"
+                    }
+                  },
+                  {
+                    "id": "75d39a98-6d2f-4f62-8fdf-9a7ede057d86",
+                    "text": "Fox 32 Chicago",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/Fox32Chicago"
+                    }
+                  },
+                  {
+                    "id": "4b999015-8236-42bf-8055-0bb2ba5d1043",
+                    "text": "Chicago Sun-Times",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/thechicagosuntimes"
+                    }
+                  },
+                  {
+                    "id": "8c9dd288-06a8-4fed-b864-987841f34e04",
+                    "text": "Chicago Tribune",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/chicagotribune"
+                    }
+                  },
+                  {
+                    "id": "c93c3d02-495e-42c8-8dc8-95681514d64d",
+                    "text": "Houston Press",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/HoustonPress"
+                    }
+                  },
+                  {
+                    "id": "ad9e8a0e-b08e-4d36-8838-db0c7665f14e",
+                    "text": "Houston Chronicle",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/houstonchronicle"
+                    }
+                  },
+                  {
+                    "id": "753f1391-fd82-4b90-8e4c-2da9e541eb25",
+                    "text": "Phoenix New Times",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/phoenixnewtimes"
+                    }
+                  },
+                  {
+                    "id": "4b30ccf3-9d4a-4a27-9e97-9a514657aa80",
+                    "text": "Arizona Daily Star",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/ArizonaDailyStar"
+                    }
+                  },
+                  {
+                    "id": "d34a529b-eebc-4498-b86b-e1ba36827495",
+                    "text": "Best Things to Do in Arizona | Facebook",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/groups/766338847273237"
+                    }
+                  },
+                  {
+                    "id": "aa3bc2c2-d457-4acd-b5e5-09a3371883e4",
+                    "text": "Explore Arizona | Facebook",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/groups/exploreaz"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "63f79853-43a7-4395-95b6-8d3fe87fa199",
+                "text": "Newspapers",
+                "type": "folder",
+                "children": [
+                  {
+                    "id": "a85aeeaa-64c3-49a9-bcba-f4324b8519a3",
+                    "text": "EuroNews",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/euronews"
+                    }
+                  },
+                  {
+                    "id": "0369cce5-0746-453a-91f8-ab051364bdab",
+                    "text": "theGuardian",
+                    "type": "link",
+                    "data": {
+                      "url": "https://www.facebook.com/theguardian"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "b0526e87-5fba-496c-af6c-43098409210c",
+            "text": "FreeCodeCamp",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/freecodecamp"
+            }
+          },
+          {
+            "id": "5192f631-8e24-4e6e-bd54-35b2aed345f1",
+            "text": "NASA History",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/NASAHistoryOffice"
+            }
+          },
+          {
+            "id": "418e6049-ae77-4733-a9cb-d3409b3bbba5",
+            "text": "The Castle Diaries",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/TheCastleDiaries"
+            }
+          },
+          {
+            "id": "898d42f3-81f6-40e9-8428-d0bb1864a471",
+            "text": "NASA Jet Propulsion Laboratory",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/NASAJPL"
+            }
+          },
+          {
+            "id": "0c4c8741-e387-453a-8046-94ad3b8ceaa8",
+            "text": "All That's Interesting",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/AllThatsInteresting"
+            }
+          },
+          {
+            "id": "86f65379-5bcc-41cc-bc20-d01c043deecd",
+            "text": "Space Insight",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/isro.spaceinsight"
+            }
+          },
+          {
+            "id": "a344fefb-c9f0-4565-8a36-09ff2ed55d48",
+            "text": "Old But Gold",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/oldbutgoldreal"
+            }
+          },
+          {
+            "id": "5cd20765-b037-49f8-8cd1-48b02393f093",
+            "text": "Steve Bartlett",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/SteveBartlettShow"
+            }
+          },
+          {
+            "id": "01fbd42c-b463-4d45-86c8-559820f61d9e",
+            "text": "Unify",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/unify"
+            }
+          },
+          {
+            "id": "79fa86f8-1877-424c-b211-bad79563ec21",
+            "text": "Loving Grandma",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/profile.php?id=61566710193101"
+            }
+          },
+          {
+            "id": "757c8378-4fb7-4dc4-9c5f-7cb5ff88830b",
+            "text": "History Revealed",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/revealedhistory"
+            }
+          },
+          {
+            "id": "71237f6a-a333-4829-834c-063ab20f2190",
+            "text": "Nobel Prize",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/nobelprize"
+            }
+          },
+          {
+            "id": "9724cee0-8bdf-4f01-b3a5-f200dfed70c9",
+            "text": "Humans Of Maharashtra",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/humansofmaha"
+            }
+          },
+          {
+            "id": "f24f265a-b636-4c2f-be74-71af4bfcfa73",
+            "text": "The Better India - Marathi",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/thebetterindia.marathi"
+            }
+          },
+          {
+            "id": "442ba4e0-dfe4-41b5-ab0c-789441404cf7",
+            "text": "Visually",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/visually"
+            }
+          },
+          {
+            "id": "141fc6e2-2396-4a8d-af98-74ba2ae51ac7",
+            "text": "Codeacademy",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/codeacademy"
+            }
+          },
+          {
+            "id": "53b0ec05-c9e7-4000-bb86-14f0e49f3b4e",
+            "text": "Dave Ramsey",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/daveramsey"
+            }
+          },
+          {
+            "id": "3f491486-f598-4d03-95e4-32059b24d81f",
+            "text": "Big Think",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/BigThinkdotcom?ref=timeline_chaining"
+            }
+          },
+          {
+            "id": "daff6271-3c12-455c-a744-b516741e507d",
+            "text": "MIT Open Course Ware",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/MITOCW"
+            }
+          },
+          {
+            "id": "3e7d960f-afac-4cf9-8d23-d484446cf920",
+            "text": "Ankur Deshpande",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/ankur.deshpande4444"
+            }
+          },
+          {
+            "id": "0211be40-a471-41a0-b7b6-169cdf917151",
+            "text": "The EQ School",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/theeqschool"
+            }
+          },
+          {
+            "id": "c6674795-d4f8-4325-a5c0-bf22d36ff77e",
+            "text": "The Stoic Mind Mastery",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/profile.php?id=100090065723754"
+            }
+          },
+          {
+            "id": "63432747-e46e-4eb6-899d-e442c2eddce5",
+            "text": "cooking",
+            "type": "folder",
+            "children": [
+              {
+                "id": "0f59c1d6-2622-422a-aba0-283ed8532389",
+                "text": "Aarti Madan",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/ChefAartiMadan"
+                }
+              },
+              {
+                "id": "64c39f95-f9b9-4a49-ad33-9dfe772e8111",
+                "text": "Facebook",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/ChefSanjeevKapoor"
+                }
+              },
+              {
+                "id": "4f7d4b92-1be7-486e-998a-a238591e3df7",
+                "text": "Anukriti Cooking Recipes",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/anukriticookingrecipesyoutube"
+                }
+              },
+              {
+                "id": "8e3d43b6-7d2e-4dde-9cc4-e0f5f5ac1588",
+                "text": "मराठी समुदाय",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/marathisamudayy"
+                }
+              }
+            ]
+          },
+          {
+            "id": "7a431b6b-abd2-4651-b62f-7e0547f5fe10",
+            "text": "OpenAI",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/openai"
+            }
+          },
+          {
+            "id": "292ffa9e-bdb1-4873-b073-1869ddb9b260",
+            "text": "music",
+            "type": "folder",
+            "children": [
+              {
+                "id": "c0792c85-45e2-414d-bd8c-3d1f2133528d",
+                "text": "Unique Music World",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/uniquemusicworld2021"
+                }
+              },
+              {
+                "id": "36f976a1-d2db-4783-b462-33d8c1dd4971",
+                "text": "Asha Bhosle",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/ashabhosleofficialpage"
+                }
+              },
+              {
+                "id": "ffefa98a-d02f-4b93-b0db-79a9025a0faf",
+                "text": "(धुंधली यादें)",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/groups/763043409215120/"
+                }
+              },
+              {
+                "id": "402433d1-777c-4267-bad0-589ca5f362e4",
+                "text": "Old Hindi Film Songs",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/oldhindifilm"
+                }
+              },
+              {
+                "id": "bcde832b-5fa0-4255-b15b-931cd7f89ea7",
+                "text": "Marathi Video Songs",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/groups/1967026973377031"
+                }
+              },
+              {
+                "id": "0d5b77bf-3b71-4062-ba86-ff0e28f22f0c",
+                "text": "Jhanak Jhanak Payal Baje [1955] Songs | Sandhya - Gopi Krishna | Lata Mangeshkar Hits [HD] - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=ARC8eK2AP3I&list=RDARC8eK2AP3I&start_radio=1"
+                }
+              }
+            ]
+          },
+          {
+            "id": "7161cbc7-6065-41bb-90c1-1f07a31aa7fc",
+            "text": "**-Psychology Today",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/psychologytoday?fref=nf"
+            }
+          },
+          {
+            "id": "98d99e0c-24c8-488c-8a68-1dd4856e0fe7",
+            "text": "**-Smithsonian Magazine",
+            "type": "link",
+            "data": {
+              "url": "https://www.facebook.com/smithsonianmagazine"
+            }
+          },
+          {
+            "id": "8cbc6470-75ec-47b4-81cb-3be502093472",
+            "text": "health",
+            "type": "folder",
+            "children": [
+              {
+                "id": "79bffd50-24fa-4b61-b2b6-42e81efe1b3c",
+                "text": "Facebook",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/profile.php?id=61578500349284"
+                }
+              },
+              {
+                "id": "a16e4e36-e376-4e8c-9ad5-0a059cf13476",
+                "text": "Facebook",
+                "type": "link",
+                "data": {
+                  "url": "https://www.facebook.com/milind.padki.1"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5917a930-2306-4c53-9700-9390c413a5eb",
+        "text": "old",
+        "type": "folder",
+        "children": [
+          {
+            "id": "101ddef6-d5a2-491e-9fd7-5928bf5584ac",
+            "text": "The Suez canal : letters and documents descriptive of its rise and progress in 1854-1856 : Lesseps, Ferdinand de, 1805-1894 : Free Download, Borrow, and Streaming : Internet Archive",
+            "type": "link",
+            "data": {
+              "url": "https://archive.org/details/suezcanalletters00lessuoft/page/4/mode/2up?ref=ol&view=theater"
+            }
+          },
+          {
+            "id": "e26373f8-2797-4b10-ba5f-c73e927454c1",
+            "text": "How the 1896 Bombay Plague Changed Mumbai Forever - Atlas Obscura",
+            "type": "link",
+            "data": {
+              "url": "https://www.atlasobscura.com/articles/how-bombay-plague-changed-mumbai"
+            }
+          }
+        ]
+      },
+      {
+        "id": "3981a6f8-d9e8-4ed6-8fb7-a44e24029af5",
+        "text": "Stocks companies",
+        "type": "folder",
+        "children": [
+          {
+            "id": "bd770b7a-29a9-443b-9ed9-c818c1d2d130",
+            "text": "Wonder Elect. Share Price, Wonder Elect. Stock Price, Wonder Electricals Ltd. Stock Price, Share Price, Live BSE/NSE, Wonder Electricals Ltd. Bids Offers. Buy/Sell Wonder Electricals Ltd. news & tips, & F&O Quotes, NSE/BSE Forecast News and Live Quotes",
+            "type": "link",
+            "data": {
+              "url": "https://www.moneycontrol.com/india/stockpricequote/electronic-goods/wonderelectricals/WF"
+            }
+          },
+          {
+            "id": "27706503-a6ce-4f74-88ec-0719686a6873",
+            "text": "Vodafone Idea Share Price, Vodafone Idea Stock Price, Vodafone Idea Ltd. Stock Price, Share Price, Live BSE/NSE, Vodafone Idea Ltd. Bids Offers. Buy/Sell Vodafone Idea Ltd. news & tips, & F&O Quotes, NSE/BSE Forecast News and Live Quotes",
+            "type": "link",
+            "data": {
+              "url": "https://www.moneycontrol.com/india/stockpricequote/telecommunication-service-provider/vodafoneidea/IC8"
+            }
+          },
+          {
+            "id": "60c0f0df-be49-453b-b42c-ed64b276fe2f",
+            "text": "Daily Market Reports - Capital Market",
+            "type": "link",
+            "data": {
+              "url": "https://www.nseindia.com/resources/historical-reports-capital-market-daily-monthly-archives"
+            }
+          },
+          {
+            "id": "959ed89d-2c89-4257-9a02-e778ab2d3002",
+            "text": "BSE Historical Information",
+            "type": "link",
+            "data": {
+              "url": "https://www.bseindia.com/market_data.html?utm_source=chatgpt.com"
+            }
+          },
+          {
+            "id": "73705028-de74-4d74-9ece-03a60f2f67e3",
+            "text": "Indian-Stock-Market-Complete-Dataset-2024",
+            "type": "link",
+            "data": {
+              "url": "https://www.kaggle.com/datasets/chiragb254/indian-stock-market-complete-dataset-2024?utm_source=chatgpt.com"
+            }
+          },
+          {
+            "id": "d1551a0a-ea37-4b23-aef4-7b66a2e8915b",
+            "text": "BSE (formerly Bombay Stock Exchange) | Live Stock Market updates for BSE SENSEX, Stock Price, Company News & Results",
+            "type": "link",
+            "data": {
+              "url": "https://www.bseindia.com/"
+            }
+          },
+          {
+            "id": "9c1971d9-7f0c-45fb-923d-83282a52d5fb",
+            "text": "Storyboard18",
+            "type": "link",
+            "data": {
+              "url": "https://www.storyboard18.com/"
+            }
+          }
+        ]
+      },
+      {
+        "id": "78e64eb8-35c2-41ce-ae5b-dba2cfa56b5a",
+        "text": "Subscriptions",
+        "type": "folder",
+        "children": [
+          {
+            "id": "e564362a-f178-411d-a377-198cbd3f01dc",
+            "text": "Marathi News| Marathi News Paper| Latest Marathi News, News Marathi| Latest News In Marathi| News In Marathi| Maharashtra Breaking News in Marathi| Marathi Newspaper| Maharashtra BMC Election 2025 Live| मराठी लेटेस्ट न्यूज| मराठी ब्रेकिंग न्यूज| ताज्या मराठी बातम्या| मराठी बातम्या| आजच्या मराठी बातम्या| महाराष्ट्र मुंबई महापालिका निवडणूक २०२५ लाइव्ह at Loksatta",
+            "type": "link",
+            "data": {
+              "url": "https://www.loksatta.com/"
+            }
+          },
+          {
+            "id": "2b9ecde1-bc3e-4821-8c5c-2e727c75f8aa",
+            "text": "The New York Times International - Breaking News, US News, World News, Videos",
+            "type": "link",
+            "data": {
+              "url": "https://www.nytimes.com/international/"
+            }
+          },
+          {
+            "id": "1b89b75a-e7b2-4a44-ac07-3a493ec8ff1c",
+            "text": "Medium",
+            "type": "link",
+            "data": {
+              "url": "https://medium.com/"
+            }
+          },
+          {
+            "id": "6fd06e7d-7445-41bb-a8bd-e02524c5b133",
+            "text": "Business News Today: Stock and Share Market News, Economy and Finance News, Sensex, Nifty, Global Market, NSE, BSE Live IPO News",
+            "type": "link",
+            "data": {
+              "url": "https://www.moneycontrol.com/"
+            }
+          },
+          {
+            "id": "0cc20d48-e40f-45d1-9751-61750e6ef0b5",
+            "text": "ET Now – Read Latest Business News, Stock Market Updates, Financial News Insights, and Business Trends in India",
+            "type": "link",
+            "data": {
+              "url": "https://www.etnownews.com/"
+            }
+          },
+          {
+            "id": "d1dd003e-15e0-4b37-a44d-271c2d35aee0",
+            "text": "Esakal",
+            "type": "link",
+            "data": {
+              "url": "https://www.esakal.com/"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ab8cd97a-1faf-4bb8-815b-a188984d2d8c",
+        "text": "pointcloud",
+        "type": "folder",
+        "children": [
+          {
+            "id": "53265a8e-4ae2-45bc-a8a2-83b668dca27a",
+            "text": "Getting Started with LiDAR. As an engineer, I’ve always been… | by Amnah Ebrahim | Medium",
+            "type": "link",
+            "data": {
+              "url": "https://medium.com/@amnahhmohammed/getting-started-with-lidar-92ff984ec9f3"
+            }
+          },
+          {
+            "id": "3576f3ba-02dc-4425-b516-90c43388bd1b",
+            "text": "Open3D - YouTube",
+            "type": "link",
+            "data": {
+              "url": "https://www.youtube.com/playlist?list=PLY67kK07siHWNiaWLUj8hZ_kQYQpwLSUR"
+            }
+          },
+          {
+            "id": "1316ab50-7906-4cb3-8faa-19358d3a78b4",
+            "text": "amnahhebrahim/Open3D-For-3D-Point-Cloud-Data",
+            "type": "link",
+            "data": {
+              "url": "https://github.com/amnahhebrahim/Open3D-For-3D-Point-Cloud-Data"
+            }
+          },
+          {
+            "id": "7c55d148-ce87-4592-a637-bebefbdda774",
+            "text": "CompViz",
+            "type": "folder",
+            "children": [
+              {
+                "id": "3bd00652-d0e7-4111-9fe6-0a4e7126bbc7",
+                "text": "LIDAR Explained: What is LIDAR? How LIDAR Works? LIDAR vs RADAR - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=uOhD8PYAVF4"
+                }
+              },
+              {
+                "id": "a71d7272-66a2-41a8-984f-91295ee9c953",
+                "text": "Delaunay Triangulations [Computational Geometry] - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=BMtg2-ShffI&list=PLSISkCdxkLpPS6DXM4cuX7y372qaOiucC&index=6"
+                }
+              },
+              {
+                "id": "c0597c31-af9d-4129-98f0-4740ad5a2cdd",
+                "text": "Mesh Generation - In Depth Session - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=cYEfNPfBufk"
+                }
+              },
+              {
+                "id": "ba632a78-6b94-4c66-9d36-245652e954c6",
+                "text": "SGP 2020 Graduate School: Geometric Computing with CGAL - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=UdhjJPG_ic8"
+                }
+              },
+              {
+                "id": "1d091b7b-6e66-49d9-af7b-4658b7feda5b",
+                "text": "K-d Trees - Computerphile - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=BK5x7IUTIyU"
+                }
+              },
+              {
+                "id": "3db9340a-1c85-40aa-b37e-a6585b0692c3",
+                "text": "Triangles and Pixels - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/playlist?list=PLzH6n4zXuckrPkEUK5iMQrQyvj9Z6WCrm"
+                }
+              },
+              {
+                "id": "7646116b-8542-428e-a879-11d31ca12252",
+                "text": "Virtual Reality - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/playlist?list=PLzH6n4zXuckrOPXf9THuMOKnXnUJ55xw5"
+                }
+              },
+              {
+                "id": "9ff23856-a0cd-4ded-b4e3-295c5696f8b0",
+                "text": "Computer Vision: Filters (Blur, Edge Detection etc) - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/playlist?list=PLzH6n4zXuckoRdljSlM2k35BufTYXNNeF"
+                }
+              },
+              {
+                "id": "ce39a004-5be4-4f9f-b7d5-28b39ed5f4fc",
+                "text": "Lights and Shadows in Graphics - Computerphile - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/watch?v=LUjXAoP5GG0&list=PLzH6n4zXuckrPkEUK5iMQrQyvj9Z6WCrm&index=5"
+                }
+              },
+              {
+                "id": "131f7a68-527f-4933-8eac-7155676c6038",
+                "text": "Roboflow Universe: Computer Vision Datasets",
+                "type": "link",
+                "data": {
+                  "url": "https://universe.roboflow.com/"
+                }
+              },
+              {
+                "id": "9f5ac956-83f2-4097-886f-fe3d9f58dc5e",
+                "text": "Delaunay Triangulation",
+                "type": "link",
+                "data": {
+                  "url": "https://gwlucastrig.github.io/TinfourDocs/DelaunayIntro/index.html"
+                }
+              },
+              {
+                "id": "a54c6ce7-e11c-4131-8abe-344f0ff6ea78",
+                "text": "Graph Theory Algorithms: From Mathematical Concepts to Python Code | by Rajat Sharma | The Pythoneers | Jul, 2024 | Medium",
+                "type": "link",
+                "data": {
+                  "url": "https://medium.com/pythoneers/graph-theory-algorithms-from-mathematical-concepts-to-python-code-93427e86f78c"
+                }
+              },
+              {
+                "id": "3a1cf4c1-bc03-43ed-a031-97bcddb14f27",
+                "text": "Open Inventor Developer Zone",
+                "type": "link",
+                "data": {
+                  "url": "https://developer.openinventor.com/"
+                }
+              },
+              {
+                "id": "9a3c2c64-33b3-462d-941d-ec0bfd2e9b88",
+                "text": "aumuell/open-inventor: Open Inventor is an object oriented scene graph library implemented in C++ layered on top of OpenGL. It was originally developed by SGI.",
+                "type": "link",
+                "data": {
+                  "url": "https://github.com/aumuell/open-inventor"
+                }
+              }
+            ]
+          },
+          {
+            "id": "1a5ffe57-3154-42d6-86a8-c08c4f91cc76",
+            "text": "vtk",
+            "type": "folder",
+            "children": [
+              {
+                "id": "7a73bc35-23f2-4c3f-8533-4a33a503014b",
+                "text": "djeada/Vtk-Examples: Explore the world of 3D graphics and visualization with VTK examples in Python.",
+                "type": "link",
+                "data": {
+                  "url": "https://github.com/djeada/Vtk-Examples"
+                }
+              },
+              {
+                "id": "c7f14f66-101a-45fb-9a0f-2a31b3fdb0e9",
+                "text": "VTKTextBook.pdf",
+                "type": "link",
+                "data": {
+                  "url": "https://gitlab.kitware.com/vtk/textbook/raw/master/VTKBook/VTKTextBook.pdf"
+                }
+              },
+              {
+                "id": "066fbb0a-8d53-4f0b-b60b-55d134a451be",
+                "text": "vtk-examples/Tarballs/Cxx at gh-pages · Kitware/vtk-examples",
+                "type": "link",
+                "data": {
+                  "url": "https://github.com/Kitware/vtk-examples/tree/gh-pages/Tarballs/Cxx"
+                }
+              },
+              {
+                "id": "f0af8fd1-6534-4f66-91bd-122081277299",
+                "text": "VTK Cookbook",
+                "type": "link",
+                "data": {
+                  "url": "https://vtk.org/wp-content/uploads/2021/08/VTKUsersGuide.pdf"
+                }
+              },
+              {
+                "id": "e5821a38-2f36-45ce-ba6d-39cfac37fd3f",
+                "text": "NamDinhRobotics/Open3D_tutorial: The Open3D tutorials in C++",
+                "type": "link",
+                "data": {
+                  "url": "https://github.com/NamDinhRobotics/Open3D_tutorial"
+                }
+              },
+              {
+                "id": "e916b07d-ea49-47be-82e7-5f93c36d1800",
+                "text": "objparser/include/obj at main · potato3d/objparser",
+                "type": "link",
+                "data": {
+                  "url": "https://github.com/potato3d/objparser/tree/main/include/obj"
+                }
+              },
+              {
+                "id": "4c7bdd44-e652-4f6f-ab5f-72d6c781e283",
+                "text": "tinyobjloader/tinyobjloader: Tiny but powerful single file wavefront obj loader",
+                "type": "link",
+                "data": {
+                  "url": "https://github.com/tinyobjloader/tinyobjloader"
+                }
+              },
+              {
+                "id": "5d873993-80a4-4be4-9d19-337c1c326207",
+                "text": "| The hxr Portal",
+                "type": "link",
+                "data": {
+                  "url": "https://hxr99.blogspot.com/"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "42e06772-a469-4e1d-a869-c4bd707e6bab",
+        "text": "cpp",
+        "type": "folder",
+        "children": [
+          {
+            "id": "03150a62-fdc1-4489-bcbf-6ec02486d30a",
+            "text": "mortennobel/cpp-cheatsheet: Modern C++ Cheatsheet",
+            "type": "link",
+            "data": {
+              "url": "https://github.com/mortennobel/cpp-cheatsheet"
+            }
+          },
+          {
+            "id": "ba8f00d5-9702-4f6d-86a5-9b46b37e5afd",
+            "text": "CodeBeauty - YouTube",
+            "type": "link",
+            "data": {
+              "url": "https://www.youtube.com/@CodeBeauty"
+            }
+          },
+          {
+            "id": "b2b4ffbe-dbc9-473f-94fb-7b5371575240",
+            "text": "cppreference.com",
+            "type": "link",
+            "data": {
+              "url": "https://en.cppreference.com/w/"
+            }
+          },
+          {
+            "id": "f803621b-8e41-4762-9098-4d0034653c5d",
+            "text": "Master SOLID Principles in C++: Elevate Your Code to Pro-Level",
+            "type": "link",
+            "data": {
+              "url": "https://markaicode.com/master-solid-principles-in-cpp-elevate-your-code-to-pro-level/"
+            }
+          },
+          {
+            "id": "bef74bb2-ddf6-4f06-b688-85524d0fc037",
+            "text": "C++ docs - get started, tutorials, reference. | Microsoft Learn",
+            "type": "link",
+            "data": {
+              "url": "https://learn.microsoft.com/en-us/cpp/cpp/?view=msvc-170"
+            }
+          },
+          {
+            "id": "98e44212-c66c-447f-b676-81e90bde75db",
+            "text": "11 Powerful Examples of C++ Vectors | Mark Ai Code",
+            "type": "link",
+            "data": {
+              "url": "https://markaicode.com/11-powerful-examples-of-c-vectors/"
+            }
+          },
+          {
+            "id": "1623db66-6349-49a3-88f7-d1190eeb4d8a",
+            "text": "CPPNUTS-Rupesh",
+            "type": "link",
+            "data": {
+              "url": "https://www.youtube.com/@CppNuts"
+            }
+          },
+          {
+            "id": "a38350f3-41d2-4780-9031-7d0c4422719e",
+            "text": "Prof Hanks",
+            "type": "link",
+            "data": {
+              "url": "https://www.youtube.com/@ProfessorHankStalica"
+            }
+          },
+          {
+            "id": "83ba6569-a069-439f-bf26-f034caca9c81",
+            "text": "C++ Basic Input/Output & More | C++ Tutorials for Beginners #5 - YouTube",
+            "type": "link",
+            "data": {
+              "url": "https://www.youtube.com/watch?v=J05uoTbGOvQ&list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL&index=5"
+            }
+          },
+          {
+            "id": "dd9da7ec-79e3-43d2-bc74-e810274ef987",
+            "text": "lectures-and-homeworks/lectures/build_systems.md at main · cpp-for-yourself/lectures-and-homeworks",
+            "type": "link",
+            "data": {
+              "url": "https://github.com/cpp-for-yourself/lectures-and-homeworks/blob/main/lectures/build_systems.md"
+            }
+          },
+          {
+            "id": "f8b89d67-a8fc-413e-aa90-6a842958c3e2",
+            "text": "Stable Sort - YouTube",
+            "type": "link",
+            "data": {
+              "url": "https://www.youtube.com/@stablesort"
+            }
+          },
+          {
+            "id": "4fc99291-d6ee-4f6d-82e9-41e77da49ae7",
+            "text": "C++ STL Cheat Sheet - GeeksforGeeks",
+            "type": "link",
+            "data": {
+              "url": "https://www.geeksforgeeks.org/cpp-stl-cheat-sheet/"
+            }
+          },
+          {
+            "id": "c641343c-857e-4063-9655-75c5dee0e2e7",
+            "text": "gamedev",
+            "type": "folder",
+            "children": [
+              {
+                "id": "ebd6856d-95dc-4770-8d08-0e6efaea8fd3",
+                "text": "ChiliTomatoNoodle - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/@ChiliTomatoNoodle/videos"
+                }
+              },
+              {
+                "id": "fd3b5366-6693-43c9-990e-d0f3ad5782b6",
+                "text": "Planet Chili Nexus",
+                "type": "link",
+                "data": {
+                  "url": "https://planetchili.net/"
+                }
+              },
+              {
+                "id": "6fef8929-d014-42cf-bded-825d36df7519",
+                "text": "Molly Rocket",
+                "type": "link",
+                "data": {
+                  "url": "https://mollyrocket.com/#handmade"
+                }
+              },
+              {
+                "id": "1c37855a-4a79-44b1-8d8a-358f10b89f61",
+                "text": "The Cherno - YouTube",
+                "type": "link",
+                "data": {
+                  "url": "https://www.youtube.com/user/TheChernoProject"
+                }
+              },
+              {
+                "id": "8a5fb1bd-8947-4df3-bb4e-0f1b661fd9fe",
+                "text": "Table of Contents · Game Programming Patterns",
+                "type": "link",
+                "data": {
+                  "url": "https://gameprogrammingpatterns.com/contents.html"
+                }
+              },
+              {
+                "id": "bfe3a43b-ec86-44b1-98b6-f0555b1c156f",
+                "text": "Learn OpenGL, extensive tutorial resource for learning Modern OpenGL",
+                "type": "link",
+                "data": {
+                  "url": "https://learnopengl.com/"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b4480275-9499-4764-940d-5dc797f3f9c2",
+        "text": "QGIS Python  documentation",
+        "type": "link",
+        "data": {
+          "url": "file:///D:/Users/avina/Documents/pyqgis-docs-3.34/build/3.34/index.html"
+        }
+      },
+      {
+        "id": "378269a8-0f0a-4166-ba36-a9c2a455335a",
+        "text": "InfoBlurbs",
+        "type": "folder",
+        "children": [
+          {
+            "id": "0b1f0840-1635-41b1-9d35-0eaf7ba6aa4b",
+            "text": "InformationWeek, News & Analysis Tech Leaders Trust",
+            "type": "link",
+            "data": {
+              "url": "https://www.informationweek.com/"
+            }
+          },
+          {
+            "id": "cdec499c-ef50-4842-ae9b-1e354c214f70",
+            "text": "Network World | From the data center to the edge",
+            "type": "link",
+            "data": {
+              "url": "https://www.networkworld.com/"
+            }
+          },
+          {
+            "id": "000a7d35-866a-4970-9a13-a05b59b1aca7",
+            "text": "InfoWorld | Technology insight for the enterprise",
+            "type": "link",
+            "data": {
+              "url": "https://www.infoworld.com/"
+            }
+          },
+          {
+            "id": "c107a46f-9630-4c9f-80f2-9ae2bb81ac2e",
+            "text": "The Cloudcast",
+            "type": "link",
+            "data": {
+              "url": "https://www.thecloudcast.net/"
+            }
+          },
+          {
+            "id": "14cb583d-5388-4139-a29f-7f17e37d7d4b",
+            "text": "AWS Podcast | Listen & Learn about AWS",
+            "type": "link",
+            "data": {
+              "url": "https://aws.amazon.com/podcasts/aws-podcast/?ams%23interactive-card-vertical%23pattern-data.filter=%257B%2522filters%2522%253A%255B%255D%257D"
+            }
+          },
+          {
+            "id": "e036bff5-dc7f-469d-a01e-716fb339f28a",
+            "text": "On Cloud - Podcast - Apple Podcasts",
+            "type": "link",
+            "data": {
+              "url": "https://podcasts.apple.com/nz/podcast/on-cloud/id1406374662"
+            }
+          }
+        ]
+      },
+      {
+        "id": "8afbb84a-0c10-4c44-b13f-9ad38e319d08",
+        "text": "Times Life",
+        "type": "link",
+        "data": {
+          "url": "https://timeslife.com/"
+        }
+      },
+      {
+        "id": "bcc679ff-f4dd-44db-a990-dd7d9349bb9e",
+        "text": "gov.in",
+        "type": "folder",
+        "children": [
+          {
+            "id": "dbf610f6-44b9-4aaa-b244-a0008d25783c",
+            "text": "Ministry of External Affairs, Government of India",
+            "type": "link",
+            "data": {
+              "url": "https://www.mea.gov.in/index.htm"
+            }
+          },
+          {
+            "id": "1d5a8db1-0203-48cb-9d28-ce9a80fdf63c",
+            "text": "My Government| National Portal of India",
+            "type": "link",
+            "data": {
+              "url": "https://www.india.gov.in/my-government?utm_source=chatgpt.com"
+            }
+          },
+          {
+            "id": "6e14ea6b-1e7a-4ad8-bb4f-55fd28f933be",
+            "text": "MyGov.in | MyGov: A Platform for Citizen Engagement towards Good Governance in India",
+            "type": "link",
+            "data": {
+              "url": "https://www.mygov.in/?utm_source=chatgpt.com"
+            }
+          },
+          {
+            "id": "eaa096f0-ed93-430b-bac1-0e88601f3021",
+            "text": "Home | Open Government Data (OGD) Platform India",
+            "type": "link",
+            "data": {
+              "url": "https://www.data.gov.in/"
+            }
+          },
+          {
+            "id": "33f3fd3f-bc4c-45d4-a3b3-c91920ba4121",
+            "text": "Home | Ministry of Health and Family Welfare | GOI",
+            "type": "link",
+            "data": {
+              "url": "https://mohfw.gov.in/?utm_source=chatgpt.com"
+            }
+          },
+          {
+            "id": "d77b8192-7dc5-47e1-a63f-5f6c4c181835",
+            "text": "Home - Mcommerce",
+            "type": "link",
+            "data": {
+              "url": "https://www.commerce.gov.in/?utm_source=chatgpt.com"
+            }
+          },
+          {
+            "id": "aa6dd46a-6672-4bb0-84a8-4dd7b25149ce",
+            "text": "Home Page:Press Information Bureau",
+            "type": "link",
+            "data": {
+              "url": "https://www.pib.gov.in/indexd.aspx"
+            }
+          },
+          {
+            "id": "08751aa8-4deb-47ae-aa1d-a922076572c4",
+            "text": "Vikaspedia : Landing Page",
+            "type": "link",
+            "data": {
+              "url": "https://vikaspedia.in/"
+            }
+          }
+        ]
+      },
+      {
+        "id": "5647db5f-6258-40f4-be4e-791e10acbca4",
+        "text": "shapely",
+        "type": "folder",
+        "children": [
+          {
+            "id": "d514a35e-3b53-457a-abac-8f2facc98468",
+            "text": "github repos",
+            "type": "folder",
+            "children": [
+              {
+                "id": "c731306a-e248-4134-b869-501410a41b6c",
+                "text": "shapely-playground/extra at master · rrmhearts/shapely-playground",
+                "type": "link",
+                "data": {
+                  "url": "https://github.com/rrmhearts/shapely-playground/tree/master/extra"
+                }
+              },
+              {
+                "id": "19f92252-2878-463c-a621-f22adfc91783",
+                "text": "jake-low/detect-lakes-in-dems",
+                "type": "link",
+                "data": {
+                  "url": "https://github.com/jake-low/detect-lakes-in-dems/tree/main"
+                }
+              },
+              {
+                "id": "ee3cc930-cf33-4aa6-9858-c930d5302fe7",
+                "text": "Geom plotter",
+                "type": "link",
+                "data": {
+                  "url": "https://github.com/hoon-volution/geom_plotter/tree/main"
+                }
+              },
+              {
+                "id": "15f531d4-086b-4262-9194-f9025d6abf39",
+                "text": "linepolygonintersection",
+                "type": "link",
+                "data": {
+                  "url": "https://github.com/edancain/LinePolygonIntersectionShapely/tree/main"
+                }
+              },
+              {
+                "id": "d080c529-8246-4079-8cbf-2d495dae23cc",
+                "text": "ShortestPolyIntersecting",
+                "type": "link",
+                "data": {
+                  "url": "https://github.com/lduncan1712/ShortestPolyIntersecting"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+}

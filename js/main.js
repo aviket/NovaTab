@@ -7,6 +7,18 @@ const themeSelect = document.getElementById("theme-select");
 import { WidgetHost } from "../widgets/widget-host.js";
 import { getDefaultWidgets } from "../widgets/widget-config.js";
 
+document.addEventListener('DOMContentLoaded', async () => {
+  const btnSidebar = document.getElementById('btn-open-sidebar');
+  if (btnSidebar) {
+    console.log('Sidebar button found, adding click listener');
+    btnSidebar.addEventListener('click', () => {
+      // Send a message to the background script to open the Side Panel
+      chrome.runtime.sendMessage({ type: 'OPEN_SIDE_PANEL' });
+    });
+  }
+   await initLinksTree();
+});
+
 const widgetHost = new WidgetHost();
 widgetHost.registerContainer("widget-container");
 
@@ -73,6 +85,8 @@ function performSearch() {
 document.getElementById("settings-btn").addEventListener("click", () => {
     chrome.runtime.openOptionsPage();
 });
+
+
 
 // import { WidgetManager } from "./widget-manager.js";
 // import { ClockWidget } from "./../widgets/Clock/clock.js";

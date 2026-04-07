@@ -10,8 +10,8 @@ import { Carousel } from "../components/Carousel/Carousel.js";
 // ==========================================
 const CAROUSEL_DATA = [
     { src: "https://picsum.photos/id/15/800/450", alt: "River valley" },
-    { src: "assets/images/local-test.jpg", alt: "A Local Extension Image" }, // 🔥 Local Image Example!
-    { src: "https://this-website-is-fake.com/broken.jpg", alt: "Broken Image" }, // ❌ This will be automatically skipped!
+    // { src: "assets/images/local-test.jpg", alt: "A Local Extension Image" }, // 🔥 Local Image Example!
+    // { src: "https://this-website-is-fake.com/broken.jpg", alt: "Broken Image" }, // ❌ This will be automatically skipped!
     { src: "https://picsum.photos/id/16/800/450", alt: "Coastal rocks" },
     { src: "https://picsum.photos/id/17/800/450", alt: "Forest path" }
 ];
