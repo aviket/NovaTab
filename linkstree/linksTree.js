@@ -144,9 +144,27 @@ async function loadJsonAsset(pathInExtension) {
 }
 
 function getTreeSnapshot($tree) {
-  // Export the current jsTree JSON
   const inst = $tree.jstree(true);
-  return inst.get_node('#', { flat: false });
+  if (!inst) return [];
+
+  // ✅ manually extract clean JSON (no circular refs)
+  function serialize(nodeId) {
+    const node = inst.get_node(nodeId);
+    if (!node) return null;
+
+    return {
+      id: node.id,
+      text: node.text,
+      type: node.type,
+      data: node.data || {},
+      children: node.children.map(childId => serialize(childId))
+    };
+  }
+
+  // start from root "#"
+  const root = inst.get_node('#');
+
+  return root.children.map(childId => serialize(childId));
 }
 
 async function ensureRecentFolderPlacement() {
