@@ -1,0 +1,14 @@
+[
+  {
+    "keys": "alt+1",
+    "text": "alt 1 pressed"
+  },
+  {
+    "keys": "alt+2",
+    "text": "Hello world!"
+  },
+  {
+    "keys": "ctrl+shift+h",
+    "text": "Hi there 👋"
+  }
+]

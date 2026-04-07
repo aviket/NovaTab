@@ -32,6 +32,15 @@
   },
   "side_panel": {
     "default_path": "sidepanel/sidepanel.html"
-  }
+  },
+  
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["widgets/TextExpandar/content-script.js"]
+    }
+  ]
+
 
 }

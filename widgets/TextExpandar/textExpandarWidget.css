@@ -1,0 +1,86 @@
+/* widgets/Shortcuts/shortcutsWidget.css */
+/* ==============================
+   SHORTCUTS CARD
+============================== */
+.shortcuts-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;            /* 🔥 fill widget */
+  gap: 10px;
+}
+
+/* ==============================
+   TABLE
+============================== */
+.shortcuts-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  table-layout: fixed;     /* 🔥 prevents overflow */
+}
+
+.shortcuts-table th,
+.shortcuts-table td {
+  padding: 6px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+/* URL column wider */
+.shortcuts-table td:nth-child(2),
+.shortcuts-table th:nth-child(2) {
+  width: 45%;
+}
+
+/* ==============================
+   INPUTS
+============================== */
+.shortcuts-table input,
+.shortcuts-table select {
+  width: 100%;
+  box-sizing: border-box;  /* 🔥 important */
+  background: rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+.add-shortcut-btn {
+  align-self: flex-start;
+  background: rgba(0,0,0,0.1);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+}
+
+/* ==============================
+   SCROLL BEHAVIOR
+============================== */
+.shortcuts-card {
+  overflow: hidden;
+}
+
+.shortcuts-table tbody {
+  display: block;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.shortcuts-table thead,
+.shortcuts-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
