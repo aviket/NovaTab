@@ -1,0 +1,49 @@
+.links-tree-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+#links-tree {
+  width: 75%;
+  font-size: 13px;
+  line-height: 1.4;
+  max-width: 600px;
+  overflow: auto;
+  background-color: lightcyan;
+}
+
+.jstree-anchor {
+  display: inline-block;
+  vertical-align: middle;
+  font-style: italic;
+  color: #f0f0f0;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* background-color: cornsilk; */
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.jstree-anchor:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.jstree-clicked {
+  background: rgba(0, 123, 255, 0.15) !important;
+}
+
+.jstree-node {
+  margin: 0;
+  padding: 1px 0;
+}
+
+.jstree-icon {
+  margin-right: 4px;
+  vertical-align: middle;
+}
+

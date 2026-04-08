@@ -145,26 +145,13 @@ async function loadJsonAsset(pathInExtension) {
 
 function getTreeSnapshot($tree) {
   const inst = $tree.jstree(true);
-  if (!inst) return [];
 
-  // ✅ manually extract clean JSON (no circular refs)
-  function serialize(nodeId) {
-    const node = inst.get_node(nodeId);
-    if (!node) return null;
-
-    return {
-      id: node.id,
-      text: node.text,
-      type: node.type,
-      data: node.data || {},
-      children: node.children.map(childId => serialize(childId))
-    };
-  }
-
-  // start from root "#"
-  const root = inst.get_node('#');
-
-  return root.children.map(childId => serialize(childId));
+  // ✅ PURE JSON (safe for stringify + storage)
+  return inst.get_json('#', {
+    flat: false,
+    no_id: false,
+    no_data: false
+  });
 }
 
 async function ensureRecentFolderPlacement() {
