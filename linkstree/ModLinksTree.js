@@ -9,7 +9,9 @@ export class ModLinksTree {
   }
 
   init() {
+    console.log("Initializing Links Tree with empty data...");
     this.tree.init({
+      
       core: { data: [] },
     });
 
@@ -17,6 +19,7 @@ export class ModLinksTree {
   }
 
   getInstance() {
+    console.log("Getting jsTree instance from ModLinksTree");
     return this.tree.getInstance();
   }
 
@@ -90,6 +93,7 @@ export class ModLinksTree {
 
   async initLinksTree() {
     // 1) Try storage
+    console.log("Initializing links tree: loading from storage...");
     const { linksTree } = await chrome.storage.local.get(["linksTree"]);
     loadCSS( "tooltip" , "utilities/TooltipManager/TooltipManager.css");
     loadCSS( "tree" , "linkstree/linksTree.css");
@@ -114,7 +118,7 @@ export class ModLinksTree {
     this.bindUIEvents(); // ensure UI buttons are wired up before we init the tree
     // Normalize and init jsTree
     const treeData = this.normalizeRoot(seed);
-    console.log("Initializing links tree with data:", treeData);
+    // console.log("Initializing links tree with data:", treeData);
     const $tree = $("#links-tree").jstree({
       core: {
         data: treeData,
@@ -132,7 +136,7 @@ export class ModLinksTree {
         items: function (node) {
           const inst = $("#links-tree").jstree(true);
           const t = inst.get_type(node); // 'folder', 'link', 'root', etc.
-          console.log("Context menu for node type:", t);
+          // console.log("Context menu for node type:", t);
           const canAddChild = t === "folder" || t === "root";
 
           const base = {
@@ -231,16 +235,16 @@ export class ModLinksTree {
         },
       },
     });
-    console.log("jsTree initialized on #links-tree");
+    // console.log("jsTree initialized on #links-tree");
     // Prepare a promise that resolves when jsTree signals ready (or after a short fallback timeout)
     const readyPromise = new Promise((resolve) => {
       // Resolve with the instance when ready.jstree fires
 
-      console.log("Waiting for jsTree to be ready...");
+      // console.log("Waiting for jsTree to be ready...");
       // Fallback: resolve after 2s to avoid hanging consumers in rare cases
       setTimeout(() => resolve($("#links-tree").jstree(true)), 2000);
     });
-    console.log("jsTree initialization continues while waiting for ready...");
+    // console.log("jsTree initialization continues while waiting for ready...");
     // 3) Persist any change back to storage
     const save = async () => {
       try {
@@ -250,20 +254,20 @@ export class ModLinksTree {
         console.error("Failed to save linksTree:", e);
       }
     };
-    console.log("Attached event listeners for jsTree changes");
+    //console.log("Attached event listeners for jsTree changes");
     // === Export / Import ===
 
-    console.log("Defined downloadJson helper function");
+    //console.log("Defined downloadJson helper function");
     // Export: dump current tree JSON (including the root wrapper)
 
-    console.log("Attached export button listener");
+    //console.log("Attached export button listener");
     // Import: choose file, parse, store, and reload UI
 
-    console.log("Attached import button listener");
+    //console.log("Attached import button listener");
 
-    console.log("Attached collapse button listener");
+    //console.log("Attached collapse button listener");
 
-    console.log("Attached file input change listener for import");
+    //console.log("Attached file input change listener for import");
     $("#links-tree")
       .on("rename_node.jstree", save)
       .on("delete_node.jstree", save)
@@ -279,16 +283,16 @@ export class ModLinksTree {
         console.warn("Could not persist initial seed to storage:", e);
       }
     }
-    console.log(
-      "Attached jsTree event listeners for changes to persist to storage",
-    );
+    // console.log(
+    //   "Attached jsTree event listeners for changes to persist to storage",
+    // );
     // Inside initLinksTree (newtab.js)
     $("#tree-search").on("input", function () {
       const v = $(this).val();
       $("#links-tree").jstree("close_all");
       $("#links-tree").jstree(true).search(v);
     });
-    console.log("Attached search input listener for tree search");
+    //console.log("Attached search input listener for tree search");
     // Once the tree is built, collapse everything
 
     // 5) Optional: handle link activation (open in current tab)
@@ -301,46 +305,46 @@ export class ModLinksTree {
     //     }
     //   });
 
-    $("#links-tree").on("select_node.jstree", async function (e, data) {
-      const node = data.node;
+    // $("#links-tree").on("select_node.jstree", async function (e, data) {
+    //   const node = data.node;
 
-      console.log("***data logged above*** ");
-      if (
-        data.event &&
-        data.event.button !== undefined &&
-        data.event.button !== 0
-      ) {
-        console.log("Non-left click ignored");
-        return;
-      }
-      // console.log('Selected node:', node.data);
+    //   console.log("***data logged above*** ");
+    //   if (
+    //     data.event &&
+    //     data.event.button !== undefined &&
+    //     data.event.button !== 0
+    //   ) {
+    //     console.log("Non-left click ignored");
+    //     return;
+    //   }
+    //   // console.log('Selected node:', node.data);
 
-      // If node has a URL stored in its "a_attr.href" or custom data
-      let url = null;
+    //   // If node has a URL stored in its "a_attr.href" or custom data
+    //   let url = null;
 
-      if (node.data && node.data.url) {
-        url = node.data.url;
-      } else if (node.original && node.original.url) {
-        url = node.original.url;
-      }
+    //   if (node.data && node.data.url) {
+    //     url = node.data.url;
+    //   } else if (node.original && node.original.url) {
+    //     url = node.original.url;
+    //   }
 
-      // 🚫 Also ignore non-left mouse buttons (safety)
-      // if (data.event && data.event.button !== undefined && data.event.button !== 0) {
-      //   console.log('Non-left click ignored');
-      //   return;
-      // }
+    //   // 🚫 Also ignore non-left mouse buttons (safety)
+    //   // if (data.event && data.event.button !== undefined && data.event.button !== 0) {
+    //   //   console.log('Non-left click ignored');
+    //   //   return;
+    //   // }
 
-      if (url) {
-        // Update recent BEFORE opening (so duplicate/move logic runs)
-        try {
-          await addOrMoveRecent(url, node.text || this.prettyTitleFromUrl(url));
-        } catch (err) {
-          console.error("Failed to update Recent from tree select", err);
-        }
-        // open in new tab
-        window.open(url, "_blank");
-      }
-    });
+    //   if (url) {
+    //     // Update recent BEFORE opening (so duplicate/move logic runs)
+    //     try {
+    //       await addOrMoveRecent(url, node.text || this.prettyTitleFromUrl(url));
+    //     } catch (err) {
+    //       console.error("Failed to update Recent from tree select", err);
+    //     }
+    //     // open in new tab
+    //     window.open(url, "_blank");
+    //   }
+    // });
 
     // wait till jsTree reports ready (or fallback timeout) before returning
     await readyPromise;
@@ -408,7 +412,7 @@ export class ModLinksTree {
 
     // 1) Ensure "My Sites" exists (create if missing)
     const mySitesNode = this.getOrCreateMySites();
-    console.log("addOrMoveRecent: My Sites node:", mySitesNode);
+    //console.log("addOrMoveRecent: My Sites node:", mySitesNode);
     if (!mySitesNode) {
       console.warn("addOrMoveRecent: could not get/create My Sites");
       return null;
@@ -525,10 +529,10 @@ export class ModLinksTree {
     if (!name) return null;
     const inst = $("#links-tree").jstree(true);
     if (!inst) return null;
-    console.log(`Searching for node by name: "${name}"`);
+    // console.log(`Searching for node by name: "${name}"`);
     const needle = String(name).trim().toLowerCase();
     const flat = inst.get_json("#", { flat: true }) || [];
-    console.log(`Total nodes to scan: ${flat.length}`);
+    //console.log(`Total nodes to scan: ${flat.length}`);
     const match = flat.find(
       (n) =>
         String(n.text || "")
@@ -536,9 +540,9 @@ export class ModLinksTree {
           .toLowerCase() === needle,
     );
     if (!match) return null;
-    console.log(`Found matching node ID: ${match.id} (type: ${match.type})`);
+    //console.log(`Found matching node ID: ${match.id} (type: ${match.type})`);
     const full = inst.get_node(match.id);
-    console.log("Full node object:", full);
+    // console.log("Full node object:", full);
     return {
       node: full,
       type: match.type === "link" ? "link" : "node",
@@ -632,7 +636,7 @@ export class ModLinksTree {
     if (beforeSnapshot !== afterSnapshot) {
       await persistTree();
     } else {
-      console.log("ensureRecentFolderPlacement: no changes needed");
+      //console.log("ensureRecentFolderPlacement: no changes needed");
     }
   }
 
@@ -644,7 +648,7 @@ export class ModLinksTree {
     try {
       const snapshot = this.getTreeSnapshot($("#links-tree"));
       await chrome.storage.local.set({ linksTree: snapshot });
-      console.log("persistTree: saved linksTree");
+     // console.log("persistTree: saved linksTree");
     } catch (err) {
       console.error("persistTree: failed to save linksTree", err);
     }
@@ -830,12 +834,12 @@ export class ModLinksTree {
     if (beforeSnapshot !== afterSnapshot) {
       await this.persistTree();
     } else {
-      console.log("ensureRecentFolderPlacement: no changes needed");
+      // console.log("ensureRecentFolderPlacement: no changes needed");
     }
   }
 
   bindUIEvents() {
-    console.log("**********Binding UI events for export/import/collapse");
+    // console.log("**********Binding UI events for export/import/collapse");
     const btnExport = document.getElementById("btn-export-tree");
     const btnImport = document.getElementById("btn-import-tree");
     const btnCollapse = document.getElementById("btn-collapse");
@@ -907,46 +911,54 @@ export class ModLinksTree {
     URL.revokeObjectURL(url);
   }
 
-  bindCoreEvents() {
-    if (this._coreEventsBound) return;
+ bindCoreEvents() {
+  if (this._coreEventsBound) return;
 
-    const $tree = $("#links-tree");
+  console.log("Binding core jsTree events");
 
-    // 🔁 Persist changes
-    const save = async () => {
-      try {
-        const snapshot = this.getTreeSnapshot($tree);
-        await chrome.storage.local.set({ linksTree: snapshot });
-      } catch (e) {
-        console.error("Failed to save linksTree:", e);
-      }
-    };
+  const $tree = $("#links-tree");
 
-    $tree
-      .on("rename_node.jstree", save)
-      .on("delete_node.jstree", save)
-      .on("create_node.jstree", save)
-      .on("move_node.jstree", save)
-      .on("changed.jstree", save);
+  // ✅ remove ONLY our handlers
+  $tree.off(".modLinksTree");
 
-    // 🎯 Node selection
-    $tree.on("select_node.jstree", this.handleNodeSelect.bind(this));
+  const save = async () => {
+    try {
+      const snapshot = this.getTreeSnapshot($tree);
+      await chrome.storage.local.set({ linksTree: snapshot });
+    } catch (e) {
+      console.error("Failed to save linksTree:", e);
+    }
+  };
 
-    // 🖱️ Context menu suppression logic
-    $tree.on("contextmenu.jstree", this.handleContextMenu.bind(this));
+  // ✅ namespace all events
+  $tree
+    .on("rename_node.jstree.modLinksTree", save)
+    .on("delete_node.jstree.modLinksTree", save)
+    .on("create_node.jstree.modLinksTree", save)
+    .on("move_node.jstree.modLinksTree", save)
+    .on("changed.jstree.modLinksTree", save);
 
-    // 🧭 Tooltip (delegated)
-    $tree
-  .on("mouseenter", ".jstree-anchor", this.handleNodeHover.bind(this))
-  .on("mousemove", ".jstree-anchor", this.handleNodeMove.bind(this))
-  .on("mouseleave", ".jstree-anchor", this.handleNodeLeave.bind(this));
+  $tree.on(
+    "select_node.jstree.modLinksTree",
+    this.handleNodeSelect.bind(this)
+  );
 
-    this._coreEventsBound = true;
-  }
+  $tree.on(
+    "contextmenu.jstree.modLinksTree",
+    this.handleContextMenu.bind(this)
+  );
+
+  $tree
+    .on("mouseenter.modLinksTree", ".jstree-anchor", this.handleNodeHover.bind(this))
+    .on("mousemove.modLinksTree", ".jstree-anchor", this.handleNodeMove.bind(this))
+    .on("mouseleave.modLinksTree", ".jstree-anchor", this.handleNodeLeave.bind(this));
+
+  this._coreEventsBound = true;
+}
 
   async handleNodeSelect(e, data) {
     const node = data.node;
-
+    console.count("Node click handler fired");
     // Ignore non-left click
     if (data.event && data.event.button !== 0) return;
 
@@ -964,6 +976,7 @@ export class ModLinksTree {
   }
 
   handleContextMenu(e) {
+    console.log("Context menu triggered, suppressing next select");
     this.suppressNextSelect = true;
 
     setTimeout(() => {
@@ -972,6 +985,7 @@ export class ModLinksTree {
   }
 
   handleNodeHover(e) {
+    console.log("Node hover for tooltip:", e.currentTarget);
     const el = e.currentTarget;
 
     const inst = $("#links-tree").jstree(true);
@@ -997,8 +1011,8 @@ export class ModLinksTree {
 //       ${todo ? `<div>✅ ${todo}</div>` : ""}
 //     </div>
 //   `;
-    console.log("Showing tooltip for node:", node);
-    console.log("Tooltip element:", tooltipManager.el);
+    // console.log("Showing tooltip for node:", node);
+    // console.log("Tooltip element:", tooltipManager.el);
 //     if (!this._tippy && window.tippy) {
 //     console.log("Initializing tippy tooltip");    
 //     console.log("Tooltip content:", html);
@@ -1017,6 +1031,7 @@ tooltipManager.show(tooltipContent, e.clientX, e.clientY);
 }
 
 handleNodeMove(e) {
+  console.log("Node mouse move, updating tooltip position");
   tooltipManager.move(e.clientX, e.clientY);
 }
 

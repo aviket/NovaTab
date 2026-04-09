@@ -23,7 +23,7 @@ show(html, x, y) {
   this.el.style.opacity = '1';
   this.el.style.visibility = 'visible';
 
-  console.log("Tooltip display:", this.el.style.display);
+  // // console.log("Tooltip display:", this.el.style.display);
 }
 
   move(x, y) {
