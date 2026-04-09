@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', async () => {
    // await initLinksTree();
 
 });
-   const tree = new ModLinksTree('#links-tree');
-   tree.initLinksTree();
+//    const tree = new ModLinksTree('#links-tree');
+//    tree.initLinksTree();
 
 const widgetHost = new WidgetHost();
 widgetHost.registerContainer("widget-container");
