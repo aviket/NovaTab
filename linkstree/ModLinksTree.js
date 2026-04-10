@@ -254,20 +254,7 @@ export class ModLinksTree {
         console.error("Failed to save linksTree:", e);
       }
     };
-    //console.log("Attached event listeners for jsTree changes");
-    // === Export / Import ===
 
-    //console.log("Defined downloadJson helper function");
-    // Export: dump current tree JSON (including the root wrapper)
-
-    //console.log("Attached export button listener");
-    // Import: choose file, parse, store, and reload UI
-
-    //console.log("Attached import button listener");
-
-    //console.log("Attached collapse button listener");
-
-    //console.log("Attached file input change listener for import");
     $("#links-tree")
       .on("rename_node.jstree", save)
       .on("delete_node.jstree", save)
@@ -292,59 +279,6 @@ export class ModLinksTree {
       $("#links-tree").jstree("close_all");
       $("#links-tree").jstree(true).search(v);
     });
-    //console.log("Attached search input listener for tree search");
-    // Once the tree is built, collapse everything
-
-    // 5) Optional: handle link activation (open in current tab)
-    //   $('#links-tree').on('activate_node.jstree', function (_e, data) {
-    //     const node = data.node;
-    //     const url = node?.data?.url;
-    //     if (url && typeof url === 'string') {
-    //       // open in same tab
-    //       window.location.href = url;
-    //     }
-    //   });
-
-    // $("#links-tree").on("select_node.jstree", async function (e, data) {
-    //   const node = data.node;
-
-    //   console.log("***data logged above*** ");
-    //   if (
-    //     data.event &&
-    //     data.event.button !== undefined &&
-    //     data.event.button !== 0
-    //   ) {
-    //     console.log("Non-left click ignored");
-    //     return;
-    //   }
-    //   // console.log('Selected node:', node.data);
-
-    //   // If node has a URL stored in its "a_attr.href" or custom data
-    //   let url = null;
-
-    //   if (node.data && node.data.url) {
-    //     url = node.data.url;
-    //   } else if (node.original && node.original.url) {
-    //     url = node.original.url;
-    //   }
-
-    //   // 🚫 Also ignore non-left mouse buttons (safety)
-    //   // if (data.event && data.event.button !== undefined && data.event.button !== 0) {
-    //   //   console.log('Non-left click ignored');
-    //   //   return;
-    //   // }
-
-    //   if (url) {
-    //     // Update recent BEFORE opening (so duplicate/move logic runs)
-    //     try {
-    //       await addOrMoveRecent(url, node.text || this.prettyTitleFromUrl(url));
-    //     } catch (err) {
-    //       console.error("Failed to update Recent from tree select", err);
-    //     }
-    //     // open in new tab
-    //     window.open(url, "_blank");
-    //   }
-    // });
 
     // wait till jsTree reports ready (or fallback timeout) before returning
     await readyPromise;
@@ -355,7 +289,7 @@ export class ModLinksTree {
     } catch (err) {
       console.error("ensureRecentFolderPlacement failed", err);
     }
-
+    $("#links-tree").jstree("close_all"); // start with tree collapsed  
     // return the jstree instance for convenience to callers
     return $("#links-tree").jstree(true);
   }
@@ -992,37 +926,7 @@ export class ModLinksTree {
     const node = inst.get_node(el);
     if (!node) return;
 
-    // const { url = "", Notes: notes = "", Todo: todo = "" } = node.data || {};
 
-    // const favicon = url
-    //   ? `https://www.google.com/s2/favicons?domain=${url}&sz=32`
-    //   : "";
-
-//     const html = `
-//     <div class="tooltip-card">
-//       <div class="tooltip-header">
-//         ${favicon ? `<img src="${favicon}" class="tooltip-favicon">` : ""}
-//         <div>
-//           <div>${node.text}</div>
-//           ${url ? `<div>${url}</div>` : ""}
-//         </div>
-//       </div>
-//       ${notes ? `<div>📝 ${notes}</div>` : ""}
-//       ${todo ? `<div>✅ ${todo}</div>` : ""}
-//     </div>
-//   `;
-    // console.log("Showing tooltip for node:", node);
-    // console.log("Tooltip element:", tooltipManager.el);
-//     if (!this._tippy && window.tippy) {
-//     console.log("Initializing tippy tooltip");    
-//     console.log("Tooltip content:", html);
-//     window.tippy(el, {
-//       content: html,
-//       allowHTML: true,
-//       placement: "right",
-//     });
-    
-//   }
 
 const tooltipContent = this.buildTooltipHTML(node);
 
