@@ -32,6 +32,12 @@ export class TextexpanderWidget extends BaseWidget {
       </thead>
       <tbody></tbody>   <!-- ✅ EMPTY -->
     </table>
+        <div style="display:flex; gap:8px;">
+        <button class="add-shortcut-btn">＋ Add</button>
+        <button class="import-btn-t">📂 Import</button>
+        <button class="export-btn-t">📂 Export</button>
+    </div>
+    <input type="file" class="file-input" accept=".json" style="display:none;" />
   `;
 
   this.element = createWidgetShell({
@@ -84,52 +90,86 @@ export class TextexpanderWidget extends BaseWidget {
       }
     });
 
-    // const importBtn = this.element.querySelector(".import-btn");
-    // const fileInput = this.element.querySelector(".file-input");
+    const addBtn = this.element.querySelector(".add-shortcut-btn");
 
-    // importBtn.addEventListener("click", () => {
-    //   fileInput.click(); // open file picker
-    // });
+    // ➕ Add
+    addBtn.addEventListener("click", async () => {
+      if (this.data.length >= this.MAX_RECORDS) {
+        alert(`Max ${this.MAX_RECORDS} shortcuts allowed`);
+        return;
+      }
 
-    // fileInput.addEventListener("change", async (e) => {
-    //   const file = e.target.files[0];
-    //   if (!file) return;
+      this.data.push({ keys: "", text: ""  });
+      await this.saveData(this.data);
+      this.renderTable();
+    });
 
-    //   try {
-    //     const text = await file.text();
-    //     const json = JSON.parse(text);
+    const importBtn = this.element.querySelector(".import-btn-t");
+    console.log("Import button element:", importBtn);
+    const fileInput = this.element.querySelector(".file-input");
+    importBtn.addEventListener("click", () => {
+      fileInput.click();
+      
 
-    //     // 🔍 validate format
-    //     if (!Array.isArray(json)) {
-    //       throw new Error("Invalid format: must be array");
-    //     }
 
-    //     const valid = json.every(
-    //       (item) =>
-    //         typeof item.keys === "string" &&
-    //         typeof item.url === "string" &&
-    //         (item.target === "tab" || item.target === "window"),
-    //     );
 
-    //     if (!valid) {
-    //       throw new Error("Invalid shortcut structure");
-    //     }
+    });
 
-    //     // 🔥 apply data
-    //     this.data = json.slice(0, this.MAX_RECORDS);
+        fileInput.addEventListener("change", async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
 
-    //     await this.saveData(this.data);
-    //     this.renderTable();
+      try {
+        const text = await file.text();
+        const json = JSON.parse(text);
 
-    //     alert("Shortcuts imported successfully 🚀");
-    //   } catch (err) {
-    //     console.error(err);
-    //     alert("Invalid JSON file");
-    //   }
+        // 🔍 validate format
+        if (!Array.isArray(json)) {
+          throw new Error("Invalid format: must be array");
+        }
+        console.log("Parsed JSON from file:", json);  
+        const valid = json.every(
+          (item) =>
+            typeof item.keys === "string" &&
+            typeof item.text === "string" 
 
-    //   // reset input so same file can be re-selected
-    //   fileInput.value = "";
-    // });
+           
+        );
+
+        if (!valid) {
+          throw new Error("Invalid shortcut structure");
+        }
+
+        // 🔥 apply data
+        this.data = json.slice(0, this.MAX_RECORDS);
+
+        await this.saveData(this.data);
+        this.renderTable();
+
+        alert("Shortcuts imported successfully 🚀");
+      } catch (err) {
+        console.error(err);
+        alert("Invalid JSON file");
+      }
+
+      // reset input so same file can be re-selected
+      fileInput.value = "";
+    });
+
+    const exportBtn = this.element.querySelector(".export-btn-t");
+    console.log("Export button element:", exportBtn);
+    exportBtn.addEventListener("click", () => {
+      const dataStr = JSON.stringify(this.data, null, 2);
+      const blob = new Blob([dataStr], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "shortcuts.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+
   }
 
   async syncFromUI() {

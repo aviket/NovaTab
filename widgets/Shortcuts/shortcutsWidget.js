@@ -38,6 +38,7 @@ export class ShortcutsWidget extends BaseWidget {
     <div style="display:flex; gap:8px;">
         <button class="add-shortcut-btn">＋ Add</button>
         <button class="import-btn">📂 Import</button>
+        <button class="export-btn">📂 Export</button>
     </div>
 
     <input type="file" class="file-input" accept=".json" style="display:none;" />
@@ -77,6 +78,20 @@ export class ShortcutsWidget extends BaseWidget {
       await this.saveData(this.data);
       this.renderTable();
     });
+
+    const exportBtn = this.element.querySelector(".export-btn");
+    exportBtn.addEventListener("click", () => {
+      const dataStr = JSON.stringify(this.data, null, 2);
+      const blob = new Blob([dataStr], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "shortcuts.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    
 
     // ✏️ Auto-save
     this.element.addEventListener("input", async () => {
