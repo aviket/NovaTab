@@ -15,8 +15,13 @@ export const STORAGE_KEYS = {
     default: {},
   },
   SHORTCUTS: {
-    key: "shortcuts",
+    key: "shortcuts_widget_data",
     storage: "local",
     default: [],
+  },
+  TEXT_EXPANDER: {
+    key: "textExpander",
+    storage: "local",
+    default: {},
   }
 };

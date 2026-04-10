@@ -1,7 +1,7 @@
-import { loadScript } from "../utilities/loadscript.js";
 import { JsTreeAdapter } from "./JsTreeAdapter.js";
 import { tooltipManager } from "../utilities/ToolTipManager/ToolTipManager.js";
 import {loadCSS } from "../utilities/loadcss.js";
+import { LinksTreeStorage } from "./linksTreeStorage.js";
 export class ModLinksTree {
   constructor(selector) {
     this.tree = new JsTreeAdapter(selector, $);
@@ -94,7 +94,7 @@ export class ModLinksTree {
   async initLinksTree() {
     // 1) Try storage
     console.log("Initializing links tree: loading from storage...");
-    const { linksTree } = await chrome.storage.local.get(["linksTree"]);
+    const linksTree = await LinksTreeStorage.getTree();
     loadCSS( "tooltip" , "utilities/TooltipManager/TooltipManager.css");
     loadCSS( "tree" , "linkstree/linksTree.css");
     // await loadScript( "popper", "assets/lib/popper.min.js");
@@ -249,7 +249,7 @@ export class ModLinksTree {
     const save = async () => {
       try {
         const snapshot = this.getTreeSnapshot($("#links-tree"));
-        await chrome.storage.local.set({ linksTree: snapshot });
+        await LinksTreeStorage.saveTree(snapshot);
       } catch (e) {
         console.error("Failed to save linksTree:", e);
       }
@@ -278,7 +278,7 @@ export class ModLinksTree {
     // 4) On very first run (no storage), store the seeded tree so future opens are fast
     if (!linksTree || !linksTree.length) {
       try {
-        await chrome.storage.local.set({ linksTree: treeData });
+        await LinksTreeStorage.saveTree(treeData);
       } catch (e) {
         console.warn("Could not persist initial seed to storage:", e);
       }
@@ -642,13 +642,13 @@ export class ModLinksTree {
 
   /**
    * persistTree()
-   * - Persist current jstree snapshot to chrome.storage.local (same key used by the app).
+   * - Persist current jstree snapshot to storage.
    */
   async persistTree() {
     try {
       const snapshot = this.getTreeSnapshot($("#links-tree"));
-      await chrome.storage.local.set({ linksTree: snapshot });
-     // console.log("persistTree: saved linksTree");
+      await LinksTreeStorage.saveTree(snapshot);
+      // console.log("persistTree: saved linksTree");
     } catch (err) {
       console.error("persistTree: failed to save linksTree", err);
     }
@@ -889,7 +889,7 @@ export class ModLinksTree {
 
       const normalized = this.normalizeRoot(incoming);
 
-      await chrome.storage.local.set({ linksTree: normalized });
+      await LinksTreeStorage.saveTree(normalized);
 
       location.reload();
     } catch (err) {
@@ -924,7 +924,7 @@ export class ModLinksTree {
   const save = async () => {
     try {
       const snapshot = this.getTreeSnapshot($tree);
-      await chrome.storage.local.set({ linksTree: snapshot });
+       await LinksTreeStorage.saveTree(snapshot);
     } catch (e) {
       console.error("Failed to save linksTree:", e);
     }

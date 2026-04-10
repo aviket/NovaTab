@@ -3,8 +3,8 @@
 let shortcuts = [];
 
 // Load shortcuts from storage
-chrome.storage.local.get("textexpander_widget_data", (res) => {
-  shortcuts = res.textexpander_widget_data || [];
+chrome.storage.local.get("textExpander", (res) => {
+  shortcuts = res.textExpander || [];
 });
 
 function normalize(str) {
@@ -31,6 +31,7 @@ function getEventShortcut(e) {
 window.addEventListener("keydown", (e) => {
   const pressed = getEventShortcut(e);
   console.log("Pressed shortcut:", pressed);
+  console.log("Defined shortcuts:", shortcuts.map(s => s.keys));
   for (const item of shortcuts) {
     if (normalize(item.keys) === pressed) {
       e.preventDefault();
@@ -42,7 +43,7 @@ window.addEventListener("keydown", (e) => {
 
 function insertText(text) {
   const active = document.activeElement;
-
+  console.log("Active element:", active);
   if (!active) return;
 
   if (

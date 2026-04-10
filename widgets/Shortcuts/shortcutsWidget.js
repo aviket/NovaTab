@@ -2,6 +2,8 @@
 // shortcuts-widget.js
 
 import { BaseWidget } from "../widget-base.js";
+import { ShortcutsStorage } from "./ShortcutsStorage.js";
+
 import { createWidgetShell } from "../widget-shell.js";
 import { loadCSS } from "../../utilities/loadcss.js";
 
@@ -10,7 +12,6 @@ export class ShortcutsWidget extends BaseWidget {
     super(id);
 
     console.log("ShortcutsWidget constructor called");
-    this.STORAGE_KEY = "shortcuts_widget_data";
     this.MAX_RECORDS = 10;
 
     this.data = [];
@@ -155,15 +156,15 @@ export class ShortcutsWidget extends BaseWidget {
 
   async loadData() {
     try {
-      const result = await chrome.storage.local.get([this.STORAGE_KEY]);
-      const stored = result[this.STORAGE_KEY];
+      const result = await ShortcutsStorage.getShortcuts();
+      const stored = result;
+      console.log("Loaded shortcuts from storage:", stored);
 
-      if (!stored) {
+      if (!result || !Array.isArray(result)) {
+        console.warn("No valid shortcuts found in storage, loading defaults...");
         const defaults = await this.loadDefaultShortcuts();
 
-        await chrome.storage.local.set({
-          [this.STORAGE_KEY]: defaults,
-        });
+        await ShortcutsStorage.saveShortcuts(defaults);
 
         return [...defaults];
       }
@@ -176,9 +177,7 @@ export class ShortcutsWidget extends BaseWidget {
   }
 
   async saveData(data) {
-    await chrome.storage.local.set({
-      [this.STORAGE_KEY]: data,
-    });
+    await ShortcutsStorage.saveShortcuts(data);
   }
 
   renderTable() {

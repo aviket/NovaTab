@@ -4,13 +4,13 @@
 import { BaseWidget } from "../widget-base.js";
 import { createWidgetShell } from "../widget-shell.js";
 import { loadCSS } from "../../utilities/loadcss.js";
+import { TextExpanderStorage } from "./TextExpanderStorage.js";
 
-export class TextExpandarWidget extends BaseWidget {
+export class TextexpanderWidget extends BaseWidget {
   constructor(id) {
     super(id);
 
-    console.log("TextExpandarWidget constructor called");
-    this.STORAGE_KEY = "textexpander_widget_data";
+    console.log("TextexpanderWidget constructor called");
     this.MAX_RECORDS = 10;
 
     this.data = [];
@@ -44,12 +44,12 @@ export class TextExpandarWidget extends BaseWidget {
 }
 
   async init() {
-    console.log("Initializing ShortcutsWidget...");
-    loadCSS("shortcuts-css", "widgets/TextExpandar/textExpandarWidget.css");
+    console.log("Initializing TextExpanderWidget...");
+    loadCSS("shortcuts-css", "widgets/TextExpander/textExpanderWidget.css");
 
     this.data = await this.loadData(); // ✅ async moved here
     this.renderTable();
-    console.log("TextExpandarWidget initialized with data:", this.data);
+    console.log("TextExpanderWidget initialized with data:", this.data);
     this.bindEvents();
     // this.attachShortcutListener();
   }
@@ -146,20 +146,22 @@ this.data = [...rows].map((row) => ({
 
   async loadData() {
     try {
-      const result = await chrome.storage.local.get([this.STORAGE_KEY]);
-      const stored = result[this.STORAGE_KEY];
+      const result = await TextExpanderStorage.getTextExpander();
+      console.log("Loaded data from storage:", result);
+      // check if result is empty or not an array
+      if (!result || !Array.isArray(result)) {
 
-      if (!stored) {
+
+      //if (!result) {
+        console.log("No existing data found, loading defaults...");
         const defaults = await this.loadDefaultShortcuts();
 
-        await chrome.storage.local.set({
-          [this.STORAGE_KEY]: defaults,
-        });
+        await TextExpanderStorage.saveTextExpander(defaults);
 
         return [...defaults];
       }
 
-      return Array.isArray(stored) ? stored : [];
+      return Array.isArray(result) ? result : [];
     } catch (err) {
       console.error(err);
       return [];
@@ -167,9 +169,7 @@ this.data = [...rows].map((row) => ({
   }
 
   async saveData(data) {
-    await chrome.storage.local.set({
-      [this.STORAGE_KEY]: data,
-    });
+    await TextExpanderStorage.saveTextExpander(data);
   }
 
  renderTable() {
@@ -194,7 +194,7 @@ this.data = [...rows].map((row) => ({
   async loadDefaultShortcuts() {
     try {
       const url = chrome.runtime.getURL(
-        "widgets/TextExpandar/default-shortcuts.json",
+        "widgets/Textexpander/default-shortcuts.json",
       );
 
       const response = await fetch(url);
