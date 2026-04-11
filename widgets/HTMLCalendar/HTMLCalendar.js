@@ -76,38 +76,62 @@ export class HTMLCalendar extends BaseWidget {
 
       const firstDay = new Date(year, month, 1).getDay(); // 0–6
       const daysInMonth = new Date(year, month + 1, 0).getDate();
-      
+
       grid.innerHTML = "";
 
       // 1️⃣ Empty slots before first day
       for (let i = 0; i < firstDay; i++) {
         const empty = document.createElement("div");
+        empty.classList.add("empty-cell");
         grid.appendChild(empty);
       }
 
       // 2️⃣ Actual days ONLY
+      const today = new Date();
       for (let d = 1; d <= daysInMonth; d++) {
         const cell = document.createElement("div");
+        cell.addEventListener("mouseover", (e) => {
+          console.log("Hovering over date:", d);
+          cell.classList.add("calendar-day--hover");
+        });
+        cell.addEventListener("mouseleave", (e) => {
+          cell.classList.remove("calendar-day--hover");
+        });
         cell.addEventListener("click", () => {
           const selectedDate = new Date(year, month, d);
-                      notify.create({
-              type: "basic",
-              title: "📅 Calendar",
-              message: "You selected: " + selectedDate.toDateString(),
-              priority: 2,
-              requireInteraction: true,
+          notify.create({
+            type: "basic",
+            title: "📅 Calendar",
+            message: "You selected: " + selectedDate.toDateString(),
+            priority: 2,
+            requireInteraction: true,
 
-              // 👇 optional click
-              onClick: () => {
-                console.log("Notification clicked");
-              },
-            });
-          
+            // 👇 optional click
+            onClick: () => {
+              console.log("Notification clicked");
+            },
+          });
         });
         cell.textContent = d;
 
+          // 🔥 Check if this cell is today
+  if (
+    d === today.getDate() &&
+    month === today.getMonth() &&
+    year === today.getFullYear()
+  ) {
+    console.log("Marking today:", d);
+    cell.style.backgroundColor = "#b9d5f2";
+    cell.style.fontWeight = "bold";
+    cell.style.border = "2px solid #1976D2";
+    cell.style.color = "#1976D2";
+  }
+       
+        
+
         grid.appendChild(cell);
       }
+      
 
     };
 
