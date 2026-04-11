@@ -76,7 +76,7 @@ export class HTMLCalendar extends BaseWidget {
 
       const firstDay = new Date(year, month, 1).getDay(); // 0–6
       const daysInMonth = new Date(year, month + 1, 0).getDate();
-
+      
       grid.innerHTML = "";
 
       // 1️⃣ Empty slots before first day
@@ -88,29 +88,29 @@ export class HTMLCalendar extends BaseWidget {
       // 2️⃣ Actual days ONLY
       for (let d = 1; d <= daysInMonth; d++) {
         const cell = document.createElement("div");
+        cell.addEventListener("click", () => {
+          const selectedDate = new Date(year, month, d);
+                      notify.create({
+              type: "basic",
+              title: "📅 Calendar",
+              message: "You selected: " + selectedDate.toDateString(),
+              priority: 2,
+              requireInteraction: true,
+
+              // 👇 optional click
+              onClick: () => {
+                console.log("Notification clicked");
+              },
+            });
+          
+        });
         cell.textContent = d;
 
         grid.appendChild(cell);
       }
       const today = new Date();
 
-      for (let d = 1; d <= days; d++) {
-        const cell = document.createElement("div");
-        cell.textContent = d;
 
-        const cellDate = new Date(year, month, d);
-
-        // ✅ TODAY highlight
-        if (
-          d === today.getDate() &&
-          month === today.getMonth() &&
-          year === today.getFullYear()
-        ) {
-          cell.classList.add("calendar-day--today");
-        }
-
-        grid.appendChild(cell);
-      }
     };
 
     root.querySelector("#prev-month").onclick = () => {
