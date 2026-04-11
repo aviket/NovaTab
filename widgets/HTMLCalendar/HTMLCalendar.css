@@ -121,3 +121,8 @@
     background: transparent;
     pointer-events: none;
 }
+
+.calendar-day--hover {
+    background: darkblue;
+    transform: translateY(-1px);
+}
