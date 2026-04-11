@@ -9,6 +9,6 @@ widgetHost.registerContainer("widget-container-side");
 // mount widgets
 const widgets = getDefaultSideWidgets();
 
-widgets.forEach(widget => {
-    widgetHost.mountWidget("widget-container-side", widget);
+widgets.forEach((widget) => {
+  widgetHost.mountWidget("widget-container-side", widget);
 });

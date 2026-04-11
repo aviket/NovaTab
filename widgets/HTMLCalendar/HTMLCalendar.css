@@ -35,7 +35,8 @@
 #month-label {
     font-size: 16px;
     font-weight: 700;
-    color: #1976D2;   /* primary accent */
+    color: #1976D2;
+    /* primary accent */
     letter-spacing: 0.5px;
 }
 

@@ -1,5 +1,5 @@
 export class JsTreeAdapter {
-  constructor( selector ,  $) {
+  constructor(selector, $) {
     if (!$) {
       throw new Error("jQuery not loaded");
     }

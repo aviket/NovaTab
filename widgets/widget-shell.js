@@ -1,10 +1,10 @@
 // widgets/widget-shell.js
 export function createWidgetShell({ id, title, content }) {
-    const wrapper = document.createElement("div");
-    wrapper.className = "widget";
-    wrapper.dataset.id = id;
+  const wrapper = document.createElement("div");
+  wrapper.className = "widget";
+  wrapper.dataset.id = id;
 
-    wrapper.innerHTML = `
+  wrapper.innerHTML = `
         <div class="widget-header">
             <span class="widget-title">${title}</span>
             <div class="widget-controls">
@@ -17,24 +17,25 @@ export function createWidgetShell({ id, title, content }) {
         </div>
     `;
 
-    const contentContainer = wrapper.querySelector(".widget-content");
-    contentContainer.appendChild(content);
+  const contentContainer = wrapper.querySelector(".widget-content");
+  contentContainer.appendChild(content);
 
-     // Remove logic
-    wrapper.querySelector(".remove-btn").onclick = () => {
-        wrapper.remove();
-    };
+  // Remove logic
+  wrapper.querySelector(".remove-btn").onclick = () => {
+    wrapper.remove();
+  };
 
+  // 🔥 Maximize logic
+  const maximizeBtn = wrapper.querySelector(".maximize-btn");
 
-    // 🔥 Maximize logic
-    const maximizeBtn = wrapper.querySelector(".maximize-btn");
+  maximizeBtn.onclick = () => {
+    wrapper.classList.toggle("maximized");
 
-    maximizeBtn.onclick = () => {
-        wrapper.classList.toggle("maximized");
+    // Change icon
+    maximizeBtn.textContent = wrapper.classList.contains("maximized")
+      ? "🗗"
+      : "⛶";
+  };
 
-        // Change icon
-        maximizeBtn.textContent = wrapper.classList.contains("maximized") ? "🗗" : "⛶";
-    };
-
-    return wrapper;
+  return wrapper;
 }

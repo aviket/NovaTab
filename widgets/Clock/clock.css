@@ -52,7 +52,8 @@
   justify-content: center;
   padding: 10px;
   overflow: hidden;
-} */ */
+} */
+*/
 
 /* Remove unnecessary pane splitting */
 #float-clock .pane {
@@ -112,6 +113,7 @@
   border-radius: 50%;
   overflow: hidden;
 }
+
 .clock::before {
   content: "";
   position: absolute;
@@ -120,11 +122,11 @@
   border-radius: 50%;
 
   background:
-  radial-gradient(circle at 50% 40%, #1f2937 0%, #020617 80%),
-  linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.2));
+    radial-gradient(circle at 50% 40%, #1f2937 0%, #020617 80%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.2));
 
   z-index: 1;
-}  
+}
 
 
 .clock::after {
@@ -134,22 +136,19 @@
   border-radius: 50%;
 
   background:
-    repeating-conic-gradient(
-      from -90deg,
+    repeating-conic-gradient(from -90deg,
       #aaa 0deg 2deg,
-      transparent 2deg 30deg
-    ),
-    repeating-conic-gradient(
-      from -90deg,
+      transparent 2deg 30deg),
+    repeating-conic-gradient(from -90deg,
       #666 0deg 1deg,
-      transparent 1deg 6deg
-    );
+      transparent 1deg 6deg);
 
   -webkit-mask: radial-gradient(circle, transparent 55%, black 56%);
   mask: radial-gradient(circle, transparent 55%, black 56%);
 
   z-index: 3;
 }
+
 /* ==============================
    HANDS
 ============================== */
@@ -162,12 +161,27 @@
   transform: translate(-50%, -100%) rotate(0deg);
 
   border-radius: 10px;
-  z-index: 5; /* 🔥 force above clock face */
+  z-index: 5;
+  /* 🔥 force above clock face */
 }
 
-.hand.hour   { width: clamp(4px, 1.2%, 6px); height: 26%; background: #ffffff; }
-.hand.minute { width: clamp(3px, 0.8%, 4px); height: 36%; background: #c7d2fe; }
-.hand.second { width: clamp(1px, 0.5%, 2px); height: 40%; background: #ff4d4d;}
+.hand.hour {
+  width: clamp(4px, 1.2%, 6px);
+  height: 26%;
+  background: #ffffff;
+}
+
+.hand.minute {
+  width: clamp(3px, 0.8%, 4px);
+  height: 36%;
+  background: #c7d2fe;
+}
+
+.hand.second {
+  width: clamp(1px, 0.5%, 2px);
+  height: 40%;
+  background: #ff4d4d;
+}
 
 /* ==============================
    NUMBERS
@@ -176,7 +190,8 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 2; /* 🔥 ABOVE ticks */
+  z-index: 2;
+  /* 🔥 ABOVE ticks */
 }
 
 #nums .num {
@@ -185,7 +200,8 @@
   font-size: clamp(16px, 2.5vw, 18px);
   color: #d0acac;
   /* font-weight:300; */
-  text-shadow: 0 0 12px rgba(112, 179, 213, 0.8); /* 🔥 readability boost */
+  text-shadow: 0 0 12px rgba(112, 179, 213, 0.8);
+  /* 🔥 readability boost */
   opacity: 0.85;
 }
 
@@ -203,7 +219,7 @@
   border-radius: 12px;
 
   background: var(--card, #edebeb);
-  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
 }
 
 .digital-time {

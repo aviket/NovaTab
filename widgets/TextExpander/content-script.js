@@ -31,7 +31,10 @@ function getEventShortcut(e) {
 window.addEventListener("keydown", (e) => {
   const pressed = getEventShortcut(e);
   console.log("Pressed shortcut:", pressed);
-  console.log("Defined shortcuts:", shortcuts.map(s => s.keys));
+  console.log(
+    "Defined shortcuts:",
+    shortcuts.map((s) => s.keys),
+  );
   for (const item of shortcuts) {
     if (normalize(item.keys) === pressed) {
       e.preventDefault();
@@ -55,10 +58,7 @@ function insertText(text) {
 
     const value = active.value;
 
-    active.value =
-      value.substring(0, start) +
-      text +
-      value.substring(end);
+    active.value = value.substring(0, start) + text + value.substring(end);
 
     const pos = start + text.length;
     active.selectionStart = active.selectionEnd = pos;

@@ -3,7 +3,6 @@
 import { StorageManager } from "../../utilities/StorageUtils/storageManager.js";
 
 export const ShortcutsStorage = {
-
   async getShortcuts() {
     return await StorageManager.get("SHORTCUTS");
   },
@@ -14,5 +13,5 @@ export const ShortcutsStorage = {
 
   async updateShortcuts(updater) {
     return await StorageManager.update("SHORTCUTS", updater);
-  }
+  },
 };

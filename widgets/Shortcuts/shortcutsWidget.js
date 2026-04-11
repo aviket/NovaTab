@@ -91,8 +91,6 @@ export class ShortcutsWidget extends BaseWidget {
       URL.revokeObjectURL(url);
     });
 
-    
-
     // ✏️ Auto-save
     this.element.addEventListener("input", async () => {
       await this.syncFromUI();
@@ -176,7 +174,9 @@ export class ShortcutsWidget extends BaseWidget {
       console.log("Loaded shortcuts from storage:", stored);
 
       if (!result || !Array.isArray(result)) {
-        console.warn("No valid shortcuts found in storage, loading defaults...");
+        console.warn(
+          "No valid shortcuts found in storage, loading defaults...",
+        );
         const defaults = await this.loadDefaultShortcuts();
 
         await ShortcutsStorage.saveShortcuts(defaults);

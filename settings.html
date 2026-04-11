@@ -1,83 +1,85 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>NovaTab Settings</title>
-    <link rel="stylesheet" href="css/settings.css">
-</head>
-<body>
+    <head>
+        <title>NovaTab Settings</title>
+        <link rel="stylesheet" href="css/settings.css">
+    </head>
+    <body>
 
-<h1>NovaTab Settings</h1>
+        <h1>NovaTab Settings</h1>
 
-<form id="settings-form">
+        <form id="settings-form">
 
-    <!-- GENERAL -->
-    <fieldset>
-        <legend>General</legend>
+            <!-- GENERAL -->
+            <fieldset>
+                <legend>General</legend>
 
-        <label>Theme:</label>
-        <label><input type="radio" name="theme" value="light"> Light</label>
-        <label><input type="radio" name="theme" value="dark"> Dark</label>
+                <label>Theme:</label>
+                <label><input type="radio" name="theme" value="light">
+                    Light</label>
+                <label><input type="radio" name="theme" value="dark">
+                    Dark</label>
 
-        <br><br>
+                <br><br>
 
-        <label>
-            <input type="checkbox" id="openSearchInNewTab">
-            Open search in new tab
-        </label>
-    </fieldset>
+                <label>
+                    <input type="checkbox" id="openSearchInNewTab">
+                    Open search in new tab
+                </label>
+            </fieldset>
 
-    <!-- SEARCH -->
-    <fieldset>
-        <legend>Search</legend>
+            <!-- SEARCH -->
+            <fieldset>
+                <legend>Search</legend>
 
-        <label>Default Engine:</label>
-        <select id="defaultEngine">
-            <option value="google">Google</option>
-            <option value="bing">Bing</option>
-            <option value="duckduckgo">DuckDuckGo</option>
-        </select>
+                <label>Default Engine:</label>
+                <select id="defaultEngine">
+                    <option value="google">Google</option>
+                    <option value="bing">Bing</option>
+                    <option value="duckduckgo">DuckDuckGo</option>
+                </select>
 
-        <br><br>
+                <br><br>
 
-        <label>Custom Engines (JSON):</label><br>
-        <textarea id="customEngines" rows="4"></textarea>
-    </fieldset>
+                <label>Custom Engines (JSON):</label><br>
+                <textarea id="customEngines" rows="4"></textarea>
+            </fieldset>
 
-    <!-- API KEYS -->
-    <fieldset>
-        <legend>API Keys</legend>
+            <!-- API KEYS -->
+            <fieldset>
+                <legend>API Keys</legend>
 
-        <label>Google Maps API:</label>
-        <input type="text" id="googleMaps"><br><br>
+                <label>Google Maps API:</label>
+                <input type="text" id="googleMaps"><br><br>
 
-        <label>OpenWeather API:</label>
-        <input type="text" id="openWeather">
-    </fieldset>
+                <label>OpenWeather API:</label>
+                <input type="text" id="openWeather">
+            </fieldset>
 
-    <!-- UI -->
-    <fieldset>
-        <legend>UI</legend>
+            <!-- UI -->
+            <fieldset>
+                <legend>UI</legend>
 
-        <label>
-            <input type="checkbox" id="showClock">
-            Show Clock
-        </label>
+                <label>
+                    <input type="checkbox" id="showClock">
+                    Show Clock
+                </label>
 
-        <br>
+                <br>
 
-        <label>
-            <input type="checkbox" id="compactMode">
-            Compact Mode
-        </label>
-    </fieldset>
+                <label>
+                    <input type="checkbox" id="compactMode">
+                    Compact Mode
+                </label>
+            </fieldset>
 
-    <br>
+            <br>
 
-    <button type="submit">Save Settings</button>
+            <button type="submit">Save Settings</button>
 
-</form>
+        </form>
 
-<script src="js/settings.js" type="module"></script>
+        <script src="js/settings.js" type="module"></script>
 
-</body>
+    </body>
 </html>

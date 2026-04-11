@@ -3,7 +3,6 @@
 import { StorageManager } from "../../utilities/StorageUtils/storageManager.js";
 
 export const TextExpanderStorage = {
-
   async getTextExpander() {
     return await StorageManager.get("TEXT_EXPANDER");
   },
@@ -14,5 +13,5 @@ export const TextExpanderStorage = {
 
   async updateTextExpander(updater) {
     return await StorageManager.update("TEXT_EXPANDER", updater);
-  }
+  },
 };

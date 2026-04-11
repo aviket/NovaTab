@@ -1,8 +1,8 @@
 export const STORAGE_KEYS = {
-    LINKS_TREE: {
+  LINKS_TREE: {
     key: "linksTree",
     storage: "local",
-    default: {},   // or [] depending on your structure
+    default: {}, // or [] depending on your structure
   },
   SETTINGS: {
     key: "settings",
@@ -23,5 +23,5 @@ export const STORAGE_KEYS = {
     key: "textExpander",
     storage: "local",
     default: {},
-  }
+  },
 };

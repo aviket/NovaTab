@@ -9,19 +9,18 @@ import { ModLinksTree } from "../linkstree/ModLinksTree.js";
 
 import { getDefaultWidgets } from "../widgets/widget-config.js";
 
-document.addEventListener('DOMContentLoaded', async () => {
-  const btnSidebar = document.getElementById('btn-open-sidebar');
+document.addEventListener("DOMContentLoaded", async () => {
+  const btnSidebar = document.getElementById("btn-open-sidebar");
   if (btnSidebar) {
-    console.log('Sidebar button found, adding click listener');
-    btnSidebar.addEventListener('click', () => {
+    console.log("Sidebar button found, adding click listener");
+    btnSidebar.addEventListener("click", () => {
       // Send a message to the background script to open the Side Panel
-      chrome.runtime.sendMessage({ type: 'OPEN_SIDE_PANEL' });
+      chrome.runtime.sendMessage({ type: "OPEN_SIDE_PANEL" });
     });
   }
-   const tree = new ModLinksTree('#links-tree');
-   await tree.initLinksTree();
-   // await initLinksTree();
-
+  const tree = new ModLinksTree("#links-tree");
+  await tree.initLinksTree();
+  // await initLinksTree();
 });
 //    const tree = new ModLinksTree('#links-tree');
 //    tree.initLinksTree();
@@ -30,19 +29,18 @@ const widgetHost = new WidgetHost();
 widgetHost.registerContainer("widget-container");
 
 // Load default widgets
-getDefaultWidgets().forEach(widget => {
-    widgetHost.mountWidget("widget-container", widget);
+getDefaultWidgets().forEach((widget) => {
+  widgetHost.mountWidget("widget-container", widget);
 });
 
-
 themeSelect.addEventListener("change", () => {
-    const theme = themeSelect.value;
+  const theme = themeSelect.value;
 
-    document.body.classList.remove("light", "dark");
-    document.body.classList.add(theme);
+  document.body.classList.remove("light", "dark");
+  document.body.classList.add(theme);
 
-    // Persist theme
-    localStorage.setItem("novatab-theme", theme);
+  // Persist theme
+  localStorage.setItem("novatab-theme", theme);
 });
 
 // Load saved theme
@@ -50,50 +48,47 @@ const savedTheme = localStorage.getItem("novatab-theme") || "light";
 document.body.classList.add(savedTheme);
 themeSelect.value = savedTheme;
 
-
 // ==============================
 // Search Handling
 // ==============================
 const searchInput = document.getElementById("search-input");
 
 searchInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-        performSearch();
-    }
+  if (e.key === "Enter") {
+    performSearch();
+  }
 });
 
 function performSearch() {
-    const query = searchInput.value.trim();
-    const engine = document.getElementById("search-engine").value;
+  const query = searchInput.value.trim();
+  const engine = document.getElementById("search-engine").value;
 
-    if (!query) return;
+  if (!query) return;
 
-    let url = "";
+  let url = "";
 
-    switch (engine) {
-        case "google":
-            url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-            break;
+  switch (engine) {
+    case "google":
+      url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+      break;
 
-        case "bing":
-            url = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
-            break;
+    case "bing":
+      url = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
+      break;
 
-        case "duckduckgo":
-            url = `https://duckduckgo.com/?q=${encodeURIComponent(query)}`;
-            break;
-    }
+    case "duckduckgo":
+      url = `https://duckduckgo.com/?q=${encodeURIComponent(query)}`;
+      break;
+  }
 
-    // Open in same tab
-    window.location.href = url;
+  // Open in same tab
+  window.location.href = url;
 }
 
 // Settings button handler
 document.getElementById("settings-btn").addEventListener("click", () => {
-    chrome.runtime.openOptionsPage();
+  chrome.runtime.openOptionsPage();
 });
-
-
 
 // import { WidgetManager } from "./widget-manager.js";
 // import { ClockWidget } from "./../widgets/Clock/clock.js";
@@ -103,7 +98,6 @@ document.getElementById("settings-btn").addEventListener("click", () => {
 // import { NotesWidget } from "./../widgets/Notes/NotesWidget.js";
 // import { sampleCarouselWidget } from "./../widgets/sampleCarouselWidget/sampleCarouselWidget.js";
 // import { sampleImageCarouselWidget } from "./../widgets/sampleImageCarouselWidget/sampleImageCarouselWidget.js";
-
 
 // const container = document.getElementById("widget-container");
 
@@ -117,8 +111,6 @@ document.getElementById("settings-btn").addEventListener("click", () => {
 // const notes = new NotesWidget("w5");
 // const carousel = new sampleCarouselWidget("w6");
 // const imageCarousel = new sampleImageCarouselWidget("w7");
-
-
 
 // manager.addWidget(clock);
 // // manager.addWidget(calendar);

@@ -1,6 +1,6 @@
 import { JsTreeAdapter } from "./JsTreeAdapter.js";
 import { tooltipManager } from "../utilities/ToolTipManager/ToolTipManager.js";
-import {loadCSS } from "../utilities/loadcss.js";
+import { loadCSS } from "../utilities/loadcss.js";
 import { LinksTreeStorage } from "./linksTreeStorage.js";
 export class ModLinksTree {
   constructor(selector) {
@@ -11,7 +11,6 @@ export class ModLinksTree {
   init() {
     console.log("Initializing Links Tree with empty data...");
     this.tree.init({
-      
       core: { data: [] },
     });
 
@@ -23,80 +22,80 @@ export class ModLinksTree {
     return this.tree.getInstance();
   }
 
-//   bindEvents() {
-//     const inst = this.getInstance();
+  //   bindEvents() {
+  //     const inst = this.getInstance();
 
-//     $("#links-tree").on("contextmenu.jstree", function (e) {
-//       // console.log(e);
+  //     $("#links-tree").on("contextmenu.jstree", function (e) {
+  //       // console.log(e);
 
-//       // console.log('Context menu opened');
-//       suppressNextSelect = true;
+  //       // console.log('Context menu opened');
+  //       suppressNextSelect = true;
 
-//       // reset shortly after (covers all browsers)
-//       setTimeout(() => {
-//         suppressNextSelect = false;
-//       }, 0);
-//     });
+  //       // reset shortly after (covers all browsers)
+  //       setTimeout(() => {
+  //         suppressNextSelect = false;
+  //       }, 0);
+  //     });
 
-//     let mouseX = 0;
-//     let mouseY = 0;
+  //     let mouseX = 0;
+  //     let mouseY = 0;
 
-//     $(document).on("mousemove", function (e) {
-//       mouseX = e.pageX;
-//       mouseY = e.pageY;
-//     });
+  //     $(document).on("mousemove", function (e) {
+  //       mouseX = e.pageX;
+  //       mouseY = e.pageY;
+  //     });
 
-//     let tooltipEl = null;
+  //     let tooltipEl = null;
 
-//     $("#links-tree").on("mouseenter", ".jstree-anchor", function () {
-//       console.log("Mouse entered node:", this);
-//       //if (tippy) return;
+  //     $("#links-tree").on("mouseenter", ".jstree-anchor", function () {
+  //       console.log("Mouse entered node:", this);
+  //       //if (tippy) return;
 
-//       const inst = $("#links-tree").jstree(true);
-//       const node = inst.get_node(this);
-//       if (!node) return;
+  //       const inst = $("#links-tree").jstree(true);
+  //       const node = inst.get_node(this);
+  //       if (!node) return;
 
-//       const { url = "", Notes: notes = "", Todo: todo = "" } = node.data || {};
+  //       const { url = "", Notes: notes = "", Todo: todo = "" } = node.data || {};
 
-//       // 🔥 favicon (Google service)
-//       const favicon = url
-//         ? `https://www.google.com/s2/favicons?domain=${url}&sz=32`
-//         : "";
+  //       // 🔥 favicon (Google service)
+  //       const favicon = url
+  //         ? `https://www.google.com/s2/favicons?domain=${url}&sz=32`
+  //         : "";
 
-//       const html = `
-//     <div class="tooltip-card">
-      
-//       <div class="tooltip-header">
-//         ${favicon ? `<img src="${favicon}" class="tooltip-favicon">` : ""}
-//         <div class="tooltip-title-wrap">
-//           <div class="tooltip-title">${node.text}</div>
-//           ${url ? `<div class="tooltip-url">${url}</div>` : ""}
-//         </div>
-//       </div>
+  //       const html = `
+  //     <div class="tooltip-card">
 
-//       ${notes ? `<div class="tooltip-section">📝 ${notes.replace(/\n/g, "<br>")}</div>` : ""}
-//       ${todo ? `<div class="tooltip-section">✅ ${todo}</div>` : ""}
+  //       <div class="tooltip-header">
+  //         ${favicon ? `<img src="${favicon}" class="tooltip-favicon">` : ""}
+  //         <div class="tooltip-title-wrap">
+  //           <div class="tooltip-title">${node.text}</div>
+  //           ${url ? `<div class="tooltip-url">${url}</div>` : ""}
+  //         </div>
+  //       </div>
 
-//     </div>
-//   `;
+  //       ${notes ? `<div class="tooltip-section">📝 ${notes.replace(/\n/g, "<br>")}</div>` : ""}
+  //       ${todo ? `<div class="tooltip-section">✅ ${todo}</div>` : ""}
 
-//       tippy(this, {
-//         content: html,
-//         allowHTML: true,
-//         theme: "light-border",
-//         placement: "right",
-//         delay: [300, 0],
-//         maxWidth: 350,
-//       });
-//     });
-//   }
+  //     </div>
+  //   `;
+
+  //       tippy(this, {
+  //         content: html,
+  //         allowHTML: true,
+  //         theme: "light-border",
+  //         placement: "right",
+  //         delay: [300, 0],
+  //         maxWidth: 350,
+  //       });
+  //     });
+  //   }
 
   async initLinksTree() {
     // 1) Try storage
     console.log("Initializing links tree: loading from storage...");
     const linksTree = await LinksTreeStorage.getTree();
-    loadCSS( "tooltip" , "utilities/TooltipManager/TooltipManager.css");
-    loadCSS( "tree" , "linkstree/linksTree.css");
+    loadCSS("tooltip", "utilities/TooltipManager/TooltipManager.css");
+    loadCSS("tree", "linkstree/linksTree.css");
     // await loadScript( "popper", "assets/lib/popper.min.js");
     // await loadScript("tippy", "assets/lib/tippy-bundle.umd.min.js");
     // await loadScript("tippylife", "assets/lib/tippy-bundle.iife.min.js");
@@ -289,7 +288,7 @@ export class ModLinksTree {
     } catch (err) {
       console.error("ensureRecentFolderPlacement failed", err);
     }
-    $("#links-tree").jstree("close_all"); // start with tree collapsed  
+    $("#links-tree").jstree("close_all"); // start with tree collapsed
     // return the jstree instance for convenience to callers
     return $("#links-tree").jstree(true);
   }
@@ -845,50 +844,62 @@ export class ModLinksTree {
     URL.revokeObjectURL(url);
   }
 
- bindCoreEvents() {
-  if (this._coreEventsBound) return;
+  bindCoreEvents() {
+    if (this._coreEventsBound) return;
 
-  console.log("Binding core jsTree events");
+    console.log("Binding core jsTree events");
 
-  const $tree = $("#links-tree");
+    const $tree = $("#links-tree");
 
-  // ✅ remove ONLY our handlers
-  $tree.off(".modLinksTree");
+    // ✅ remove ONLY our handlers
+    $tree.off(".modLinksTree");
 
-  const save = async () => {
-    try {
-      const snapshot = this.getTreeSnapshot($tree);
-       await LinksTreeStorage.saveTree(snapshot);
-    } catch (e) {
-      console.error("Failed to save linksTree:", e);
-    }
-  };
+    const save = async () => {
+      try {
+        const snapshot = this.getTreeSnapshot($tree);
+        await LinksTreeStorage.saveTree(snapshot);
+      } catch (e) {
+        console.error("Failed to save linksTree:", e);
+      }
+    };
 
-  // ✅ namespace all events
-  $tree
-    .on("rename_node.jstree.modLinksTree", save)
-    .on("delete_node.jstree.modLinksTree", save)
-    .on("create_node.jstree.modLinksTree", save)
-    .on("move_node.jstree.modLinksTree", save)
-    .on("changed.jstree.modLinksTree", save);
+    // ✅ namespace all events
+    $tree
+      .on("rename_node.jstree.modLinksTree", save)
+      .on("delete_node.jstree.modLinksTree", save)
+      .on("create_node.jstree.modLinksTree", save)
+      .on("move_node.jstree.modLinksTree", save)
+      .on("changed.jstree.modLinksTree", save);
 
-  $tree.on(
-    "select_node.jstree.modLinksTree",
-    this.handleNodeSelect.bind(this)
-  );
+    $tree.on(
+      "select_node.jstree.modLinksTree",
+      this.handleNodeSelect.bind(this),
+    );
 
-  $tree.on(
-    "contextmenu.jstree.modLinksTree",
-    this.handleContextMenu.bind(this)
-  );
+    $tree.on(
+      "contextmenu.jstree.modLinksTree",
+      this.handleContextMenu.bind(this),
+    );
 
-  $tree
-    .on("mouseenter.modLinksTree", ".jstree-anchor", this.handleNodeHover.bind(this))
-    .on("mousemove.modLinksTree", ".jstree-anchor", this.handleNodeMove.bind(this))
-    .on("mouseleave.modLinksTree", ".jstree-anchor", this.handleNodeLeave.bind(this));
+    $tree
+      .on(
+        "mouseenter.modLinksTree",
+        ".jstree-anchor",
+        this.handleNodeHover.bind(this),
+      )
+      .on(
+        "mousemove.modLinksTree",
+        ".jstree-anchor",
+        this.handleNodeMove.bind(this),
+      )
+      .on(
+        "mouseleave.modLinksTree",
+        ".jstree-anchor",
+        this.handleNodeLeave.bind(this),
+      );
 
-  this._coreEventsBound = true;
-}
+    this._coreEventsBound = true;
+  }
 
   async handleNodeSelect(e, data) {
     const node = data.node;
@@ -926,39 +937,36 @@ export class ModLinksTree {
     const node = inst.get_node(el);
     if (!node) return;
 
+    const tooltipContent = this.buildTooltipHTML(node);
 
+    tooltipManager.show(tooltipContent, e.clientX, e.clientY);
+  }
 
-const tooltipContent = this.buildTooltipHTML(node);
+  handleNodeMove(e) {
+    console.log("Node mouse move, updating tooltip position");
+    tooltipManager.move(e.clientX, e.clientY);
+  }
 
-tooltipManager.show(tooltipContent, e.clientX, e.clientY);
+  handleNodeLeave() {
+    tooltipManager.hide();
+  }
+  buildTooltipHTML(node) {
+    const { url = "", Notes: notes = "", Todo: todo = "" } = node.data || {};
 
-}
+    const favicon = url
+      ? `https://www.google.com/s2/favicons?domain=${url}&sz=32`
+      : "";
 
-handleNodeMove(e) {
-  console.log("Node mouse move, updating tooltip position");
-  tooltipManager.move(e.clientX, e.clientY);
-}
-
-handleNodeLeave() {
-  tooltipManager.hide();
-}
-buildTooltipHTML(node) {
-  const { url = '', Notes: notes = '', Todo: todo = '' } = node.data || {};
-
-  const favicon = url
-    ? `https://www.google.com/s2/favicons?domain=${url}&sz=32`
-    : '';
-
-  return `
+    return `
     <div class="tooltip-card">
       <div class="tooltip-header">
-        ${favicon ? `<img src="${favicon}" width="16">` : ''}
+        ${favicon ? `<img src="${favicon}" width="16">` : ""}
         <strong>${node.text}</strong>
       </div>
-      ${url ? `<div>${url}</div>` : ''}
-      ${notes ? `<div>📝 ${notes}</div>` : ''}
-      ${todo ? `<div>✅ ${todo}</div>` : ''}
+      ${url ? `<div>${url}</div>` : ""}
+      ${notes ? `<div>📝 ${notes}</div>` : ""}
+      ${todo ? `<div>✅ ${todo}</div>` : ""}
     </div>
   `;
-}
+  }
 }

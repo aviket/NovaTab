@@ -2,39 +2,43 @@
 /* The main window that hides anything overflowing outside of it */
 .carousel-container {
     width: 100%;
-    max-width: 800px; /* Optional: Stops it from getting TOO huge on big monitors */
+    max-width: 800px;
+    /* Optional: Stops it from getting TOO huge on big monitors */
     position: relative;
-    overflow: hidden; 
-    border-radius: 8px; /* Move the border-radius here so images clip to the corners */
-    background: #865a5a; /* Black background looks great for images */
+    overflow: hidden;
+    border-radius: 8px;
+    /* Move the border-radius here so images clip to the corners */
+    background: #865a5a;
+    /* Black background looks great for images */
 }
 
 /* The long train track holding all the slides in a row */
 .carousel-track {
     display: flex;
     width: 100%;
-    transition: transform 0.3s ease-in-out; /* Smooth sliding animation */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth sliding animation */
 }
 
 /* Every slide is forced to be exactly 100% of the container's width */
 .carousel-item {
-    flex: 0 0 100%; 
+    flex: 0 0 100%;
     width: 100%;
     /* 🔥 Remove the padding so images go edge-to-edge! */
-    padding: 0; 
+    padding: 0;
     box-sizing: border-box;
 }
 
 .carousel-image {
     width: 100%;
-    aspect-ratio: 16 / 9; 
-    
+    aspect-ratio: 16 / 9;
+
     /* 'contain' tells the browser: "Shrink or grow the image so the whole thing is visible, but never crop it." */
-    object-fit: contain; 
+    object-fit: contain;
     display: block;
-    
+
     /* Optional: Since 'contain' might leave empty space, a subtle background color looks nice */
-    background-color: #111; 
+    background-color: #111;
 }
 
 /* Navigation Buttons */

@@ -8,11 +8,18 @@
     "newtab": "newtab.html"
   },
 
-   "options_page": "settings.html",
+  "options_page": "settings.html",
 
-  "permissions": ["storage" , "tabs", "activeTab", "scripting","sidePanel" , "notifications"],
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "sidePanel",
+    "notifications"
+  ],
 
-   "background": {
+  "background": {
     "service_worker": "js/background.js"
   },
 
@@ -33,14 +40,11 @@
   "side_panel": {
     "default_path": "sidepanel/sidepanel.html"
   },
-  
-  
+
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["widgets/TextExpander/content-script.js"]
     }
   ]
-
-
 }

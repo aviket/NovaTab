@@ -9,27 +9,26 @@ import { TextexpanderWidget } from "../widgets/TextExpander/textExpanderWidget.j
 import { HTMLCalendar } from "../widgets/HTMLCalendar/HTMLCalendar.js";
 
 export function getDefaultWidgets() {
-    return [
-        new ClockWidget("w1"),
-        new CalendarWidget("w2"),
-        new HTMLCalendar("w3"),
-        new ShortcutsWidget("w3"),
-        new TimeToolsWidget("w4"),
-        new NotesWidget("w5"),
-        new sampleImageCarouselWidget("w6"),
-        new TextexpanderWidget("w7")
-    ];
+  return [
+    new ClockWidget("w1"),
+    new CalendarWidget("w2"),
+    new HTMLCalendar("w3"),
+    new ShortcutsWidget("w3"),
+    new TimeToolsWidget("w4"),
+    new NotesWidget("w5"),
+    new sampleImageCarouselWidget("w6"),
+    new TextexpanderWidget("w7"),
+  ];
 }
 
 export function getDefaultSideWidgets() {
-    return [
-        new ClockWidget("ws1"),
-        new TextexpanderWidget("ws3"),
-        // new CalendarWidget("w2"),
-        // new ShortcutsWidget("w3"),
-        // new TimeToolsWidget("w4"),
-        new NotesWidget("ws2"),
-        new HTMLCalendar("ws3")
-
-    ];
+  return [
+    new ClockWidget("ws1"),
+    new TextexpanderWidget("ws3"),
+    // new CalendarWidget("w2"),
+    // new ShortcutsWidget("w3"),
+    // new TimeToolsWidget("w4"),
+    new NotesWidget("ws2"),
+    new HTMLCalendar("ws3"),
+  ];
 }

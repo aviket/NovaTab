@@ -1,18 +1,21 @@
 .custom-tooltip {
-  background: aquamarine;   
+  background: aquamarine;
   border: 1px solid #cc5a5a;
   border-radius: 8px;
   padding: 10px;
 
-  max-width: 240px;         /* limit width */
+  max-width: 240px;
+  /* limit width */
   min-width: 120px;
 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   font-size: 13px;
 
-  word-wrap: break-word;    /* wrap long text */
+  word-wrap: break-word;
+  /* wrap long text */
   overflow-wrap: break-word;
-  white-space: normal;      /* allow wrapping */
+  white-space: normal;
+  /* allow wrapping */
 
   line-height: 1.4;
 }

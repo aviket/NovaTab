@@ -1,7 +1,6 @@
 import { STORAGE_KEYS } from "./storageRegistry.js";
 
 export class StorageManager {
-
   static async get(alias) {
     const config = STORAGE_KEYS[alias];
     const storage = chrome.storage[config.storage];

@@ -45,7 +45,8 @@
 
 .widget-content {
     height: 100%;
-    overflow: auto; /* 🔥 scrollbar here */
+    overflow: auto;
+    /* 🔥 scrollbar here */
     padding: 10px;
 }
 
@@ -66,21 +67,27 @@
 #widget-container {
     display: grid;
 
-    grid-template-columns: repeat(4, 300px);  /* 4 columns */
-    grid-template-rows: repeat(4, 300px);     /* 4 rows */
+    grid-template-columns: repeat(4, 300px);
+    /* 4 columns */
+    grid-template-rows: repeat(4, 300px);
+    /* 4 rows */
 
     gap: 15px;
 
-    justify-content: center; /* optional: center grid horizontally */
+    justify-content: center;
+    /* optional: center grid horizontally */
 }
 
 #widget-container-side {
     display: grid;
 
-    grid-template-columns: repeat(1, 300px);  /* 4 columns */
-    grid-template-rows: repeat(4, 300px);     /* 4 rows */
+    grid-template-columns: repeat(1, 300px);
+    /* 4 columns */
+    grid-template-rows: repeat(4, 300px);
+    /* 4 rows */
 
     gap: 15px;
 
-    justify-content: center; /* optional: center grid horizontally */
+    justify-content: center;
+    /* optional: center grid horizontally */
 }

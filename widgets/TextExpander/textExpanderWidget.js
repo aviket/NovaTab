@@ -17,11 +17,11 @@ export class TextexpanderWidget extends BaseWidget {
   }
 
   // 🔹 Create DOM (required by BaseWidget)
- render() {
-  const content = document.createElement("div");
-  content.className = "shortcuts-card";
+  render() {
+    const content = document.createElement("div");
+    content.className = "shortcuts-card";
 
-  content.innerHTML = `
+    content.innerHTML = `
     <table class="shortcuts-table">
       <thead>
         <tr>
@@ -40,14 +40,14 @@ export class TextexpanderWidget extends BaseWidget {
     <input type="file" class="file-input" accept=".json" style="display:none;" />
   `;
 
-  this.element = createWidgetShell({
-    id: this.id,
-    title: "Text Expander",
-    content,
-  });
+    this.element = createWidgetShell({
+      id: this.id,
+      title: "Text Expander",
+      content,
+    });
 
-  return this.element;
-}
+    return this.element;
+  }
 
   async init() {
     console.log("Initializing TextExpanderWidget...");
@@ -99,7 +99,7 @@ export class TextexpanderWidget extends BaseWidget {
         return;
       }
 
-      this.data.push({ keys: "", text: ""  });
+      this.data.push({ keys: "", text: "" });
       await this.saveData(this.data);
       this.renderTable();
     });
@@ -109,13 +109,9 @@ export class TextexpanderWidget extends BaseWidget {
     const fileInput = this.element.querySelector(".file-input");
     importBtn.addEventListener("click", () => {
       fileInput.click();
-      
-
-
-
     });
 
-        fileInput.addEventListener("change", async (e) => {
+    fileInput.addEventListener("change", async (e) => {
       const file = e.target.files[0];
       if (!file) return;
 
@@ -127,13 +123,10 @@ export class TextexpanderWidget extends BaseWidget {
         if (!Array.isArray(json)) {
           throw new Error("Invalid format: must be array");
         }
-        console.log("Parsed JSON from file:", json);  
+        console.log("Parsed JSON from file:", json);
         const valid = json.every(
           (item) =>
-            typeof item.keys === "string" &&
-            typeof item.text === "string" 
-
-           
+            typeof item.keys === "string" && typeof item.text === "string",
         );
 
         if (!valid) {
@@ -168,17 +161,15 @@ export class TextexpanderWidget extends BaseWidget {
       a.click();
       URL.revokeObjectURL(url);
     });
-
-
   }
 
   async syncFromUI() {
     const rows = this.element.querySelectorAll(".shortcuts-table tbody tr");
 
-this.data = [...rows].map((row) => ({
-  keys: row.children[0].querySelector("input").value.trim(),
-  text: row.children[1].querySelector("input").value.trim()
-}));
+    this.data = [...rows].map((row) => ({
+      keys: row.children[0].querySelector("input").value.trim(),
+      text: row.children[1].querySelector("input").value.trim(),
+    }));
 
     await this.saveData(this.data);
     // this.attachShortcutListener();
@@ -190,9 +181,7 @@ this.data = [...rows].map((row) => ({
       console.log("Loaded data from storage:", result);
       // check if result is empty or not an array
       if (!result || !Array.isArray(result)) {
-
-
-      //if (!result) {
+        //if (!result) {
         console.log("No existing data found, loading defaults...");
         const defaults = await this.loadDefaultShortcuts();
 
@@ -212,14 +201,14 @@ this.data = [...rows].map((row) => ({
     await TextExpanderStorage.saveTextExpander(data);
   }
 
- renderTable() {
-  const tbody = this.element.querySelector(".shortcuts-table tbody");
-  tbody.innerHTML = "";
+  renderTable() {
+    const tbody = this.element.querySelector(".shortcuts-table tbody");
+    tbody.innerHTML = "";
 
-  this.data.forEach((item, index) => {
-    const tr = document.createElement("tr");
+    this.data.forEach((item, index) => {
+      const tr = document.createElement("tr");
 
-    tr.innerHTML = `
+      tr.innerHTML = `
       <td><input value="${item.keys || ""}" /></td>
       <td><input value="${item.text || ""}" /></td>
       <td>
@@ -227,9 +216,9 @@ this.data = [...rows].map((row) => ({
       </td>
     `;
 
-    tbody.appendChild(tr);
-  });
-}
+      tbody.appendChild(tr);
+    });
+  }
 
   async loadDefaultShortcuts() {
     try {
@@ -268,65 +257,65 @@ this.data = [...rows].map((row) => ({
     return keys.sort().join("+");
   }
 
-//   attachShortcutListener() {
-//     // Prevent duplicate listeners if widget re-inits
-//     if (this._shortcutHandler) {
-//       window.removeEventListener("keydown", this._shortcutHandler);
-//     }
+  //   attachShortcutListener() {
+  //     // Prevent duplicate listeners if widget re-inits
+  //     if (this._shortcutHandler) {
+  //       window.removeEventListener("keydown", this._shortcutHandler);
+  //     }
 
-//     this._shortcutHandler = (e) => {
-//       const pressed = this.getEventShortcut(e);
+  //     this._shortcutHandler = (e) => {
+  //       const pressed = this.getEventShortcut(e);
 
-//       for (const item of this.data) {
-//         const defined = this.normalizeShortcut(item.keys);
+  //       for (const item of this.data) {
+  //         const defined = this.normalizeShortcut(item.keys);
 
-//         if (!defined) continue;
+  //         if (!defined) continue;
 
-//         if (pressed === defined) {
-//           e.preventDefault(); // stop default browser behavior
+  //         if (pressed === defined) {
+  //           e.preventDefault(); // stop default browser behavior
 
-//           this.executeShortcut(item);
-//           break;
-//         }
-//       }
-//     };
+  //           this.executeShortcut(item);
+  //           break;
+  //         }
+  //       }
+  //     };
 
-//     window.addEventListener("keydown", this._shortcutHandler);
-//   }
+  //     window.addEventListener("keydown", this._shortcutHandler);
+  //   }
 
-// executeShortcut(item) {
-//   console.log(`Executing shortcut: "${item.keys}"`);
-//   if (!item.text) return;
+  // executeShortcut(item) {
+  //   console.log(`Executing shortcut: "${item.keys}"`);
+  //   if (!item.text) return;
 
-//   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-//     const tab = tabs[0];
-//     if (!tab?.id || !tab.url) return;
+  //   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  //     const tab = tabs[0];
+  //     if (!tab?.id || !tab.url) return;
 
-//     if (tab.url.startsWith("chrome://") || tab.url.startsWith("chrome-extension://")) {
-//       console.warn("Cannot inject into this page");
-//       return;
-//     }
+  //     if (tab.url.startsWith("chrome://") || tab.url.startsWith("chrome-extension://")) {
+  //       console.warn("Cannot inject into this page");
+  //       return;
+  //     }
 
-//     chrome.tabs.sendMessage(tab.id, {
-//       type: "INSERT_TEXT",
-//       text: item.text
-//     }, () => {
-//       if (chrome.runtime.lastError) {
-//         console.warn("Retrying via script injection...");
+  //     chrome.tabs.sendMessage(tab.id, {
+  //       type: "INSERT_TEXT",
+  //       text: item.text
+  //     }, () => {
+  //       if (chrome.runtime.lastError) {
+  //         console.warn("Retrying via script injection...");
 
-//         chrome.scripting.executeScript({
-//           target: { tabId: tab.id },
-//           files: ["content-script.js"]
-//         }, () => {
-//           chrome.tabs.sendMessage(tab.id, {
-//             type: "INSERT_TEXT",
-//             text: item.text
-//           });
-//         });
-//       }
-//     });
-//   });
-// }
+  //         chrome.scripting.executeScript({
+  //           target: { tabId: tab.id },
+  //           files: ["content-script.js"]
+  //         }, () => {
+  //           chrome.tabs.sendMessage(tab.id, {
+  //             type: "INSERT_TEXT",
+  //             text: item.text
+  //           });
+  //         });
+  //       }
+  //     });
+  //   });
+  // }
 
   destroy() {
     if (this._shortcutHandler) {
