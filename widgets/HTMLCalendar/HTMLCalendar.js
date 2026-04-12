@@ -92,25 +92,7 @@ export class HTMLCalendar extends BaseWidget {
 
         grid.appendChild(cell);
       }
-      const today = new Date();
 
-      for (let d = 1; d <= days; d++) {
-        const cell = document.createElement("div");
-        cell.textContent = d;
-
-        const cellDate = new Date(year, month, d);
-
-        // ✅ TODAY highlight
-        if (
-          d === today.getDate() &&
-          month === today.getMonth() &&
-          year === today.getFullYear()
-        ) {
-          cell.classList.add("calendar-day--today");
-        }
-
-        grid.appendChild(cell);
-      }
     };
 
     root.querySelector("#prev-month").onclick = () => {
