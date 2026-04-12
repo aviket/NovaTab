@@ -5,7 +5,7 @@
 const themeSelect = document.getElementById("theme-select");
 
 import { WidgetHost } from "../widgets/widget-host.js";
-import { ModLinksTree } from "../linkstree/ModLinksTree.js";
+//import { ModLinksTree } from "../linkstree/ModLinksTree.js";
 
 import { getDefaultWidgets } from "../widgets/widget-config.js";
 
@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       chrome.runtime.sendMessage({ type: "OPEN_SIDE_PANEL" });
     });
   }
-  const tree = new ModLinksTree("#links-tree");
-  await tree.initLinksTree();
+  // const tree = new ModLinksTree("#links-tree");
+  // await tree.initLinksTree();
   // await initLinksTree();
 });
 //    const tree = new ModLinksTree('#links-tree');

@@ -1,6 +1,6 @@
 import { JsTreeAdapter } from "./JsTreeAdapter.js";
-import { tooltipManager } from "../utilities/ToolTipManager/ToolTipManager.js";
-import { loadCSS } from "../utilities/loadcss.js";
+import { tooltipManager } from "../../utilities/ToolTipManager/ToolTipManager.js";
+import { loadCSS } from "../../utilities/loadcss.js";
 import { LinksTreeStorage } from "./linksTreeStorage.js";
 export class ModLinksTree {
   constructor(selector) {
@@ -95,7 +95,7 @@ export class ModLinksTree {
     console.log("Initializing links tree: loading from storage...");
     const linksTree = await LinksTreeStorage.getTree();
     loadCSS("tooltip", "utilities/TooltipManager/TooltipManager.css");
-    loadCSS("tree", "linkstree/linksTree.css");
+    //loadCSS("tree", "linkstree/linksTree.css");
     // await loadScript( "popper", "assets/lib/popper.min.js");
     // await loadScript("tippy", "assets/lib/tippy-bundle.umd.min.js");
     // await loadScript("tippylife", "assets/lib/tippy-bundle.iife.min.js");

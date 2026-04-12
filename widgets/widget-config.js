@@ -7,6 +7,7 @@ import { NotesWidget } from "../widgets/Notes/NotesWidget.js";
 import { sampleImageCarouselWidget } from "../widgets/sampleImageCarouselWidget/sampleImageCarouselWidget.js";
 import { TextexpanderWidget } from "../widgets/TextExpander/textExpanderWidget.js";
 import { HTMLCalendar } from "../widgets/HTMLCalendar/HTMLCalendar.js";
+import { StructuredBookMarksWidget } from "../widgets/StructuredBookmarks/StructuredBookMarksWidget.js";
 
 export function getDefaultWidgets() {
   return [
@@ -18,6 +19,7 @@ export function getDefaultWidgets() {
     new NotesWidget("w5"),
     new sampleImageCarouselWidget("w6"),
     new TextexpanderWidget("w7"),
+    new StructuredBookMarksWidget("w8"),
   ];
 }
 

@@ -1,6 +1,6 @@
 // linksTreeStorage.js
 
-import { StorageManager } from "../utilities/StorageUtils/storageManager.js";
+import { StorageManager } from "../../utilities/StorageUtils/storageManager.js";
 
 export const LinksTreeStorage = {
   async getTree() {
