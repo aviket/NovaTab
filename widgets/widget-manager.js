@@ -15,7 +15,7 @@ export class WidgetManager {
   }
 
   async addWidget(widgetInstance) {
-    const el = widgetInstance.render();
+    const el = await widgetInstance.render();
 
     // Delegate drag behavior
     this.dragController.makeDraggable(el);

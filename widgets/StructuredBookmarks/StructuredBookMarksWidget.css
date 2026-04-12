@@ -1,5 +1,5 @@
 .links-tree-container {
-  max-width: 400px;
+  /* max-width: 400px; */
   width: 100%;
   margin: 0 auto;
   padding: 8px;
@@ -7,10 +7,11 @@
 }
 
 #links-tree {
-  width: 75%;
+  width: 100%;
   font-size: 13px;
-  line-height: 1.4;
-  max-width: 600px;
+  line-height: 1.1;
+  max-height: 50%;
+  /* max-width: 600px; */
   overflow: auto;
   background-color: lightcyan;
 }
@@ -25,8 +26,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   /* background-color: cornsilk; */
-  padding: 2px 4px;
-  border-radius: 4px;
+  /* padding: 2px 2px; */
+ /* border-radius: 4px; */
 }
 
 .jstree-anchor:hover {
